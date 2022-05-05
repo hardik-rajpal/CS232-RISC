@@ -14,7 +14,7 @@ architecture rtl of RISC is
 	constant ST_ID:std_logic_vector(4 downto 0)		:="00010";
     constant ST_CNDB:std_logic_vector(4 downto 0)   :="00011";
 	constant ST_LWRD:std_logic_vector(4 downto 0)	:="00100";
-	constant ST_SWWR:std_logic_vector(4 downto 0)	:="00101";
+	constant ST_PJAL2:std_logic_vector(4 downto 0)	:="00101";
 	constant ST_LWWR:std_logic_vector(4 downto 0)	:="00110";
 	constant ST_ADDI:std_logic_vector(4 downto 0)	:="00111";
 	constant ST_ADDIWB:std_logic_vector(4 downto 0)	:="01000";
@@ -127,6 +127,7 @@ architecture rtl of RISC is
     signal rfWrite:std_logic:='0';
     signal rfSel1,rfSel2,rfSelW:std_logic_vector(2 downto 0);
 ---
+    signal tempData1:std_logic_vector(15 downto 0);
 ---aLU signals
     signal aluZeroFlag,aluCarryFlag:std_logic;
     signal aluIn1,aluIn2,aluOut:std_logic_vector(15 downto 0);
@@ -265,13 +266,17 @@ begin
                     aluSel<="00";
                     nextState<=ST_CNDB;
                 elsif (opCode = OC_JAL) then
+                    --TODO:implement JAL properly.
                     report "oc: JAL";
-                    
                 elsif (opCode = OC_JLR) then
                     report "oc: JLR";
 
                 elsif (opCode = OC_JRI) then
                     report "oc: JRI";
+                    rfSel1<=raSel;
+                    aluIn2Mux<="100";--pass imm9_16low to alu
+                    aluSel<="00";
+                    nextState<=ST_CPC;
                 else
                     report "op code not matched";
                     --no next state=>execution stopped.
@@ -282,11 +287,17 @@ begin
                 rfsel2<=rbSel;
                 nextState<=ST_CPC;
             elsif (state = ST_CPC) then
-                report "rd1:"&integer'image(to_integer(unsigned(rfDataOut1)))&", rd2"&integer'image(to_integer(unsigned(rfDataOut2)));
-                if (rfDataOut1 = rfDataOut2) then
+                if(opcode = OC_BEQ) then
+                    report "rd1:"&integer'image(to_integer(unsigned(rfDataOut1)))&", rd2"&integer'image(to_integer(unsigned(rfDataOut2)));
+                    if (rfDataOut1 = rfDataOut2) then
+                        rfSelW<="111";
+                        rfWrite<='1';
+                        rfDataIn<=aluOut;
+                    end if;
+                elsif (opcode = OC_JRI) then
                     rfSelW<="111";
-                    rfWrite<='1';
                     rfDataIn<=aluOut;
+                    rfWrite<='1';
                 end if;
                 nextState<=ST_HK;
             elsif (state = ST_MEMA) then
@@ -330,6 +341,8 @@ begin
                 aluIn2<=std_logic_vector(shift_left(unsigned(rfDataOut2),1)) ;
             elsif (aluIn2Mux = "011") then
                 aluIn2<=imm6_16;
+            elsif (aluIn2Mux = "100") then
+                aluIn2<=imm9_16low;
             else
                 report "udb";
             end if;
