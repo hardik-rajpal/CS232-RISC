@@ -24,9 +24,9 @@ architecture behave of alu is
     signal sumout:std_logic_vector(15 downto 0);
 begin
     adder:SixteenBitRCA port map(xin=>inp1,yin=>inp2,cin=>cin,sum=>sumout,cout=>cout);
-    process(state,inp1,inp2,cin,sel,sumout)
+    process(inp1,inp2,cin,sel,sumout)
     begin
-        report "called";
+        report "inputs: "&integer'image(to_integer(unsigned(inp1)))&","&integer'image(to_integer(unsigned(inp2)));
         if(sel = "00") then
             tempout<=sumout;
         elsif( sel = "01") then

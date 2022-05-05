@@ -37,6 +37,8 @@ architecture rtl of RISC is
 	constant ST_IF:std_logic_vector(4 downto 0)		:="11001";
     constant ST_WBTR:std_logic_vector(4 downto 0)   :="11010";
     constant ST_ADDL:std_logic_vector(4 downto 0)   :="11011";
+    constant ST_EXE:std_logic_vector(4 downto 0)    :="11100";
+    constant ST_MEMA:std_logic_vector(4 downto 0)   :="11101";
 
     constant OC_ADDR:std_logic_vector(3 downto 0)	:="0001";
 	constant OC_ADDI:std_logic_vector(3 downto 0)	:="0000";
@@ -162,7 +164,7 @@ begin
                 memWrite<='0';
                 rfWrite<='0';
                 rfSel1<="111";
-                memInMux<='1';
+                memInMux<='0';
                 nextState<=ST_IF;
             elsif (state = ST_IF) then
                 aluIn2Mux<="001";
@@ -175,7 +177,8 @@ begin
                 rfSelW<="111";
                 rfDataIn<=aluOut;
                 rfWrite<='1';
-                nextState<=ST_HK;
+                nextState<=ST_EXE;
+            elsif(state = ST_EXE) then
                 if(opCode = OC_ADDR) then
                     report "oc: addR";
                     rfWrite<='0';
@@ -226,10 +229,17 @@ begin
                     nextState<=ST_WBTR;
                 elsif (opCode = OC_LHI) then
                     report "oc: LHI";
-
+                    rfSelW<=raSel;
+                    rfDataIn<=imm9_16high;
+                    rfWrite<='1';
+                    nextState<=ST_HK;
                 elsif (opCode = OC_LW) then
                     report "oc: LW";
-
+                    rfSelW<=raSel;
+                    rfSel1<=rbSel;
+                    aluIn2Mux<="011";--imm6
+                    memInMux<='1';
+                    nextState<=ST_MEMA;
                 elsif (opCode = OC_SW) then
                     report "oc: SW";
                 
@@ -251,7 +261,12 @@ begin
                     report "oc: JRI";
                 else
                     report "op code not matched";
+                    --no next state=>execution stopped.
                 end if;
+            elsif (state = ST_MEMA) then
+                rfDataIn<=memDataOut;
+                rfWrite<='1';
+                nextState<=ST_HK;
             elsif (state = ST_WBTR) then
                 rfDataIn<=aluOut;
                 rfWrite<='1';
@@ -268,7 +283,7 @@ begin
                 report "udb";
             end if;
     end process;
-    process(aluIn1Mux,aluIn2Mux,rfDataOut1,rfDataOut2)
+    process(aluIn1Mux,aluIn2Mux,rfDataOut1,rfDataOut2,imm6_16,imm8_16,imm9_16high,imm9_16low)
         begin
             report"aluin1: "&integer'image(to_integer(unsigned(rfDataOut1)));
             aluIn1<=rfDataOut1;
@@ -301,7 +316,7 @@ begin
     process(imm9)
         begin
             imm9_16high(15 downto 7)<=imm9;
-            imm9_16high(5 downto 0)<=(others=>'0');
+            imm9_16high(6 downto 0)<=(others=>'0');
             imm9_16low(8 downto 0)<=imm9;
             imm9_16low(15 downto 9)<=(others=>'0');
     end process;
