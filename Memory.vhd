@@ -22,7 +22,9 @@ architecture memory_behave of memory is
 		begin 
 			report "addr:"&integer'image(to_integer(unsigned(addr)));
 			if (init = '1') then
-				mem_reg(0) <= "0001000001010011"; -- ADD R2 <- R1+R0
+				-- mem_reg(0) <= "0001000001010000"; -- ADD R2 <- R1+R0
+				-- mem_reg(0) <= "0000000001100000"; -- ADDI R1 <- 100000+R0
+				mem_reg(0) <= "0010000001010000"; -- NND R2 <- R1 nand R0
 				mem_reg(1) <= "0011001011010101"; -- LHI R1, 011010101
 				mem_reg(2) <= "0011010101010111"; -- LHI R2, 101010111
 				mem_reg(3) <= "0011011101010111"; -- LHI R3, 101010111

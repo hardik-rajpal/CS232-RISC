@@ -117,6 +117,7 @@ architecture rtl of RISC is
     signal czVal:std_logic_vector(1 downto 0);
     signal imm9:std_logic_vector(8 downto 0);
     signal imm8:std_logic_vector(7 downto 0);
+    signal imm6_16,imm9_16low,imm9_16high,imm8_16:std_logic_vector(15 downto 0);
 ---
 ---register file signals
     signal rfDataIn,rfDataOut1,rfDataOut2:std_logic_vector(15 downto 0);
@@ -199,9 +200,30 @@ begin
                     end if;
                 elsif (opCode = OC_ADDI) then
                     report "oc: addI";
+                    rfWrite<='0';
+                    rfSel1<=raSel;
+                    rfSelW<=rbSel;
+                    aluIn2Mux<="011";
+                    aluSel<="00";
+                    nextState<=ST_WBTR;
                 elsif (opCode = OC_NND) then
                     report "oc: NND";
-
+                    rfWrite<='0';
+                    rfSel1<=raSel;
+                    rfSel2<=rbSel;
+                    rfSelW<=rcSel;
+                    aluSel<="01";--nand selected
+                    aluIn2Mux<="000";
+                    if(czVal = "00") then
+                        nextState<=ST_WBTR;--last state
+                    elsif (czVal = "01" and aluZeroFlag = '1') then
+                        nextState<=ST_WBTR;--last state
+                    elsif (czVal = "10" and aluCarryFlag = '1') then
+                        nextState<=ST_WBTR;
+                    else
+                        nextState<=ST_HK;
+                    end if;
+                    nextState<=ST_WBTR;
                 elsif (opCode = OC_LHI) then
                     report "oc: LHI";
 
@@ -256,6 +278,8 @@ begin
                 aluIn2<=(0=>'1',others=>'0');
             elsif (aluIn2Mux = "010") then --left shift rfDataOut2 before sending to ALU
                 aluIn2<=std_logic_vector(shift_left(unsigned(rfDataOut2),1)) ;
+            elsif (aluIn2Mux = "011") then
+                aluIn2<=imm6_16;
             else
                 report "udb";
             end if;
@@ -273,6 +297,23 @@ begin
         begin
             outstates(9 downto 5) <= nextState;
             outstates(4 downto 0) <= state;
+    end process;
+    process(imm9)
+        begin
+            imm9_16high(15 downto 7)<=imm9;
+            imm9_16high(5 downto 0)<=(others=>'0');
+            imm9_16low(8 downto 0)<=imm9;
+            imm9_16low(15 downto 9)<=(others=>'0');
+    end process;
+    process(imm8)
+        begin
+            imm8_16(7 downto 0)<=imm8;
+            imm8_16(15 downto 8)<=(others=>'0');
+    end process;
+    process(imm6)
+        begin
+            imm6_16(5 downto 0)<=imm6;
+            imm6_16(15 downto 6)<=(others=>'0');
     end process;
 
 end architecture rtl;
