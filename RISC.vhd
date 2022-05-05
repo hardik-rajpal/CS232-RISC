@@ -136,6 +136,7 @@ architecture rtl of RISC is
     signal regNum:std_logic_vector(3 downto 0):="0000";
     signal index:std_logic_vector(15 downto 0):=(others=>'0');
     signal loadCurrent:std_logic:='0';
+    signal lmsmAddr:std_logic_vector(15 downto 0);
 ---
 ---aLU signals
     signal aluZeroFlag,aluCarryFlag:std_logic;
@@ -266,13 +267,11 @@ begin
                     nextState<=ST_MEMA;
                 elsif (opCode = OC_LM) then
                     report "oc: LM";
+                    aluIn1Mux<="00";
                     rfSel1<=raSel;
-                    aluIn2Mux<="111";
-                    aluSel<="00";
                     regNum<="0000";
-                    index<=(others=>'0');
                     loadCurrent<='0';
-                    nextState<=ST_LMRD;
+                    nextState<=ST_LMSM;
                 elsif (opCode = OC_SM) then
                     report "oc: SM";
                 
@@ -306,25 +305,36 @@ begin
                     report "op code not matched";
                     --no next state=>execution stopped.
                 end if;
+            elsif (state = ST_LMSM) then
+                aluIn2Mux<="111";
+                aluSel<="00";
+                nextState<=ST_LMRD;    
             elsif (state = ST_LMRD) then
                 if(to_integer(unsigned(regNum)) = 8) then
                     nextState<=ST_HK;
                 else
-                    if (imm8_16(to_integer(unsigned(regNum))) = '1') then
-                        memInMux<='1';
+                    report"rgnm:"&integer'image(to_integer(unsigned(regNum)));
+                    report"imm8val:"&integer'image(to_integer(unsigned(imm8_16)));
+                    if (imm8_16(7-to_integer(unsigned(regNum))) = '1') then
+                        memInMux<='1';--aluout
                         loadCurrent<='1';
                         nextState<=ST_LMWB;
-                    elsif (imm8_16(to_integer(unsigned(regNum))) = '0') then
+                    elsif (imm8_16(7-to_integer(unsigned(regNum))) = '0') then
                         loadCurrent<='0';
                         nextState<=ST_LMWB;
                     end if;
                 end if;
             elsif(state = ST_LMWB) then
                 if(loadCurrent = '1') then
+                    report "mdo:"&integer'image(to_integer(unsigned(memDataOut)));
+                    report "rgnml:"&integer'image(to_integer(unsigned(regNum)));
                     rfSelW<=regNum(2 downto 0);
                     rfDataIn<=memDataOut;
                     rfWrite<='1';
-                    index<=(index+"1");
+                    aluIn1Mux<="11";---pass lmsmaddr to ALu
+                    aluIn2Mux<="001";---pass +1 to ALU
+                    lmsmAddr<=aluOut;
+                    aluSel<="00";
                 end if;
                 regNum<=(regNum + "0001");
                 nextState<=ST_LMRD;
@@ -381,7 +391,7 @@ begin
                 report "udb";
             end if;
     end process;
-    process(aluIn1Mux,aluIn2Mux,rfDataOut1,rfDataOut2,imm6_16,imm8_16,imm9_16high,imm9_16low,prevPC,index)
+    process(aluIn1Mux,aluIn2Mux,rfDataOut1,rfDataOut2,imm6_16,imm8_16,imm9_16high,imm9_16low,prevPC,lmsmAddr)
         begin
             report"aluin1: "&integer'image(to_integer(unsigned(rfDataOut1)));
             if(aluIn1Mux = "00") then
@@ -390,6 +400,8 @@ begin
                 report "inp not updated";
             elsif(aluIn1Mux = "10") then
                 aluin1<=prevPC;
+            elsif (aluIn1Mux = "11") then
+                aluIn1<=lmsmAddr;
             end if;
             if(aluIn2Mux = "000") then
                 aluIn2<=rfDataOut2;
@@ -403,6 +415,8 @@ begin
                 aluIn2<=imm9_16low;
             elsif (aluIn2Mux = "101") then
                 aluIn2<=index;
+            elsif (aluIn2Mux = "111") then
+                aluIn2<=(others=>'0');
             else
                 report "udb";
             end if;

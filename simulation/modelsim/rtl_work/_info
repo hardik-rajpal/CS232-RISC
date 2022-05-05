@@ -26,9 +26,9 @@ V:W_9EQL2Kb?k2=07;U_M?1
 !s100 8JZ3lO6Zzc7la5X]lb^JQ0
 Z9 OV;C;2020.1;71
 31
-Z10 !s110 1651770819
+Z10 !s110 1651791823
 !i10b 1
-Z11 !s108 1651770819.000000
+Z11 !s108 1651791823.000000
 Z12 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/alu.vhd|
 Z13 !s107 C:/CODE/outcode/RISC-2/alu.vhd|
 !i113 1
@@ -71,9 +71,9 @@ V1RHlS>XSmHBQaGQ76Mf^K2
 !s100 zOb_lig9P^IGfzdWWHB5:1
 R9
 31
-Z19 !s110 1651770820
+Z19 !s110 1651791824
 !i10b 1
-Z20 !s108 1651770820.000000
+Z20 !s108 1651791824.000000
 Z21 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/ir.vhd|
 Z22 !s107 C:/CODE/outcode/RISC-2/ir.vhd|
 !i113 1
@@ -158,7 +158,7 @@ R9
 31
 R19
 !i10b 1
-R20
+R11
 Z31 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/onebitfulladd.vhd|
 Z32 !s107 C:/CODE/outcode/RISC-2/onebitfulladd.vhd|
 !i113 1
@@ -177,7 +177,7 @@ R9
 31
 R19
 !i10b 1
-R20
+R11
 R31
 R32
 !i113 1
@@ -268,7 +268,7 @@ R41
 R14
 R15
 Erisc
-Z42 w1651770643
+Z42 w1651791788
 R3
 R6
 R2
@@ -284,9 +284,9 @@ V@7[bi2a@zD]QUAe5[:?RT2
 !s100 9LM8A_Z3gJJNS`:EiUZOU0
 R9
 31
-Z45 !s110 1651770818
+Z45 !s110 1651791822
 !i10b 1
-Z46 !s108 1651770818.000000
+Z46 !s108 1651791822.000000
 Z47 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/RISC.vhd|
 Z48 !s107 C:/CODE/outcode/RISC-2/RISC.vhd|
 !i113 1
@@ -300,10 +300,10 @@ R4
 R5
 DEx4 work 4 risc 0 22 @7[bi2a@zD]QUAe5[:?RT2
 !i122 0
-l148
-L13 421
-VCVhP0Ch5Bc@oE6VgQ0Mn61
-!s100 [0`GZWE@UOShHG6?2]AZc0
+l149
+L13 435
+VL0<@_J_jI05?m@UbLWCF@3
+!s100 f8K:acZVD0o3gcQ<W5oFZ0
 R9
 31
 R45
@@ -369,9 +369,9 @@ VLHO57Kj1h1>VC;T<7naKX2
 !s100 dY<dC2JN<<eR@oaPNGbdk0
 R9
 31
-R19
+R10
 !i10b 1
-R20
+R11
 Z56 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/sixteenbitrca.vhd|
 Z57 !s107 C:/CODE/outcode/RISC-2/sixteenbitrca.vhd|
 !i113 1
@@ -388,9 +388,9 @@ VnAbLUG7nz8HQ9Y17S63Tj2
 !s100 UU<OXWFFeg9?hZdkB9^kO0
 R9
 31
-R19
+R10
 !i10b 1
-R20
+R11
 R56
 R57
 !i113 1
