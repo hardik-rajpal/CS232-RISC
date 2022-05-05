@@ -23,7 +23,7 @@ architecture rtl of RISC is
 	constant ST_RGWB:std_logic_vector(4 downto 0)	:="01011";
 	constant ST_S12:std_logic_vector(4 downto 0)	:="01100";
 	constant ST_LHI:std_logic_vector(4 downto 0)	:="01101";
-	constant ST_JCMD:std_logic_vector(4 downto 0)	:="01110";
+	constant ST_JLR2:std_logic_vector(4 downto 0)	:="01110";
 	constant ST_PSTJCMD:std_logic_vector(4 downto 0):="01111";
 	constant ST_PSTJAL:std_logic_vector(4 downto 0)	:="10000";
 	constant ST_PSTJLR:std_logic_vector(4 downto 0)	:="10001";
@@ -128,6 +128,8 @@ architecture rtl of RISC is
     signal rfSel1,rfSel2,rfSelW:std_logic_vector(2 downto 0);
 ---
     signal tempData1:std_logic_vector(15 downto 0);
+    signal tempData2:std_logic_vector(15 downto 0);
+
 ---aLU signals
     signal aluZeroFlag,aluCarryFlag:std_logic;
     signal aluIn1,aluIn2,aluOut:std_logic_vector(15 downto 0);
@@ -141,6 +143,7 @@ begin
     rf:registerfile port map(state=>state,dinm=>rfDataIn,regsela=>rfSel1,regselb=>rfSel2, regselm=>rfSelW,regwrite=>rfWrite,douta=>rfDataOut1,doutb=>rfDataOut2);
     aluInst:ALU port map(state=>state,inp1=>aluIn1,inp2=>aluIn2,cin=>aluCin,sel=>aluSel,outp=>aluOut,cout=>aluCarryFlag,zero=>aluZeroFlag);
     irInst:IR port map(irwrite=>irw,inp=>tempInstr,opcode=>opCode,immediate6=>imm6,immediate8=>imm8,immediate9=>imm9,ra=>raSel,rb=>rbSel,rc=>rcSel,cz=>czVal);
+    --TODO might have to maintain old pc value for beq, jal correct implementation.
     process(clk)
         begin
             if(rising_edge(clk)) then
@@ -266,11 +269,16 @@ begin
                     aluSel<="00";
                     nextState<=ST_CNDB;
                 elsif (opCode = OC_JAL) then
-                    --TODO:implement JAL properly.
                     report "oc: JAL";
+                    rfSel1<="111";
+                    aluIn2Mux<="100";--alu gets pc and 9imm_16low
+                    aluSel<="00";
+                    nextState<=ST_JLR2;
                 elsif (opCode = OC_JLR) then
                     report "oc: JLR";
-
+                    rfSel1<="111";
+                    rfSel2<=rbSel;
+                    nextState<=ST_JLR2;
                 elsif (opCode = OC_JRI) then
                     report "oc: JRI";
                     rfSel1<=raSel;
@@ -281,6 +289,12 @@ begin
                     report "op code not matched";
                     --no next state=>execution stopped.
                 end if;
+            elsif (state = ST_JLR2) then
+                report "rd1:"&integer'image(to_integer(unsigned(rfDataOut1)))&", rd2"&integer'image(to_integer(unsigned(rfDataOut2)));
+                rfDataIn<=rfDataOut1;
+                rfSelW<=raSel;
+                rfWrite<='1';
+                nextState<=ST_CPC;
             elsif (state = ST_CNDB) then
                 aluIn1Mux<='0';
                 rfSel1<=raSel;
@@ -295,6 +309,14 @@ begin
                         rfDataIn<=aluOut;
                     end if;
                 elsif (opcode = OC_JRI) then
+                    rfSelW<="111";
+                    rfDataIn<=aluOut;
+                    rfWrite<='1';
+                elsif (opcode = OC_JLR) then
+                    rfSelW<="111";
+                    rfDataIn<=rfDataOut2;
+                    rfWrite<='1';
+                elsif (opcode = OC_JAL) then
                     rfSelW<="111";
                     rfDataIn<=aluOut;
                     rfWrite<='1';
