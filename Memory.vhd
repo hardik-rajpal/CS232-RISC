@@ -18,7 +18,7 @@ architecture memory_behave of memory is
 	type RAM is array(0 to ((16)-1)) of std_logic_vector(15 downto 0);
 	signal mem_reg: RAM;
 	begin
-	process(state)
+	process(state,init,mr,mw,addr)
 		begin 
 			if (init = '1') then
 				mem_reg(0) <= "0011000101101010"; -- LHI R0, 101101010

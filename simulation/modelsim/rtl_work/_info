@@ -1,0 +1,228 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/CODE/outcode/RISC-2/simulation/modelsim
+Ealu
+Z1 w1651743344
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z6 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+!i122 3
+R0
+Z7 8C:/CODE/outcode/RISC-2/alu.vhd
+Z8 FC:/CODE/outcode/RISC-2/alu.vhd
+l0
+L5 1
+Vgjj;6=aoOh7zhljZON6W;0
+!s100 j3jQk0PEY^SmdInMaoNjf1
+Z9 OV;C;2020.1;71
+31
+Z10 !s110 1651745157
+!i10b 1
+Z11 !s108 1651745157.000000
+Z12 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/alu.vhd|
+Z13 !s107 C:/CODE/outcode/RISC-2/alu.vhd|
+!i113 1
+Z14 o-93 -work work
+Z15 tExplicit 1 CvgOpt 0
+Abehave
+R2
+R3
+R4
+R5
+R6
+DEx4 work 3 alu 0 22 gjj;6=aoOh7zhljZON6W;0
+!i122 3
+l16
+L14 22
+VD?EPh^2bV7[O29c`1?J4@0
+!s100 DO15j@j;h7HH0UVo@1iA41
+R9
+31
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 1
+R14
+R15
+Ememory
+Z16 w1651745047
+R2
+R4
+R5
+!i122 1
+R0
+Z17 8C:/CODE/outcode/RISC-2/Memory.vhd
+Z18 FC:/CODE/outcode/RISC-2/Memory.vhd
+l0
+L7 1
+VHCXbYbiU31:AW2HZdz5Hb2
+!s100 7_Ah;4HFA@E9B?9XNXF?k2
+R9
+31
+Z19 !s110 1651745156
+!i10b 1
+Z20 !s108 1651745156.000000
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/Memory.vhd|
+Z22 !s107 C:/CODE/outcode/RISC-2/Memory.vhd|
+!i113 1
+R14
+R15
+Amemory_behave
+R2
+R4
+R5
+DEx4 work 6 memory 0 22 HCXbYbiU31:AW2HZdz5Hb2
+!i122 1
+l20
+L17 19
+VPY9l0XdQ2T42lT3ID^Q6>2
+!s100 D9CRed3d4]YRG6U8D1Hih2
+R9
+31
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R14
+R15
+Eregisterfile
+Z23 w1651742503
+R2
+R4
+R5
+!i122 2
+R0
+Z24 8C:/CODE/outcode/RISC-2/RegisterFile.vhd
+Z25 FC:/CODE/outcode/RISC-2/RegisterFile.vhd
+l0
+L7 1
+VhDm3hb<l`SWoTS99gm3A51
+!s100 da7EJCUXhSOH083CO6i3E1
+R9
+31
+R10
+!i10b 1
+R11
+Z26 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/RegisterFile.vhd|
+Z27 !s107 C:/CODE/outcode/RISC-2/RegisterFile.vhd|
+!i113 1
+R14
+R15
+Abehave
+R2
+R4
+R5
+DEx4 work 12 registerfile 0 22 hDm3hb<l`SWoTS99gm3A51
+!i122 2
+l24
+L19 70
+V011l6L6kWa;[8J:;6_^ae1
+!s100 eUD15dN]dAF^Zdo2N=?`W2
+R9
+31
+R10
+!i10b 1
+R11
+R26
+R27
+!i113 1
+R14
+R15
+Erisc
+Z28 w1651745019
+R2
+R4
+R5
+!i122 0
+R0
+Z29 8C:/CODE/outcode/RISC-2/RISC.vhd
+Z30 FC:/CODE/outcode/RISC-2/RISC.vhd
+l0
+L4 1
+VEEGaN@goM4:3j;8ae_c`71
+!s100 PW=l^@DY62VblM45BH4o72
+R9
+31
+R19
+!i10b 1
+R20
+Z31 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/RISC.vhd|
+Z32 !s107 C:/CODE/outcode/RISC-2/RISC.vhd|
+!i113 1
+R14
+R15
+Artl
+R2
+R4
+R5
+DEx4 work 4 risc 0 22 EEGaN@goM4:3j;8ae_c`71
+!i122 0
+l86
+L10 139
+V381S_67Y7d4DoV7c@FDL03
+!s100 JSQMIH8VZ<:Q2g?[bbfJ82
+R9
+31
+R19
+!i10b 1
+R20
+R31
+R32
+!i113 1
+R14
+R15
+Erisc_vhd_vec_tst
+Z33 w1651743890
+R4
+R5
+!i122 4
+R0
+Z34 8C:/CODE/outcode/RISC-2/simulation/modelsim/Waveform.vwf.vht
+Z35 FC:/CODE/outcode/RISC-2/simulation/modelsim/Waveform.vwf.vht
+l0
+L32 1
+VfRnWYiOU=]BQDg1NF5e9Z2
+!s100 >Z[6d7KQY7dk7`ZR1I?4G2
+R9
+31
+R10
+!i10b 1
+R11
+Z36 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/simulation/modelsim/Waveform.vwf.vht|
+!s107 C:/CODE/outcode/RISC-2/simulation/modelsim/Waveform.vwf.vht|
+!i113 1
+R14
+R15
+Arisc_arch
+R4
+R5
+DEx4 work 16 risc_vhd_vec_tst 0 22 fRnWYiOU=]BQDg1NF5e9Z2
+!i122 4
+l45
+L34 31
+VR4fF8QlhP[mIRX1;CJoQC0
+!s100 K==m=96_9X8Ja6F;=M=Q<1
+R9
+31
+R10
+!i10b 1
+R11
+R36
+Z37 !s107 C:/CODE/outcode/RISC-2/simulation/modelsim/Waveform.vwf.vht|
+!i113 1
+R14
+R15

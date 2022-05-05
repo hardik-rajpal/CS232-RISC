@@ -79,7 +79,7 @@ architecture rtl of RISC is
 ---aLU signals
     signal aluZeroFlag,aluCarryFlag:std_logic;
     signal aluIn1,aluIn2,aluOut:std_logic_vector(15 downto 0);
-    signal aluCin:std_logic;
+    signal aluCin:std_logic:='0';
     signal aluSel:std_logic_vector(1 downto 0);
     signal aluIn1Mux,aluIn2Mux:std_logic_vector(2 downto 0);
 ---
@@ -88,44 +88,61 @@ begin
     rf:registerfile port map(state=>state,dinm=>rfDataIn,regsela=>rfSel1,regselb=>rfSel2, regselm=>rfSelW,regwrite=>rfWrite,douta=>rfDataOut1,doutb=>rfDataOut2);
     aluInst:ALU port map(inp1=>aluIn1,inp2=>aluIn2,cin=>aluCin,sel=>aluSel,outp=>aluOut,cout=>aluCarryFlag,zero=>aluZeroFlag);
     process(clk)
-    begin
-        if(rising_edge(clk)) then
-            state<=nextState;
-        end if;
+        begin
+            if(rising_edge(clk)) then
+                state<=nextState;
+                report "clk";
+            end if;
     end process;
     process(state)
-    begin
-        if(state = ST_INIT) then
-            memInit<='1';
-            memRead<='0';
-            memWrite<='0';
-            rfSelW<="111";
-            rfDataIn<=(others=>'0');
-            rfWrite<='1';
-            nextState<=ST_HK;
-        elsif (state = ST_HK) then
-            rfWrite<='0';
-            rfSel1<="111";            
-            memInit<='0';
-            memRead<='1';
-
-            
-        end if;
-    end process;
-
-    process(state,nextState)
-    begin
-        outstates(9 downto 5) <= nextState;
-        outstates(4 downto 0) <= state;
+        begin
+            if(state = ST_INIT) then
+                report "rfd1"&integer'image(to_integer(unsigned(rfDataOut1)));
+                --initialize memory contents
+                memInit<='1';
+                memRead<='0';
+                memWrite<='0';
+                ---initialize pc to 0:
+                rfSelW<="111";
+                rfDataIn<=(2=>'1',others=>'0');
+                rfWrite<='1';
+                nextState<=ST_INIT;
+                rfSel1<="111";
+                report "rfd1"&integer'image(to_integer(unsigned(rfDataOut1)));
+            elsif (state = ST_HK) then
+                rfWrite<='0';
+                rfSel1<="111";            
+                memInit<='0';
+                memRead<='1';
+                -- report "dout:"
+                
+            end if;
     end process;
     process(memMux)
-    begin
-        if(memMux = '0') then
-            memAddr<=rfSel1;
-        elsif (memMux = '1') then
-            memAddr<=aluOut;
-        else
-            report "udb";
-        end if;
+        begin
+            if(memMux = '0') then
+                memAddr<=rfDataOut1;
+            elsif (memMux = '1') then
+                memAddr<=aluOut;
+            else
+                report "udb";
+            end if;
     end process;
+    process(aluIn1Mux,aluIn2Mux)
+        begin
+            aluIn1<=rfDataOut1;
+            if(aluIn2Mux = "000") then
+                aluIn2<=rfDataOut2;
+            elsif (aluIn2Mux = "001") then
+                aluIn2<=(0=>'1',others=>'0');
+            else
+                report "udb";
+            end if;
+    end process;
+    process(state,nextState)
+        begin
+            outstates(9 downto 5) <= nextState;
+            outstates(4 downto 0) <= state;
+    end process;
+
 end architecture rtl;
