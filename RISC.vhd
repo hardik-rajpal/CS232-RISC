@@ -129,6 +129,7 @@ architecture rtl of RISC is
 ---
     signal tempData1:std_logic_vector(15 downto 0);
     signal tempData2:std_logic_vector(15 downto 0);
+    signal prevPC:std_logic_vector(15 downto 0);
 
 ---aLU signals
     signal aluZeroFlag,aluCarryFlag:std_logic;
@@ -174,6 +175,7 @@ begin
                 memInMux<='0';
                 nextState<=ST_IF;
             elsif (state = ST_IF) then
+                prevPC<=rfDataOut1;
                 aluIn2Mux<="001";
                 aluSel<="00";
                 irw<='1';
@@ -347,7 +349,7 @@ begin
                 report "udb";
             end if;
     end process;
-    process(aluIn1Mux,aluIn2Mux,rfDataOut1,rfDataOut2,imm6_16,imm8_16,imm9_16high,imm9_16low)
+    process(aluIn1Mux,aluIn2Mux,rfDataOut1,rfDataOut2,imm6_16,imm8_16,imm9_16high,imm9_16low,prevPC)
         begin
             report"aluin1: "&integer'image(to_integer(unsigned(rfDataOut1)));
             if(aluIn1Mux = '1') then
@@ -365,6 +367,8 @@ begin
                 aluIn2<=imm6_16;
             elsif (aluIn2Mux = "100") then
                 aluIn2<=imm9_16low;
+            elsif (aluIn2Mux = "101") then
+                aluIn2<=prevPC;
             else
                 report "udb";
             end if;

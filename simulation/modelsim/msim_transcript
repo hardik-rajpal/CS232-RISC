@@ -12,7 +12,7 @@
 # 
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/RISC.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:34:19 on May 05,2022
+# Start time: 21:41:12 on May 05,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/RISC.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -20,11 +20,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RISC
 # -- Compiling architecture rtl of RISC
-# End time: 21:34:19 on May 05,2022, Elapsed time: 0:00:00
+# End time: 21:41:13 on May 05,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/Memory.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:34:20 on May 05,2022
+# Start time: 21:41:13 on May 05,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/Memory.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -32,11 +32,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity memory
 # -- Compiling architecture memory_behave of memory
-# End time: 21:34:20 on May 05,2022, Elapsed time: 0:00:00
+# End time: 21:41:13 on May 05,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/RegisterFile.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:34:20 on May 05,2022
+# Start time: 21:41:13 on May 05,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/RegisterFile.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -44,11 +44,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity registerfile
 # -- Compiling architecture behave of registerfile
-# End time: 21:34:20 on May 05,2022, Elapsed time: 0:00:00
+# End time: 21:41:13 on May 05,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/alu.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:34:20 on May 05,2022
+# Start time: 21:41:13 on May 05,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/alu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -58,44 +58,44 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity alu
 # -- Compiling architecture behave of alu
-# End time: 21:34:20 on May 05,2022, Elapsed time: 0:00:00
+# End time: 21:41:14 on May 05,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/sixteenbitrca.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:34:20 on May 05,2022
+# Start time: 21:41:14 on May 05,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/sixteenbitrca.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity SixteenBitRCA
 # -- Compiling architecture arith of SixteenBitRCA
-# End time: 21:34:20 on May 05,2022, Elapsed time: 0:00:00
+# End time: 21:41:14 on May 05,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/onebitfulladd.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:34:21 on May 05,2022
+# Start time: 21:41:14 on May 05,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/onebitfulladd.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity OnebitFullAdd
 # -- Compiling architecture archobfa of onebitfulladd
-# End time: 21:34:21 on May 05,2022, Elapsed time: 0:00:00
+# End time: 21:41:14 on May 05,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/onebithalfadd.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:34:21 on May 05,2022
+# Start time: 21:41:14 on May 05,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/onebithalfadd.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity OnebitHalfAdd
 # -- Compiling architecture arch_obha of onebithalfadd
-# End time: 21:34:21 on May 05,2022, Elapsed time: 0:00:00
+# End time: 21:41:14 on May 05,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/ir.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:34:21 on May 05,2022
+# Start time: 21:41:14 on May 05,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/ir.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -103,24 +103,24 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity ir
 # -- Compiling architecture behave of ir
-# End time: 21:34:21 on May 05,2022, Elapsed time: 0:00:00
+# End time: 21:41:14 on May 05,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/simulation/modelsim/Waveform.vwf.vht}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:34:21 on May 05,2022
+# Start time: 21:41:14 on May 05,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/simulation/modelsim/Waveform.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity RISC_vhd_vec_tst
 # -- Compiling architecture RISC_arch of RISC_vhd_vec_tst
-# End time: 21:34:21 on May 05,2022, Elapsed time: 0:00:00
+# End time: 21:41:14 on May 05,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  RISC_vhd_vec_tst
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=""+acc"" RISC_vhd_vec_tst 
-# Start time: 21:34:21 on May 05,2022
+# Start time: 21:41:14 on May 05,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -143,6 +143,12 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /risc_vhd_vec_tst/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /risc_vhd_vec_tst/i1
+# ** Note: rd1:0, ppc0
+#    Time: 0 ps  Iteration: 0  Instance: /risc_vhd_vec_tst/i1
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 0  Instance: /risc_vhd_vec_tst/i1
 # ** Note: aluin1: 0
@@ -281,6 +287,10 @@
 #    Time: 500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1
 # ** Note: udb
 #    Time: 500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1
+# ** Note: rd1:0, ppc0
+#    Time: 500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1
 # ** Note: addr:0
 #    Time: 500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/mem
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -389,6 +399,8 @@
 #    Time: 3500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: oc: JAL
 #    Time: 3500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
+# ** Note: rd1:1, ppc0
+#    Time: 3500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
 # ** Note: aluin1: 1
 #    Time: 3500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
 # ** Note: addr:1
@@ -500,6 +512,8 @@
 # ** Note: regwrite:3
 #    Time: 6500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: aluin1: 3
+#    Time: 6500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
+# ** Note: rd1:3, ppc0
 #    Time: 6500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
 # ** Note: reg0 = 7
 #    Time: 6500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
@@ -628,6 +642,8 @@
 # ** Note: oc: LHI
 #    Time: 9500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
 # ** Note: aluin1: 4
+#    Time: 9500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
+# ** Note: rd1:4, ppc3
 #    Time: 9500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
 # ** Note: reg0 = 7
 #    Time: 9500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
@@ -794,6 +810,8 @@
 # ** Note: op code not matched
 #    Time: 13500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
 # ** Note: aluin1: 5
+#    Time: 13500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
+# ** Note: rd1:5, ppc4
 #    Time: 13500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
 # ** Note: addr:5
 #    Time: 13500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
@@ -1151,5 +1169,5 @@
 #    Time: 99500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
 # ** Note: oc:0
 #    Time: 99500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# End time: 21:34:55 on May 05,2022, Elapsed time: 0:00:34
-# Errors: 0, Warnings: 112
+# End time: 21:41:44 on May 05,2022, Elapsed time: 0:00:30
+# Errors: 0, Warnings: 115
