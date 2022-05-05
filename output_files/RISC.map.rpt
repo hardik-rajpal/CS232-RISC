@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RISC
-Thu May 05 15:34:24 2022
+Thu May 05 16:05:34 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,14 +13,16 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Port Connectivity Checks: "alu:aluInst"
- 11. Port Connectivity Checks: "registerfile:rf"
- 12. Port Connectivity Checks: "memory:mem"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Port Connectivity Checks: "IR:irInst"
+ 12. Port Connectivity Checks: "alu:aluInst"
+ 13. Port Connectivity Checks: "registerfile:rf"
+ 14. Port Connectivity Checks: "memory:mem"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -47,15 +49,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 05 15:34:23 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 05 16:05:34 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; RISC                                        ;
 ; Top-level Entity Name              ; RISC                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
+; Total logic elements               ; 4                                           ;
+;     Total combinational functions  ; 4                                           ;
+;     Dedicated logic registers      ; 2                                           ;
+; Total registers                    ; 2                                           ;
 ; Total pins                         ; 11                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -174,38 +176,40 @@ https://fpgasoftware.intel.com/eula.
 ; Memory.vhd                       ; yes             ; User VHDL File        ; C:/CODE/outcode/RISC-2/Memory.vhd       ;         ;
 ; RegisterFile.vhd                 ; yes             ; User VHDL File        ; C:/CODE/outcode/RISC-2/RegisterFile.vhd ;         ;
 ; alu.vhd                          ; yes             ; Auto-Found VHDL File  ; C:/CODE/outcode/RISC-2/alu.vhd          ;         ;
+; ir.vhd                           ; yes             ; Auto-Found VHDL File  ; C:/CODE/outcode/RISC-2/ir.vhd           ;         ;
 +----------------------------------+-----------------+-----------------------+-----------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 11    ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 11    ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 4        ;
+;                                             ;          ;
+; Total combinational functions               ; 4        ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 0        ;
+;     -- 3 input functions                    ; 2        ;
+;     -- <=2 input functions                  ; 2        ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 4        ;
+;     -- arithmetic mode                      ; 0        ;
+;                                             ;          ;
+; Total registers                             ; 2        ;
+;     -- Dedicated logic registers            ; 2        ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 11       ;
+;                                             ;          ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; state[0] ;
+; Maximum fan-out                             ; 3        ;
+; Total fan-out                               ; 29       ;
+; Average fan-out                             ; 1.04     ;
++---------------------------------------------+----------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -213,9 +217,21 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |RISC                      ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |RISC               ; RISC        ; work         ;
+; |RISC                      ; 4 (4)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |RISC               ; RISC        ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; nextState[0]                                       ; GND                 ; yes                    ;
+; nextState[1]                                       ; GND                 ; yes                    ;
+; Number of user-specified and inferred latches = 2  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +--------------------------------------------------------------------------------+
@@ -223,8 +239,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+----------------------------------------+
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
-; state[0..4]                           ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 5 ;                                        ;
+; state[2..4]                           ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 3 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
 
@@ -233,7 +249,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 2     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -243,42 +259,56 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alu:aluInst"                                                                        ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; inp2 ; Input  ; Info     ; Stuck at GND                                                                        ;
-; cin  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; outp ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; zero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "IR:irInst"                                                                                ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; irwrite    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; opcode     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; immediate6 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ra         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rb         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rc         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; cz         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; immediate9 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; immediate8 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "registerfile:rf"                                                                           ;
+; Port Connectivity Checks: "alu:aluInst"                                                                               ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port        ; Type   ; Severity ; Details                                                                             ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
-; dinm[15..3] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; dinm[1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; dinm[2]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; regsela     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; regselm     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; doutb       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; inp2[15..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; inp2[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; cin         ; Input  ; Info     ; Stuck at GND                                                                        ;
+; sel         ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "memory:mem"                                                                         ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; mw   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; addr ; Input  ; Info     ; Stuck at GND                                                                        ;
-; do   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "registerfile:rf"                                                                       ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; dinm    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; regsela ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; regselm ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; doutb   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------+
+; Port Connectivity Checks: "memory:mem" ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; mw   ; Input ; Info     ; Stuck at GND ;
++------+-------+----------+--------------+
 
 
 +-----------------------------------------------------+
@@ -287,12 +317,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 11                          ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
+; cycloneiii_ff         ; 2                           ;
+;     plain             ; 2                           ;
+; cycloneiii_lcell_comb ; 5                           ;
+;     normal            ; 5                           ;
 ;         0 data inputs ; 1                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 2                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.40                        ;
 +-----------------------+-----------------------------+
 
 
@@ -311,7 +345,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu May 05 15:34:13 2022
+    Info: Processing started: Thu May 05 16:05:22 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISC -c RISC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -325,62 +359,128 @@ Info (12021): Found 2 design units, including 1 entities, in source file registe
     Info (12022): Found design unit 1: registerfile-behave File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 19
     Info (12023): Found entity 1: registerfile File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 7
 Info (12127): Elaborating entity "RISC" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at RISC.vhd(71): used implicit default value for signal "memDataIn" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 71
-Warning (10036): Verilog HDL or VHDL warning at RISC.vhd(71): object "memDataOut" assigned a value but never read File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 71
-Warning (10541): VHDL Signal Declaration warning at RISC.vhd(72): used implicit default value for signal "memMux" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 72
-Warning (10541): VHDL Signal Declaration warning at RISC.vhd(77): used implicit default value for signal "rfSel2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 77
-Warning (10036): Verilog HDL or VHDL warning at RISC.vhd(80): object "aluZeroFlag" assigned a value but never read File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 80
-Warning (10036): Verilog HDL or VHDL warning at RISC.vhd(80): object "aluCarryFlag" assigned a value but never read File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 80
-Warning (10540): VHDL Signal Declaration warning at RISC.vhd(82): used explicit default value for signal "aluCin" because signal was never assigned a value File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 82
-Warning (10541): VHDL Signal Declaration warning at RISC.vhd(83): used implicit default value for signal "aluSel" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 83
-Warning (10541): VHDL Signal Declaration warning at RISC.vhd(84): used implicit default value for signal "aluIn2Mux" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 84
-Warning (10631): VHDL Process Statement warning at RISC.vhd(97): inferring latch(es) for signal or variable "memInit", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Warning (10631): VHDL Process Statement warning at RISC.vhd(97): inferring latch(es) for signal or variable "memRead", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Warning (10631): VHDL Process Statement warning at RISC.vhd(97): inferring latch(es) for signal or variable "memWrite", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Warning (10631): VHDL Process Statement warning at RISC.vhd(97): inferring latch(es) for signal or variable "rfSelW", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Warning (10631): VHDL Process Statement warning at RISC.vhd(97): inferring latch(es) for signal or variable "rfDataIn", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Warning (10631): VHDL Process Statement warning at RISC.vhd(97): inferring latch(es) for signal or variable "rfWrite", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Warning (10631): VHDL Process Statement warning at RISC.vhd(97): inferring latch(es) for signal or variable "nextState", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Warning (10631): VHDL Process Statement warning at RISC.vhd(97): inferring latch(es) for signal or variable "rfSel1", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10635): VHDL Report Statement at RISC.vhd(128): "udb" (NOTE) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 128
-Warning (10492): VHDL Process Statement warning at RISC.vhd(133): signal "rfDataOut1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 133
-Info (10635): VHDL Report Statement at RISC.vhd(139): "udb" (NOTE) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 139
-Warning (10873): Using initial value X (don't care) for net "memAddr" at RISC.vhd(71) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 71
-Warning (10873): Using initial value X (don't care) for net "aluIn2" at RISC.vhd(81) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 81
-Info (10041): Inferred latch for "rfSel1[0]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "rfSel1[1]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "rfSel1[2]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "nextState[0]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "nextState[1]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "nextState[2]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "nextState[3]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "nextState[4]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "rfWrite" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "rfDataIn[0]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "rfDataIn[1]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "rfDataIn[2]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "rfDataIn[3]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "rfDataIn[4]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "rfDataIn[5]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "rfDataIn[6]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "rfDataIn[7]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "rfDataIn[8]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "rfDataIn[9]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "rfDataIn[10]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "rfDataIn[11]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "rfDataIn[12]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "rfDataIn[13]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "rfDataIn[14]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "rfDataIn[15]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "rfSelW[0]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "rfSelW[1]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "rfSelW[2]" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "memWrite" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "memRead" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (10041): Inferred latch for "memInit" at RISC.vhd(97) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
-Info (12128): Elaborating entity "memory" for hierarchy "memory:mem" File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 87
-Warning (10492): VHDL Process Statement warning at Memory.vhd(28): signal "mem_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 28
-Warning (10492): VHDL Process Statement warning at Memory.vhd(31): signal "di" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 31
+Warning (10541): VHDL Signal Declaration warning at RISC.vhd(85): used implicit default value for signal "memDataIn" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 85
+Warning (10036): Verilog HDL or VHDL warning at RISC.vhd(94): object "imm6" assigned a value but never read File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 94
+Warning (10036): Verilog HDL or VHDL warning at RISC.vhd(95): object "raSel" assigned a value but never read File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 95
+Warning (10036): Verilog HDL or VHDL warning at RISC.vhd(96): object "rbSel" assigned a value but never read File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 96
+Warning (10036): Verilog HDL or VHDL warning at RISC.vhd(97): object "rcSel" assigned a value but never read File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 97
+Warning (10036): Verilog HDL or VHDL warning at RISC.vhd(98): object "czVal" assigned a value but never read File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 98
+Warning (10036): Verilog HDL or VHDL warning at RISC.vhd(99): object "imm9" assigned a value but never read File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 99
+Warning (10036): Verilog HDL or VHDL warning at RISC.vhd(100): object "imm8" assigned a value but never read File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 100
+Warning (10541): VHDL Signal Declaration warning at RISC.vhd(105): used implicit default value for signal "rfSel2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 105
+Warning (10036): Verilog HDL or VHDL warning at RISC.vhd(108): object "aluZeroFlag" assigned a value but never read File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 108
+Warning (10036): Verilog HDL or VHDL warning at RISC.vhd(108): object "aluCarryFlag" assigned a value but never read File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 108
+Warning (10540): VHDL Signal Declaration warning at RISC.vhd(110): used explicit default value for signal "aluCin" because signal was never assigned a value File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 110
+Warning (10492): VHDL Process Statement warning at RISC.vhd(151): signal "memDataOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 151
+Warning (10631): VHDL Process Statement warning at RISC.vhd(126): inferring latch(es) for signal or variable "memInit", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Warning (10631): VHDL Process Statement warning at RISC.vhd(126): inferring latch(es) for signal or variable "memRead", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Warning (10631): VHDL Process Statement warning at RISC.vhd(126): inferring latch(es) for signal or variable "memWrite", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Warning (10631): VHDL Process Statement warning at RISC.vhd(126): inferring latch(es) for signal or variable "rfSelW", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Warning (10631): VHDL Process Statement warning at RISC.vhd(126): inferring latch(es) for signal or variable "rfDataIn", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Warning (10631): VHDL Process Statement warning at RISC.vhd(126): inferring latch(es) for signal or variable "rfWrite", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Warning (10631): VHDL Process Statement warning at RISC.vhd(126): inferring latch(es) for signal or variable "nextState", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Warning (10631): VHDL Process Statement warning at RISC.vhd(126): inferring latch(es) for signal or variable "rfSel1", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Warning (10631): VHDL Process Statement warning at RISC.vhd(126): inferring latch(es) for signal or variable "memInMux", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Warning (10631): VHDL Process Statement warning at RISC.vhd(126): inferring latch(es) for signal or variable "aluIn2Mux", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Warning (10631): VHDL Process Statement warning at RISC.vhd(126): inferring latch(es) for signal or variable "aluSel", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Warning (10631): VHDL Process Statement warning at RISC.vhd(126): inferring latch(es) for signal or variable "irW", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Warning (10631): VHDL Process Statement warning at RISC.vhd(126): inferring latch(es) for signal or variable "tempInstr", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Warning (10492): VHDL Process Statement warning at RISC.vhd(158): signal "rfDataOut1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 158
+Warning (10492): VHDL Process Statement warning at RISC.vhd(160): signal "aluOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 160
+Warning (10631): VHDL Process Statement warning at RISC.vhd(155): inferring latch(es) for signal or variable "memAddr", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 155
+Warning (10492): VHDL Process Statement warning at RISC.vhd(167): signal "rfDataOut1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 167
+Warning (10492): VHDL Process Statement warning at RISC.vhd(169): signal "rfDataOut2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 169
+Warning (10631): VHDL Process Statement warning at RISC.vhd(165): inferring latch(es) for signal or variable "aluIn2", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 165
+Info (10041): Inferred latch for "aluIn2[0]" at RISC.vhd(165) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 165
+Info (10041): Inferred latch for "aluIn2[1]" at RISC.vhd(165) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 165
+Info (10041): Inferred latch for "aluIn2[2]" at RISC.vhd(165) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 165
+Info (10041): Inferred latch for "aluIn2[3]" at RISC.vhd(165) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 165
+Info (10041): Inferred latch for "aluIn2[4]" at RISC.vhd(165) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 165
+Info (10041): Inferred latch for "aluIn2[5]" at RISC.vhd(165) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 165
+Info (10041): Inferred latch for "aluIn2[6]" at RISC.vhd(165) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 165
+Info (10041): Inferred latch for "aluIn2[7]" at RISC.vhd(165) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 165
+Info (10041): Inferred latch for "aluIn2[8]" at RISC.vhd(165) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 165
+Info (10041): Inferred latch for "aluIn2[9]" at RISC.vhd(165) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 165
+Info (10041): Inferred latch for "aluIn2[10]" at RISC.vhd(165) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 165
+Info (10041): Inferred latch for "aluIn2[11]" at RISC.vhd(165) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 165
+Info (10041): Inferred latch for "aluIn2[12]" at RISC.vhd(165) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 165
+Info (10041): Inferred latch for "aluIn2[13]" at RISC.vhd(165) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 165
+Info (10041): Inferred latch for "aluIn2[14]" at RISC.vhd(165) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 165
+Info (10041): Inferred latch for "aluIn2[15]" at RISC.vhd(165) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 165
+Info (10041): Inferred latch for "memAddr[0]" at RISC.vhd(155) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 155
+Info (10041): Inferred latch for "memAddr[1]" at RISC.vhd(155) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 155
+Info (10041): Inferred latch for "memAddr[2]" at RISC.vhd(155) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 155
+Info (10041): Inferred latch for "memAddr[3]" at RISC.vhd(155) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 155
+Info (10041): Inferred latch for "memAddr[4]" at RISC.vhd(155) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 155
+Info (10041): Inferred latch for "memAddr[5]" at RISC.vhd(155) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 155
+Info (10041): Inferred latch for "memAddr[6]" at RISC.vhd(155) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 155
+Info (10041): Inferred latch for "memAddr[7]" at RISC.vhd(155) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 155
+Info (10041): Inferred latch for "memAddr[8]" at RISC.vhd(155) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 155
+Info (10041): Inferred latch for "memAddr[9]" at RISC.vhd(155) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 155
+Info (10041): Inferred latch for "memAddr[10]" at RISC.vhd(155) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 155
+Info (10041): Inferred latch for "memAddr[11]" at RISC.vhd(155) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 155
+Info (10041): Inferred latch for "memAddr[12]" at RISC.vhd(155) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 155
+Info (10041): Inferred latch for "memAddr[13]" at RISC.vhd(155) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 155
+Info (10041): Inferred latch for "memAddr[14]" at RISC.vhd(155) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 155
+Info (10041): Inferred latch for "memAddr[15]" at RISC.vhd(155) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 155
+Info (10041): Inferred latch for "tempInstr[0]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "tempInstr[1]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "tempInstr[2]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "tempInstr[3]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "tempInstr[4]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "tempInstr[5]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "tempInstr[6]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "tempInstr[7]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "tempInstr[8]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "tempInstr[9]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "tempInstr[10]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "tempInstr[11]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "tempInstr[12]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "tempInstr[13]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "tempInstr[14]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "tempInstr[15]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "irW" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "aluSel[0]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "aluSel[1]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "aluIn2Mux[0]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "aluIn2Mux[1]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "aluIn2Mux[2]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "memInMux" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "rfSel1[0]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "rfSel1[1]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "rfSel1[2]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "nextState[0]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "nextState[1]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "nextState[2]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "nextState[3]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "nextState[4]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "rfWrite" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "rfDataIn[0]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "rfDataIn[1]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "rfDataIn[2]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "rfDataIn[3]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "rfDataIn[4]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "rfDataIn[5]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "rfDataIn[6]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "rfDataIn[7]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "rfDataIn[8]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "rfDataIn[9]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "rfDataIn[10]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "rfDataIn[11]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "rfDataIn[12]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "rfDataIn[13]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "rfDataIn[14]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "rfDataIn[15]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "rfSelW[0]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "rfSelW[1]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "rfSelW[2]" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "memWrite" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "memRead" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (10041): Inferred latch for "memInit" at RISC.vhd(126) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 126
+Info (12128): Elaborating entity "memory" for hierarchy "memory:mem" File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 115
+Info (10635): VHDL Report Statement at Memory.vhd(23): "addr:0" (NOTE) File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 23
+Warning (10492): VHDL Process Statement warning at Memory.vhd(29): signal "mem_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 29
+Warning (10492): VHDL Process Statement warning at Memory.vhd(32): signal "di" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 32
 Warning (10631): VHDL Process Statement warning at Memory.vhd(21): inferring latch(es) for signal or variable "mem_reg", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
 Warning (10631): VHDL Process Statement warning at Memory.vhd(21): inferring latch(es) for signal or variable "do", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
 Info (10041): Inferred latch for "do[0]" at Memory.vhd(21) File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
@@ -655,7 +755,7 @@ Info (10041): Inferred latch for "mem_reg[0][12]" at Memory.vhd(21) File: C:/COD
 Info (10041): Inferred latch for "mem_reg[0][13]" at Memory.vhd(21) File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
 Info (10041): Inferred latch for "mem_reg[0][14]" at Memory.vhd(21) File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
 Info (10041): Inferred latch for "mem_reg[0][15]" at Memory.vhd(21) File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-Info (12128): Elaborating entity "registerfile" for hierarchy "registerfile:rf" File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 88
+Info (12128): Elaborating entity "registerfile" for hierarchy "registerfile:rf" File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 116
 Warning (10492): VHDL Process Statement warning at RegisterFile.vhd(29): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 29
 Info (10635): VHDL Report Statement at RegisterFile.vhd(29): "reg0 = 0" (NOTE) File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 29
 Info (10635): VHDL Report Statement at RegisterFile.vhd(29): "reg1 = 0" (NOTE) File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 29
@@ -847,7 +947,7 @@ Info (10041): Inferred latch for "data[0][15]" at RegisterFile.vhd(26) File: C:/
 Warning (12125): Using design file alu.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: alu-behave File: C:/CODE/outcode/RISC-2/alu.vhd Line: 14
     Info (12023): Found entity 1: alu File: C:/CODE/outcode/RISC-2/alu.vhd Line: 5
-Info (12128): Elaborating entity "alu" for hierarchy "alu:aluInst" File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 89
+Info (12128): Elaborating entity "alu" for hierarchy "alu:aluInst" File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 117
 Warning (10631): VHDL Process Statement warning at alu.vhd(17): inferring latch(es) for signal or variable "tempout", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/alu.vhd Line: 17
 Warning (10631): VHDL Process Statement warning at alu.vhd(17): inferring latch(es) for signal or variable "cout", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/alu.vhd Line: 17
 Info (10041): Inferred latch for "cout" at alu.vhd(17) File: C:/CODE/outcode/RISC-2/alu.vhd Line: 17
@@ -867,28 +967,45 @@ Info (10041): Inferred latch for "tempout[12]" at alu.vhd(17) File: C:/CODE/outc
 Info (10041): Inferred latch for "tempout[13]" at alu.vhd(17) File: C:/CODE/outcode/RISC-2/alu.vhd Line: 17
 Info (10041): Inferred latch for "tempout[14]" at alu.vhd(17) File: C:/CODE/outcode/RISC-2/alu.vhd Line: 17
 Info (10041): Inferred latch for "tempout[15]" at alu.vhd(17) File: C:/CODE/outcode/RISC-2/alu.vhd Line: 17
+Warning (12125): Using design file ir.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: ir-behave File: C:/CODE/outcode/RISC-2/ir.vhd Line: 23
+    Info (12023): Found entity 1: ir File: C:/CODE/outcode/RISC-2/ir.vhd Line: 6
+Info (12128): Elaborating entity "IR" for hierarchy "IR:irInst" File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 118
+Warning (10631): VHDL Process Statement warning at ir.vhd(27): inferring latch(es) for signal or variable "instr", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Info (10041): Inferred latch for "instr[0]" at ir.vhd(27) File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Info (10041): Inferred latch for "instr[1]" at ir.vhd(27) File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Info (10041): Inferred latch for "instr[2]" at ir.vhd(27) File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Info (10041): Inferred latch for "instr[3]" at ir.vhd(27) File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Info (10041): Inferred latch for "instr[4]" at ir.vhd(27) File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Info (10041): Inferred latch for "instr[5]" at ir.vhd(27) File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Info (10041): Inferred latch for "instr[6]" at ir.vhd(27) File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Info (10041): Inferred latch for "instr[7]" at ir.vhd(27) File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Info (10041): Inferred latch for "instr[8]" at ir.vhd(27) File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Info (10041): Inferred latch for "instr[9]" at ir.vhd(27) File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Info (10041): Inferred latch for "instr[10]" at ir.vhd(27) File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Info (10041): Inferred latch for "instr[11]" at ir.vhd(27) File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Info (10041): Inferred latch for "instr[12]" at ir.vhd(27) File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Info (10041): Inferred latch for "instr[13]" at ir.vhd(27) File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Info (10041): Inferred latch for "instr[14]" at ir.vhd(27) File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Info (10041): Inferred latch for "instr[15]" at ir.vhd(27) File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "outstates[0]" is stuck at GND File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 7
-    Warning (13410): Pin "outstates[1]" is stuck at GND File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 7
     Warning (13410): Pin "outstates[2]" is stuck at GND File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 7
     Warning (13410): Pin "outstates[3]" is stuck at GND File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 7
     Warning (13410): Pin "outstates[4]" is stuck at GND File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 7
-    Warning (13410): Pin "outstates[5]" is stuck at GND File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 7
-    Warning (13410): Pin "outstates[6]" is stuck at GND File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 7
     Warning (13410): Pin "outstates[7]" is stuck at GND File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 7
     Warning (13410): Pin "outstates[8]" is stuck at GND File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 7
     Warning (13410): Pin "outstates[9]" is stuck at GND File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 7
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 6
-Info (21057): Implemented 11 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 17 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 10 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 61 warnings
-    Info: Peak virtual memory: 4780 megabytes
-    Info: Processing ended: Thu May 05 15:34:24 2022
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:23
+    Info (21061): Implemented 6 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 69 warnings
+    Info: Peak virtual memory: 4776 megabytes
+    Info: Processing ended: Thu May 05 16:05:34 2022
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:27
 
 

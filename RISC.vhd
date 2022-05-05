@@ -63,13 +63,41 @@ architecture rtl of RISC is
               di  : in std_logic_vector(15 downto 0);   
               do  : out std_logic_vector(15 downto 0));  
       end component;
+    component IR is 
+        port(
+            irwrite: in std_logic;
+            inp: in std_logic_vector(15 downto 0);
+            opcode: out std_logic_vector(3 downto 0); -- 12-15
+            immediate6: out std_logic_vector(5 downto 0); --0-5
+            ra: out std_logic_vector(2 downto 0); --9-11
+            rb: out std_logic_vector(2 downto 0); --6-8
+            rc: out std_logic_vector(2 downto 0); --3-5
+            cz: out std_logic_vector(1 downto 0); --0-1 -- 0 is z and 1 is c
+            immediate9: out std_logic_vector(8 downto 0); --0-8
+            immediate8: out std_logic_vector(7 downto 0) --0-7
+            );
+    end component;
 ---
       signal state:std_logic_vector(4 downto 0):=ST_INIT;
     signal nextState:std_logic_vector(4 downto 0):=ST_HK;
 ---memory signals 
     signal memInit,memRead,memWrite:std_logic;
     signal memAddr,memDataIn,memDataOut:std_logic_vector(15 downto 0);
-    signal memMux:std_logic;
+    signal memInMux:std_logic;
+    signal memOutDemux:std_logic;
+    signal tempMemData:std_logic_vector(15 downto 0);
+---
+---instr reg signals
+    signal tempInstr:std_logic_vector(15 downto 0);
+    signal irW:std_logic;
+    signal opCode:std_logic_vector(3 downto 0);
+    signal imm6:std_logic_vector(5 downto 0);
+    signal raSel:std_logic_vector(2 downto 0);
+    signal rbSel:std_logic_vector(2 downto 0); 
+    signal rcSel:std_logic_vector(2 downto 0); 
+    signal czVal:std_logic_vector(1 downto 0);
+    signal imm9:std_logic_vector(8 downto 0);
+    signal imm8:std_logic_vector(7 downto 0);
 ---
 ---register file signals
     signal rfDataIn,rfDataOut1,rfDataOut2:std_logic_vector(15 downto 0);
@@ -87,11 +115,12 @@ begin
     mem:memory port map(state=>state,init=>memInit,mr=>memRead,mw=>memWrite,addr=>memAddr,di=>memDataIn,do=>memDataOut);
     rf:registerfile port map(state=>state,dinm=>rfDataIn,regsela=>rfSel1,regselb=>rfSel2, regselm=>rfSelW,regwrite=>rfWrite,douta=>rfDataOut1,doutb=>rfDataOut2);
     aluInst:ALU port map(inp1=>aluIn1,inp2=>aluIn2,cin=>aluCin,sel=>aluSel,outp=>aluOut,cout=>aluCarryFlag,zero=>aluZeroFlag);
+    irInst:IR port map(irwrite=>irw,inp=>tempInstr,opcode=>opCode,immediate6=>imm6,immediate8=>imm8,immediate9=>imm9,ra=>raSel,rb=>rbSel,rc=>rcSel,cz=>czVal);
     process(clk)
         begin
             if(rising_edge(clk)) then
                 state<=nextState;
-                report "clk";
+                report "oc:"&integer'image(to_integer(unsigned(opCode)));
             end if;
     end process;
     process(state)
@@ -104,25 +133,33 @@ begin
                 memWrite<='0';
                 ---initialize pc to 0:
                 rfSelW<="111";
-                rfDataIn<=(2=>'1',others=>'0');
+                rfDataIn<=(others=>'0');
                 rfWrite<='1';
-                nextState<=ST_INIT;
-                rfSel1<="111";
-                report "rfd1"&integer'image(to_integer(unsigned(rfDataOut1)));
+                nextState<=ST_HK;
             elsif (state = ST_HK) then
-                rfWrite<='0';
-                rfSel1<="111";            
                 memInit<='0';
                 memRead<='1';
-                -- report "dout:"
-                
+                memWrite<='0';
+                rfWrite<='0';
+                rfSel1<="111";
+                memInMux<='1';
+                aluIn2Mux<="001";
+                aluSel<="00";
+                nextState<=ST_ID;
+            elsif (state = ST_ID) then
+                rfSelW<="111";
+                rfDataIn<=aluOut;
+                rfWrite<='1';
+                irw<='1';
+                tempInstr<=memDataOut;
+                report "imm oc:"&integer'image(to_integer(unsigned(opcode)));
             end if;
     end process;
-    process(memMux)
+    process(memInMux)
         begin
-            if(memMux = '0') then
+            if(memInMux = '0') then
                 memAddr<=rfDataOut1;
-            elsif (memMux = '1') then
+            elsif (memInMux = '1') then
                 memAddr<=aluOut;
             else
                 report "udb";
@@ -139,6 +176,15 @@ begin
                 report "udb";
             end if;
     end process;
+    -- process(memDataOut)
+    --     begin
+    --         if(memOutDemux = '0') then
+    --             irw<='1';
+    --             tempInstr<=memDataOut;
+    --         else
+    --             tempMemData<=memDataOut;
+    --         end if;
+    -- end process;
     process(state,nextState)
         begin
             outstates(9 downto 5) <= nextState;

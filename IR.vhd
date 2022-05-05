@@ -1,7 +1,8 @@
 library ieee;
 
 use ieee.std_logic_1164.all;
-
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
 entity ir is
 	port(
 		  irwrite: in std_logic;
@@ -27,6 +28,7 @@ begin
         begin
             if(irwrite = '1') then
                 instr<=inp;
+                report "instr:"&integer'image(to_integer(unsigned(inp)));
             else
                 report "instr not in ir. irw != 1";
             end if;

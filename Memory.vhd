@@ -20,6 +20,7 @@ architecture memory_behave of memory is
 	begin
 	process(state,init,mr,mw,addr)
 		begin 
+			report "addr:"&integer'image(to_integer(unsigned(addr)));
 			if (init = '1') then
 				mem_reg(0) <= "0011000101101010"; -- LHI R0, 101101010
 				mem_reg(1) <= "0011001011010101"; -- LHI R1, 011010101
