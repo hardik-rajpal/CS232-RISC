@@ -29,6 +29,7 @@ begin
 			report "reg"&integer'image(x)&" = "&integer'image(to_integer(unsigned(data(x))));
 		end loop;
 			if(regwrite = '1') then
+				report "regwrite:"&integer'image(to_integer(unsigned(dinm)));
 				--transfer the data from the register to
 				if(regselm = "111") then
 					data(7) <= dinm;

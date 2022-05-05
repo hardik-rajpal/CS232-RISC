@@ -25,6 +25,7 @@ architecture memory_behave of memory is
 				mem_reg(0) <= "0011000101101010"; -- LHI R0, 101101010
 				mem_reg(1) <= "0011001011010101"; -- LHI R1, 011010101
 				mem_reg(2) <= "0011010101010111"; -- LHI R2, 101010111
+				mem_reg(3) <= "0011011101010111"; -- LHI R3, 101010111
 			elsif (mr = '1') then
 				do <= mem_reg(to_integer(unsigned(addr(3 downto 0))));
 			end if;

@@ -34,7 +34,8 @@ architecture rtl of RISC is
 	constant ST_SMW:std_logic_vector(4 downto 0)	:="10110";
 	constant ST_LMSMTR:std_logic_vector(4 downto 0)	:="10111";
 	constant ST_SMLP:std_logic_vector(4 downto 0)	:="11000";
-----
+	constant ST_IF:std_logic_vector(4 downto 0)		:="11001";
+    ----
 ---components
     component registerfile is port(
 		state : in std_logic_vector(4 downto 0);
@@ -47,7 +48,8 @@ architecture rtl of RISC is
 		doutb : out std_logic_vector(15 downto 0) );
     end component;
     component alu is
-        port(inp1,inp2: in std_logic_vector(15 downto 0);
+        port(state:in std_logic_vector(4 downto 0);
+		  inp1,inp2: in std_logic_vector(15 downto 0);
               cin: in std_logic;
               sel: in std_logic_vector(1 downto 0);
               outp: out std_logic_vector(15 downto 0);
@@ -114,7 +116,7 @@ architecture rtl of RISC is
 begin
     mem:memory port map(state=>state,init=>memInit,mr=>memRead,mw=>memWrite,addr=>memAddr,di=>memDataIn,do=>memDataOut);
     rf:registerfile port map(state=>state,dinm=>rfDataIn,regsela=>rfSel1,regselb=>rfSel2, regselm=>rfSelW,regwrite=>rfWrite,douta=>rfDataOut1,doutb=>rfDataOut2);
-    aluInst:ALU port map(inp1=>aluIn1,inp2=>aluIn2,cin=>aluCin,sel=>aluSel,outp=>aluOut,cout=>aluCarryFlag,zero=>aluZeroFlag);
+    aluInst:ALU port map(state=>state,inp1=>aluIn1,inp2=>aluIn2,cin=>aluCin,sel=>aluSel,outp=>aluOut,cout=>aluCarryFlag,zero=>aluZeroFlag);
     irInst:IR port map(irwrite=>irw,inp=>tempInstr,opcode=>opCode,immediate6=>imm6,immediate8=>imm8,immediate9=>imm9,ra=>raSel,rb=>rbSel,rc=>rcSel,cz=>czVal);
     process(clk)
         begin
@@ -133,7 +135,7 @@ begin
                 memWrite<='0';
                 ---initialize pc to 0:
                 rfSelW<="111";
-                rfDataIn<=(others=>'0');
+                rfDataIn<=(0=>'1',1=>'1',others=>'0');
                 rfWrite<='1';
                 nextState<=ST_HK;
             elsif (state = ST_HK) then
@@ -143,19 +145,22 @@ begin
                 rfWrite<='0';
                 rfSel1<="111";
                 memInMux<='1';
+                nextState<=ST_IF;
+            elsif (state = ST_IF) then
                 aluIn2Mux<="001";
                 aluSel<="00";
+                irw<='1';
+                tempInstr<=memDataOut;
                 nextState<=ST_ID;
-            elsif (state = ST_ID) then
+            elsif (state=ST_ID) then
+                report "oc nc:"&integer'image(to_integer(unsigned(opcode)));
                 rfSelW<="111";
                 rfDataIn<=aluOut;
                 rfWrite<='1';
-                irw<='1';
-                tempInstr<=memDataOut;
-                report "imm oc:"&integer'image(to_integer(unsigned(opcode)));
+                
             end if;
     end process;
-    process(memInMux)
+    process(memInMux,rfDataOut1,aluOut)
         begin
             if(memInMux = '0') then
                 memAddr<=rfDataOut1;
@@ -165,8 +170,9 @@ begin
                 report "udb";
             end if;
     end process;
-    process(aluIn1Mux,aluIn2Mux)
+    process(aluIn1Mux,aluIn2Mux,rfDataOut1,rfDataOut2)
         begin
+            report"aluin1: "&integer'image(to_integer(unsigned(rfDataOut1)));
             aluIn1<=rfDataOut1;
             if(aluIn2Mux = "000") then
                 aluIn2<=rfDataOut2;
