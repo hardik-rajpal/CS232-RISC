@@ -9,6 +9,9 @@ vcom -93 -work work {C:/CODE/outcode/RISC-2/RISC.vhd}
 vcom -93 -work work {C:/CODE/outcode/RISC-2/Memory.vhd}
 vcom -93 -work work {C:/CODE/outcode/RISC-2/RegisterFile.vhd}
 vcom -93 -work work {C:/CODE/outcode/RISC-2/alu.vhd}
+vcom -93 -work work {C:/CODE/outcode/RISC-2/sixteenbitrca.vhd}
+vcom -93 -work work {C:/CODE/outcode/RISC-2/onebitfulladd.vhd}
+vcom -93 -work work {C:/CODE/outcode/RISC-2/onebithalfadd.vhd}
 vcom -93 -work work {C:/CODE/outcode/RISC-2/ir.vhd}
 
 vcom -93 -work work {C:/CODE/outcode/RISC-2/simulation/modelsim/Waveform.vwf.vht}

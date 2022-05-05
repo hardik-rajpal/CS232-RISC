@@ -1,0 +1,1 @@
+Assumed op code for LHI = 0011

@@ -35,6 +35,21 @@ architecture rtl of RISC is
 	constant ST_LMSMTR:std_logic_vector(4 downto 0)	:="10111";
 	constant ST_SMLP:std_logic_vector(4 downto 0)	:="11000";
 	constant ST_IF:std_logic_vector(4 downto 0)		:="11001";
+    
+    constant OC_ADDR:std_logic_vector(3 downto 0)	:="0001";
+	constant OC_ADDI:std_logic_vector(3 downto 0)	:="0000";
+	constant OC_NND:std_logic_vector(3 downto 0)	:="0010";
+	constant OC_LHI:std_logic_vector(3 downto 0)	:="0011";
+	constant OC_LW:std_logic_vector(3 downto 0)		:="0101";
+	constant OC_SW:std_logic_vector(3 downto 0)		:="0111";
+	constant OC_LM:std_logic_vector(3 downto 0)		:="1101";
+	constant OC_SM:std_logic_vector(3 downto 0)		:="1100";
+	constant OC_JAL:std_logic_vector(3 downto 0)	:="1001";
+	constant OC_JLR:std_logic_vector(3 downto 0)	:="1010";
+    constant OC_JRI:std_logic_vector(3 downto 0)    :="1011";
+	constant OC_BEQ:std_logic_vector(3 downto 0)	:="1000";
+	
+    
     ----
 ---components
     component registerfile is port(
@@ -135,7 +150,7 @@ begin
                 memWrite<='0';
                 ---initialize pc to 0:
                 rfSelW<="111";
-                rfDataIn<=(0=>'1',1=>'1',others=>'0');
+                rfDataIn<=(others=>'0');
                 rfWrite<='1';
                 nextState<=ST_HK;
             elsif (state = ST_HK) then
@@ -157,7 +172,43 @@ begin
                 rfSelW<="111";
                 rfDataIn<=aluOut;
                 rfWrite<='1';
+                nextState<=ST_HK;
+                if(opCode = OC_ADDR) then
+                    report "oc: addR";
+
+                elsif (opCode = OC_ADDI) then
+                    report "oc: addI";
+                elsif (opCode = OC_NND) then
+                    report "oc: NND";
+
+                elsif (opCode = OC_LHI) then
+                    report "oc: LHI";
+
+                elsif (opCode = OC_LW) then
+                    report "oc: LW";
+
+                elsif (opCode = OC_SW) then
+                    report "oc: SW";
                 
+                elsif (opCode = OC_LM) then
+                    report "oc: LM";
+                
+                elsif (opCode = OC_SM) then
+                    report "oc: SM";
+                
+                elsif (opCode = OC_BEQ) then
+                    report "oc: BEQ";
+                
+                elsif (opCode = OC_JAL) then
+                    report "oc: JAL";
+                elsif (opCode = OC_JLR) then
+                    report "oc: JLR";
+
+                elsif (opCode = OC_JRI) then
+                    report "oc: JRI";
+                else
+                    report "op code not matched";
+                end if;
             end if;
     end process;
     process(memInMux,rfDataOut1,aluOut)

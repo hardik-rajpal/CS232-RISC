@@ -13,15 +13,23 @@ entity alu is
 end entity;
 
 architecture behave of alu is
+    component SixteenBitRCA is
+		port(xin,yin: in std_logic_vector(15 downto 0);
+		  cin: in std_logic;
+		  sum: out std_logic_vector(15 downto 0);
+		  cout: out std_logic);
+	end component;
     signal tempout:std_logic_vector(15 downto 0);
+    signal sumout:std_logic_vector(15 downto 0);
 begin
-    process(state,inp1,inp2,cin,sel)
+    adder:SixteenBitRCA port map(xin=>inp1,yin=>inp2,cin=>cin,sum=>sumout,cout=>cout);
+    process(state,inp1,inp2,cin,sel,sumout)
     begin
         report "called";
         if(sel = "00") then
-            report "add:"&integer'image(to_integer(unsigned(inp1)))&", "&integer'image(to_integer(unsigned(inp2)));
-            tempout<=inp1+inp2;--TODO:take in cin.
-            cout<='1';--TODO fix this with real adder
+            tempout<=sumout;
+        elsif( sel = "01") then
+            tempout<=not (inp1 and inp2);
         else
             report "udb";
         end if;
