@@ -274,9 +274,10 @@ begin
                     nextState<=ST_CPC;
                 elsif (opCode = OC_JAL) then
                     report "oc: JAL";
-                    rfSel1<="111";
-                    aluIn2Mux<="100";--alu gets pc and 9imm_16low
+                    aluIn1Mux<="10";
+                    aluIn2Mux<="100";--alu gets prevpc and 9imm_16low
                     aluSel<="00";
+                    rfSel1<="111";
                     nextState<=ST_JLR2;
                 elsif (opCode = OC_JLR) then
                     report "oc: JLR";
