@@ -19,7 +19,7 @@ end entity;
 architecture behave of registerfile is
 
 type t_Memory is array (0 to 7) of std_logic_vector(15 downto 0);
-signal data : t_Memory := (others => (others => '0'));
+signal data : t_Memory := (0=>(2=>'1',others=>'0'),1=>(3=>'1',others=>'0'),others => (others => '0'));
 
 begin
 	---sensitive to all input vars => immediate response.

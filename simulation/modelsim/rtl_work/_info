@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/CODE/outcode/RISC-2/simulation/modelsim
 Ealu
-Z1 w1651753551
+Z1 w1651755014
 Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
@@ -22,13 +22,13 @@ Z7 8C:/CODE/outcode/RISC-2/alu.vhd
 Z8 FC:/CODE/outcode/RISC-2/alu.vhd
 l0
 L5 1
-V0C<z;[b<T6MQ@YA648Omo1
-!s100 i8A]XeV=W5N]2Ac[4z=j82
+V:W_9EQL2Kb?k2=07;U_M?1
+!s100 8JZ3lO6Zzc7la5X]lb^JQ0
 Z9 OV;C;2020.1;71
 31
-Z10 !s110 1651753563
+Z10 !s110 1651755027
 !i10b 1
-Z11 !s108 1651753563.000000
+Z11 !s108 1651755027.000000
 Z12 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/alu.vhd|
 Z13 !s107 C:/CODE/outcode/RISC-2/alu.vhd|
 !i113 1
@@ -40,12 +40,12 @@ R3
 R4
 R5
 R6
-DEx4 work 3 alu 0 22 0C<z;[b<T6MQ@YA648Omo1
+DEx4 work 3 alu 0 22 :W_9EQL2Kb?k2=07;U_M?1
 !i122 3
-l24
-L15 33
-V=1VN5CWX0<PnQ3zY0ehA`0
-!s100 B7fZJAQ^YLMK628Y4:Z[i0
+l25
+L16 33
+V?4ThGBAnEcfJi6d5]`1Ph0
+!s100 LJB2SOJ:]W@cNE2M7CLTh1
 R9
 31
 R10
@@ -71,9 +71,9 @@ V1RHlS>XSmHBQaGQ76Mf^K2
 !s100 zOb_lig9P^IGfzdWWHB5:1
 R9
 31
-Z19 !s110 1651753564
+Z19 !s110 1651755028
 !i10b 1
-Z20 !s108 1651753564.000000
+Z20 !s108 1651755028.000000
 Z21 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/ir.vhd|
 Z22 !s107 C:/CODE/outcode/RISC-2/ir.vhd|
 !i113 1
@@ -100,7 +100,7 @@ R22
 R14
 R15
 Ememory
-Z23 w1651747827
+Z23 w1651754978
 R2
 R4
 R5
@@ -130,8 +130,8 @@ DEx4 work 6 memory 0 22 HCXbYbiU31:AW2HZdz5Hb2
 !i122 1
 l20
 L17 21
-Vh6UMa9g<DB8T[SD2D4eS81
-!s100 B=d6O?CzLRHEnOEYoNCib2
+VWoFgjhCB4Fd;Ha>S60G]:3
+!s100 9d?ig?7Zf_>JkG7dXfQ=b0
 R9
 31
 R10
@@ -225,7 +225,7 @@ R36
 R14
 R15
 Eregisterfile
-Z37 w1651748514
+Z37 w1651754249
 R2
 R4
 R5
@@ -255,8 +255,8 @@ DEx4 work 12 registerfile 0 22 hDm3hb<l`SWoTS99gm3A51
 !i122 2
 l24
 L19 71
-V_UWnHda[G68P[@J3flN2?3
-!s100 4f:h<XB@1L[KjWz8Td6`D3
+V>K>cQD7C@@3]?;h@=h90_0
+!s100 2B9hPOI6YCmXfReO1RUFX0
 R9
 31
 R10
@@ -268,7 +268,7 @@ R41
 R14
 R15
 Erisc
-Z42 w1651753143
+Z42 w1651754852
 R2
 R4
 R5
@@ -282,9 +282,9 @@ VEEGaN@goM4:3j;8ae_c`71
 !s100 PW=l^@DY62VblM45BH4o72
 R9
 31
-Z45 !s110 1651753562
+Z45 !s110 1651755026
 !i10b 1
-Z46 !s108 1651753562.000000
+Z46 !s108 1651755026.000000
 Z47 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/RISC.vhd|
 Z48 !s107 C:/CODE/outcode/RISC-2/RISC.vhd|
 !i113 1
@@ -296,10 +296,10 @@ R4
 R5
 DEx4 work 4 risc 0 22 EEGaN@goM4:3j;8ae_c`71
 !i122 0
-l131
-L10 242
-VVUalkQYBP<4H[<o70>`EC0
-!s100 QO@L?k6om3AS<4:CXkBj[1
+l133
+L10 269
+VWBN?8SJ[L33lmkUeD<F>o2
+!s100 jZ_`EnikS:O^jnI]^6_`e2
 R9
 31
 R45

@@ -35,7 +35,9 @@ architecture rtl of RISC is
 	constant ST_LMSMTR:std_logic_vector(4 downto 0)	:="10111";
 	constant ST_SMLP:std_logic_vector(4 downto 0)	:="11000";
 	constant ST_IF:std_logic_vector(4 downto 0)		:="11001";
-    
+    constant ST_WBTR:std_logic_vector(4 downto 0)   :="11010";
+    constant ST_ADDL:std_logic_vector(4 downto 0)   :="11011";
+
     constant OC_ADDR:std_logic_vector(3 downto 0)	:="0001";
 	constant OC_ADDI:std_logic_vector(3 downto 0)	:="0000";
 	constant OC_NND:std_logic_vector(3 downto 0)	:="0010";
@@ -175,7 +177,26 @@ begin
                 nextState<=ST_HK;
                 if(opCode = OC_ADDR) then
                     report "oc: addR";
-
+                    rfWrite<='0';
+                    rfSel1<=raSel;
+                    rfSel2<=rbSel;
+                    rfSelW<=rcSel;
+                    aluSel<="00";--addition selected
+                    if(czVal = "00") then
+                        nextState<=ST_WBTR;--last state
+                        aluIn2Mux<="000";--rfDataOut2 goes into alu
+                    elsif (czVal = "01" and aluZeroFlag = '1') then
+                        nextState<=ST_WBTR;--last state
+                        aluIn2Mux<="000";--rfDataOut2 goes into alu
+                    elsif (czVal = "10" and aluCarryFlag = '1') then
+                        nextState<=ST_WBTR;
+                        aluIn2Mux<="000";--rfDataOut2 goes into alu
+                    elsif (czVal = "11") then
+                        aluIn2Mux<="010";--left shifted rfDataOut2 goes into alu
+                        nextState<=ST_WBTR;
+                    else
+                        nextState<=ST_HK;
+                    end if;
                 elsif (opCode = OC_ADDI) then
                     report "oc: addI";
                 elsif (opCode = OC_NND) then
@@ -209,6 +230,10 @@ begin
                 else
                     report "op code not matched";
                 end if;
+            elsif (state = ST_WBTR) then
+                rfDataIn<=aluOut;
+                rfWrite<='1';
+                nextState<=ST_HK;
             end if;
     end process;
     process(memInMux,rfDataOut1,aluOut)
@@ -229,6 +254,8 @@ begin
                 aluIn2<=rfDataOut2;
             elsif (aluIn2Mux = "001") then
                 aluIn2<=(0=>'1',others=>'0');
+            elsif (aluIn2Mux = "010") then --left shift rfDataOut2 before sending to ALU
+                aluIn2<=std_logic_vector(shift_left(unsigned(rfDataOut2),1)) ;
             else
                 report "udb";
             end if;

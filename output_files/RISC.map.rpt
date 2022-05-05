@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RISC
-Thu May 05 17:55:48 2022
+Thu May 05 18:19:52 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -19,11 +19,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Port Connectivity Checks: "IR:irInst"
  13. Port Connectivity Checks: "alu:aluInst"
- 14. Port Connectivity Checks: "registerfile:rf"
- 15. Port Connectivity Checks: "memory:mem"
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+ 14. Port Connectivity Checks: "memory:mem"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -50,13 +49,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 05 17:55:47 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 05 18:19:52 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; RISC                                        ;
 ; Top-level Entity Name              ; RISC                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 8                                           ;
-;     Total combinational functions  ; 8                                           ;
+; Total logic elements               ; 262                                         ;
+;     Total combinational functions  ; 261                                         ;
 ;     Dedicated logic registers      ; 4                                           ;
 ; Total registers                    ; 4                                           ;
 ; Total pins                         ; 11                                          ;
@@ -161,10 +160,12 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -184,60 +185,192 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------------+------------------------------------------+---------+
 
 
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-; Estimated Total logic elements              ; 8        ;
-;                                             ;          ;
-; Total combinational functions               ; 8        ;
-; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 4        ;
-;     -- 3 input functions                    ; 4        ;
-;     -- <=2 input functions                  ; 0        ;
-;                                             ;          ;
-; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 8        ;
-;     -- arithmetic mode                      ; 0        ;
-;                                             ;          ;
-; Total registers                             ; 4        ;
-;     -- Dedicated logic registers            ; 4        ;
-;     -- I/O registers                        ; 0        ;
-;                                             ;          ;
-; I/O pins                                    ; 11       ;
-;                                             ;          ;
-; Embedded Multiplier 9-bit elements          ; 0        ;
-;                                             ;          ;
-; Maximum fan-out node                        ; state[0] ;
-; Maximum fan-out                             ; 5        ;
-; Total fan-out                               ; 55       ;
-; Average fan-out                             ; 1.62     ;
-+---------------------------------------------+----------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 262       ;
+;                                             ;           ;
+; Total combinational functions               ; 261       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 138       ;
+;     -- 3 input functions                    ; 106       ;
+;     -- <=2 input functions                  ; 17        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 261       ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 4         ;
+;     -- Dedicated logic registers            ; 4         ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 11        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; rfSel2[2] ;
+; Maximum fan-out                             ; 42        ;
+; Total fan-out                               ; 931       ;
+; Average fan-out                             ; 3.24      ;
++---------------------------------------------+-----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |RISC                      ; 8 (8)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |RISC               ; RISC        ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                       ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                         ; Entity Name   ; Library Name ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------+---------------+--------------+
+; |RISC                             ; 261 (146)           ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |RISC                                                                       ; RISC          ; work         ;
+;    |alu:aluInst|                  ; 36 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst                                                           ; alu           ; work         ;
+;       |SixteenBitRCA:adder|       ; 36 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder                                       ; SixteenBitRCA ; work         ;
+;          |OnebitFullAdd:a10|      ; 2 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a10                     ; OnebitFullAdd ; work         ;
+;             |OnebitHalfAdd:obha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a10|OnebitHalfAdd:obha2 ; OnebitHalfAdd ; work         ;
+;          |OnebitFullAdd:a11|      ; 2 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a11                     ; OnebitFullAdd ; work         ;
+;             |OnebitHalfAdd:obha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a11|OnebitHalfAdd:obha2 ; OnebitHalfAdd ; work         ;
+;          |OnebitFullAdd:a12|      ; 2 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a12                     ; OnebitFullAdd ; work         ;
+;             |OnebitHalfAdd:obha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a12|OnebitHalfAdd:obha2 ; OnebitHalfAdd ; work         ;
+;          |OnebitFullAdd:a13|      ; 4 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a13                     ; OnebitFullAdd ; work         ;
+;             |OnebitHalfAdd:obha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a13|OnebitHalfAdd:obha2 ; OnebitHalfAdd ; work         ;
+;          |OnebitFullAdd:a14|      ; 2 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a14                     ; OnebitFullAdd ; work         ;
+;             |OnebitHalfAdd:obha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a14|OnebitHalfAdd:obha2 ; OnebitHalfAdd ; work         ;
+;          |OnebitFullAdd:a15|      ; 2 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a15                     ; OnebitFullAdd ; work         ;
+;             |OnebitHalfAdd:obha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a15|OnebitHalfAdd:obha2 ; OnebitHalfAdd ; work         ;
+;          |OnebitFullAdd:a16|      ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a16                     ; OnebitFullAdd ; work         ;
+;             |OnebitHalfAdd:obha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a16|OnebitHalfAdd:obha2 ; OnebitHalfAdd ; work         ;
+;          |OnebitFullAdd:a1|       ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a1                      ; OnebitFullAdd ; work         ;
+;             |OnebitHalfAdd:obha1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a1|OnebitHalfAdd:obha1  ; OnebitHalfAdd ; work         ;
+;          |OnebitFullAdd:a2|       ; 2 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a2                      ; OnebitFullAdd ; work         ;
+;             |OnebitHalfAdd:obha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a2|OnebitHalfAdd:obha2  ; OnebitHalfAdd ; work         ;
+;          |OnebitFullAdd:a3|       ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a3                      ; OnebitFullAdd ; work         ;
+;             |OnebitHalfAdd:obha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a3|OnebitHalfAdd:obha2  ; OnebitHalfAdd ; work         ;
+;          |OnebitFullAdd:a4|       ; 5 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a4                      ; OnebitFullAdd ; work         ;
+;             |OnebitHalfAdd:obha2| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a4|OnebitHalfAdd:obha2  ; OnebitHalfAdd ; work         ;
+;          |OnebitFullAdd:a5|       ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a5                      ; OnebitFullAdd ; work         ;
+;             |OnebitHalfAdd:obha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a5|OnebitHalfAdd:obha2  ; OnebitHalfAdd ; work         ;
+;          |OnebitFullAdd:a6|       ; 3 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a6                      ; OnebitFullAdd ; work         ;
+;             |OnebitHalfAdd:obha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a6|OnebitHalfAdd:obha2  ; OnebitHalfAdd ; work         ;
+;          |OnebitFullAdd:a7|       ; 2 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a7                      ; OnebitFullAdd ; work         ;
+;             |OnebitHalfAdd:obha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a7|OnebitHalfAdd:obha2  ; OnebitHalfAdd ; work         ;
+;          |OnebitFullAdd:a8|       ; 2 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a8                      ; OnebitFullAdd ; work         ;
+;             |OnebitHalfAdd:obha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a8|OnebitHalfAdd:obha2  ; OnebitHalfAdd ; work         ;
+;          |OnebitFullAdd:a9|       ; 4 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a9                      ; OnebitFullAdd ; work         ;
+;             |OnebitHalfAdd:obha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a9|OnebitHalfAdd:obha2  ; OnebitHalfAdd ; work         ;
+;    |memory:mem|                   ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|memory:mem                                                            ; memory        ; work         ;
+;    |registerfile:rf|              ; 67 (67)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|registerfile:rf                                                       ; registerfile  ; work         ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; nextState[0]                                       ; GND                 ; yes                    ;
-; nextState[1]                                       ; GND                 ; yes                    ;
-; nextState[3]                                       ; GND                 ; yes                    ;
-; nextState[4]                                       ; GND                 ; yes                    ;
-; Number of user-specified and inferred latches = 4  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
++--------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                    ;
++------------------------------------------------------+------------------------+------------------------+
+; Latch Name                                           ; Latch Enable Signal    ; Free of Timing Hazards ;
++------------------------------------------------------+------------------------+------------------------+
+; nextState[0]                                         ; nextState[4]           ; no                     ;
+; nextState[1]                                         ; nextState[4]           ; no                     ;
+; nextState[3]                                         ; nextState[4]           ; no                     ;
+; nextState[4]                                         ; nextState[4]           ; no                     ;
+; tempInstr[0]                                         ; Equal2                 ; yes                    ;
+; tempInstr[1]                                         ; Equal2                 ; yes                    ;
+; aluIn2[0]                                            ; aluIn2[9]              ; yes                    ;
+; registerfile:rf|data[2][0]                           ; registerfile:rf|Equal7 ; yes                    ;
+; rfSel1[1]                                            ; rfSel1[0]              ; yes                    ;
+; registerfile:rf|data[4][0]                           ; registerfile:rf|Equal7 ; yes                    ;
+; rfSel1[2]                                            ; rfSel1[0]              ; yes                    ;
+; registerfile:rf|data[0][0]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[6][0]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[5][0]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[3][0]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[1][0]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[7][0]                           ; registerfile:rf|Equal7 ; yes                    ;
+; rfSel1[0]                                            ; rfSel1[0]              ; yes                    ;
+; aluIn2[1]                                            ; aluIn2[9]              ; yes                    ;
+; registerfile:rf|data[2][1]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[4][1]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[0][1]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[6][1]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[5][1]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[3][1]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[1][1]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[7][1]                           ; registerfile:rf|Equal7 ; yes                    ;
+; aluIn2[2]                                            ; aluIn2[9]              ; yes                    ;
+; registerfile:rf|data[2][2]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[4][2]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[0][2]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[6][2]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[5][2]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[3][2]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[1][2]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[7][2]                           ; registerfile:rf|Equal7 ; yes                    ;
+; aluIn2[3]                                            ; aluIn2[9]              ; yes                    ;
+; registerfile:rf|data[2][3]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[4][3]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[0][3]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[6][3]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[5][3]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[3][3]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[1][3]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[7][3]                           ; registerfile:rf|Equal7 ; yes                    ;
+; aluIn2[4]                                            ; aluIn2[9]              ; yes                    ;
+; registerfile:rf|data[2][4]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[4][4]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[0][4]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[6][4]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[5][4]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[3][4]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[1][4]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[7][4]                           ; registerfile:rf|Equal7 ; yes                    ;
+; aluIn2[5]                                            ; aluIn2[9]              ; yes                    ;
+; registerfile:rf|data[2][5]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[4][5]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[0][5]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[6][5]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[5][5]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[3][5]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[1][5]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[7][5]                           ; registerfile:rf|Equal7 ; yes                    ;
+; aluIn2[6]                                            ; aluIn2[9]              ; yes                    ;
+; registerfile:rf|data[2][6]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[4][6]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[0][6]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[6][6]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[5][6]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[3][6]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[1][6]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[7][6]                           ; registerfile:rf|Equal7 ; yes                    ;
+; aluIn2[7]                                            ; aluIn2[9]              ; yes                    ;
+; registerfile:rf|data[2][7]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[4][7]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[0][7]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[6][7]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[5][7]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[3][7]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[1][7]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[7][7]                           ; registerfile:rf|Equal7 ; yes                    ;
+; aluIn2[8]                                            ; aluIn2[9]              ; yes                    ;
+; registerfile:rf|data[2][8]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[4][8]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[0][8]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[6][8]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[5][8]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[3][8]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[1][8]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[7][8]                           ; registerfile:rf|Equal7 ; yes                    ;
+; aluIn2[9]                                            ; aluIn2[9]              ; yes                    ;
+; registerfile:rf|data[2][9]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[4][9]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[0][9]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[6][9]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[5][9]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[3][9]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[1][9]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[7][9]                           ; registerfile:rf|Equal7 ; yes                    ;
+; aluIn2[10]                                           ; aluIn2[9]              ; yes                    ;
+; Number of user-specified and inferred latches = 198  ;                        ;                        ;
++------------------------------------------------------+------------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +--------------------------------------------------------------------------------+
@@ -265,13 +398,16 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |RISC|nextState[0]         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |RISC|aluIn2[14]                ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |RISC|registerfile:rf|douta[9]  ;
+; 8:1                ; 15 bits   ; 75 LEs        ; 75 LEs               ; 0 LEs                  ; No         ; |RISC|registerfile:rf|doutb[13] ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |RISC|nextState[4]              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -280,40 +416,20 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Port       ; Type   ; Severity ; Details                                                                             ;
 +------------+--------+----------+-------------------------------------------------------------------------------------+
 ; irwrite    ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; opcode     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; immediate6 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ra         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; rb         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; rc         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; cz         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; immediate9 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; immediate8 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alu:aluInst"                                                                               ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; inp2[15..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; inp2[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; cin         ; Input  ; Info     ; Stuck at GND                                                                        ;
-; sel         ; Input  ; Info     ; Stuck at GND                                                                        ;
-; cout        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; zero        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "registerfile:rf"                                                                       ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; regsela ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; regselm ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; doutb   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------+
+; Port Connectivity Checks: "alu:aluInst" ;
++------+-------+----------+---------------+
+; Port ; Type  ; Severity ; Details       ;
++------+-------+----------+---------------+
+; cin  ; Input ; Info     ; Stuck at GND  ;
+; sel  ; Input ; Info     ; Stuck at GND  ;
++------+-------+----------+---------------+
 
 
 +----------------------------------------+
@@ -333,14 +449,15 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; boundary_port         ; 11                          ;
 ; cycloneiii_ff         ; 4                           ;
 ;     plain             ; 4                           ;
-; cycloneiii_lcell_comb ; 9                           ;
-;     normal            ; 9                           ;
+; cycloneiii_lcell_comb ; 262                         ;
+;     normal            ; 262                         ;
 ;         0 data inputs ; 1                           ;
-;         3 data inputs ; 4                           ;
-;         4 data inputs ; 4                           ;
+;         2 data inputs ; 17                          ;
+;         3 data inputs ; 106                         ;
+;         4 data inputs ; 138                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.56                        ;
+; Max LUT depth         ; 17.00                       ;
+; Average LUT depth     ; 5.50                        ;
 +-----------------------+-----------------------------+
 
 
@@ -359,7 +476,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu May 05 17:55:38 2022
+    Info: Processing started: Thu May 05 18:19:40 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISC -c RISC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -373,135 +490,142 @@ Info (12021): Found 2 design units, including 1 entities, in source file registe
     Info (12022): Found design unit 1: registerfile-behave File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 19
     Info (12023): Found entity 1: registerfile File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 7
 Info (12127): Elaborating entity "RISC" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at RISC.vhd(102): used implicit default value for signal "memDataIn" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 102
-Warning (10036): Verilog HDL or VHDL warning at RISC.vhd(111): object "imm6" assigned a value but never read File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 111
-Warning (10036): Verilog HDL or VHDL warning at RISC.vhd(112): object "raSel" assigned a value but never read File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 112
-Warning (10036): Verilog HDL or VHDL warning at RISC.vhd(113): object "rbSel" assigned a value but never read File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 113
-Warning (10036): Verilog HDL or VHDL warning at RISC.vhd(114): object "rcSel" assigned a value but never read File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 114
-Warning (10036): Verilog HDL or VHDL warning at RISC.vhd(115): object "czVal" assigned a value but never read File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 115
-Warning (10036): Verilog HDL or VHDL warning at RISC.vhd(116): object "imm9" assigned a value but never read File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 116
-Warning (10036): Verilog HDL or VHDL warning at RISC.vhd(117): object "imm8" assigned a value but never read File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 117
-Warning (10541): VHDL Signal Declaration warning at RISC.vhd(122): used implicit default value for signal "rfSel2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 122
-Warning (10036): Verilog HDL or VHDL warning at RISC.vhd(125): object "aluZeroFlag" assigned a value but never read File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 125
-Warning (10036): Verilog HDL or VHDL warning at RISC.vhd(125): object "aluCarryFlag" assigned a value but never read File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 125
-Warning (10540): VHDL Signal Declaration warning at RISC.vhd(127): used explicit default value for signal "aluCin" because signal was never assigned a value File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 127
-Warning (10492): VHDL Process Statement warning at RISC.vhd(168): signal "memDataOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 168
-Warning (10492): VHDL Process Statement warning at RISC.vhd(173): signal "aluOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 173
-Warning (10492): VHDL Process Statement warning at RISC.vhd(176): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 176
-Warning (10492): VHDL Process Statement warning at RISC.vhd(179): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 179
-Warning (10492): VHDL Process Statement warning at RISC.vhd(181): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 181
-Warning (10492): VHDL Process Statement warning at RISC.vhd(184): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 184
-Warning (10492): VHDL Process Statement warning at RISC.vhd(187): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 187
-Warning (10492): VHDL Process Statement warning at RISC.vhd(190): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 190
-Warning (10492): VHDL Process Statement warning at RISC.vhd(193): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 193
-Warning (10492): VHDL Process Statement warning at RISC.vhd(196): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 196
-Warning (10492): VHDL Process Statement warning at RISC.vhd(199): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 199
+Warning (10541): VHDL Signal Declaration warning at RISC.vhd(104): used implicit default value for signal "memDataIn" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 104
+Warning (10036): Verilog HDL or VHDL warning at RISC.vhd(113): object "imm6" assigned a value but never read File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 113
+Warning (10036): Verilog HDL or VHDL warning at RISC.vhd(118): object "imm9" assigned a value but never read File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 118
+Warning (10036): Verilog HDL or VHDL warning at RISC.vhd(119): object "imm8" assigned a value but never read File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 119
+Warning (10540): VHDL Signal Declaration warning at RISC.vhd(129): used explicit default value for signal "aluCin" because signal was never assigned a value File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 129
+Warning (10492): VHDL Process Statement warning at RISC.vhd(170): signal "memDataOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 170
+Warning (10492): VHDL Process Statement warning at RISC.vhd(175): signal "aluOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 175
+Warning (10492): VHDL Process Statement warning at RISC.vhd(178): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 178
+Warning (10492): VHDL Process Statement warning at RISC.vhd(181): signal "raSel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 181
+Warning (10492): VHDL Process Statement warning at RISC.vhd(182): signal "rbSel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 182
+Warning (10492): VHDL Process Statement warning at RISC.vhd(183): signal "rcSel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 183
+Warning (10492): VHDL Process Statement warning at RISC.vhd(185): signal "czVal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 185
+Warning (10492): VHDL Process Statement warning at RISC.vhd(188): signal "czVal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 188
+Warning (10492): VHDL Process Statement warning at RISC.vhd(188): signal "aluZeroFlag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 188
+Warning (10492): VHDL Process Statement warning at RISC.vhd(191): signal "czVal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 191
+Warning (10492): VHDL Process Statement warning at RISC.vhd(191): signal "aluCarryFlag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 191
+Warning (10492): VHDL Process Statement warning at RISC.vhd(194): signal "czVal" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 194
+Warning (10492): VHDL Process Statement warning at RISC.vhd(200): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 200
 Warning (10492): VHDL Process Statement warning at RISC.vhd(202): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 202
-Warning (10492): VHDL Process Statement warning at RISC.vhd(204): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 204
-Warning (10492): VHDL Process Statement warning at RISC.vhd(207): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 207
-Warning (10631): VHDL Process Statement warning at RISC.vhd(143): inferring latch(es) for signal or variable "memInit", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Warning (10631): VHDL Process Statement warning at RISC.vhd(143): inferring latch(es) for signal or variable "memRead", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Warning (10631): VHDL Process Statement warning at RISC.vhd(143): inferring latch(es) for signal or variable "memWrite", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Warning (10631): VHDL Process Statement warning at RISC.vhd(143): inferring latch(es) for signal or variable "rfSelW", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Warning (10631): VHDL Process Statement warning at RISC.vhd(143): inferring latch(es) for signal or variable "rfDataIn", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Warning (10631): VHDL Process Statement warning at RISC.vhd(143): inferring latch(es) for signal or variable "rfWrite", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Warning (10631): VHDL Process Statement warning at RISC.vhd(143): inferring latch(es) for signal or variable "nextState", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Warning (10631): VHDL Process Statement warning at RISC.vhd(143): inferring latch(es) for signal or variable "rfSel1", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Warning (10631): VHDL Process Statement warning at RISC.vhd(143): inferring latch(es) for signal or variable "memInMux", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Warning (10631): VHDL Process Statement warning at RISC.vhd(143): inferring latch(es) for signal or variable "aluIn2Mux", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Warning (10631): VHDL Process Statement warning at RISC.vhd(143): inferring latch(es) for signal or variable "aluSel", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Warning (10631): VHDL Process Statement warning at RISC.vhd(143): inferring latch(es) for signal or variable "irW", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Warning (10631): VHDL Process Statement warning at RISC.vhd(143): inferring latch(es) for signal or variable "tempInstr", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Warning (10631): VHDL Process Statement warning at RISC.vhd(214): inferring latch(es) for signal or variable "memAddr", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 214
-Info (10635): VHDL Report Statement at RISC.vhd(226): "aluin1: 0" (NOTE) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 226
-Warning (10631): VHDL Process Statement warning at RISC.vhd(224): inferring latch(es) for signal or variable "aluIn2", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 224
-Info (10041): Inferred latch for "aluIn2[0]" at RISC.vhd(224) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 224
-Info (10041): Inferred latch for "aluIn2[1]" at RISC.vhd(224) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 224
-Info (10041): Inferred latch for "aluIn2[2]" at RISC.vhd(224) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 224
-Info (10041): Inferred latch for "aluIn2[3]" at RISC.vhd(224) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 224
-Info (10041): Inferred latch for "aluIn2[4]" at RISC.vhd(224) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 224
-Info (10041): Inferred latch for "aluIn2[5]" at RISC.vhd(224) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 224
-Info (10041): Inferred latch for "aluIn2[6]" at RISC.vhd(224) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 224
-Info (10041): Inferred latch for "aluIn2[7]" at RISC.vhd(224) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 224
-Info (10041): Inferred latch for "aluIn2[8]" at RISC.vhd(224) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 224
-Info (10041): Inferred latch for "aluIn2[9]" at RISC.vhd(224) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 224
-Info (10041): Inferred latch for "aluIn2[10]" at RISC.vhd(224) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 224
-Info (10041): Inferred latch for "aluIn2[11]" at RISC.vhd(224) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 224
-Info (10041): Inferred latch for "aluIn2[12]" at RISC.vhd(224) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 224
-Info (10041): Inferred latch for "aluIn2[13]" at RISC.vhd(224) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 224
-Info (10041): Inferred latch for "aluIn2[14]" at RISC.vhd(224) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 224
-Info (10041): Inferred latch for "aluIn2[15]" at RISC.vhd(224) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 224
-Info (10041): Inferred latch for "memAddr[0]" at RISC.vhd(214) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 214
-Info (10041): Inferred latch for "memAddr[1]" at RISC.vhd(214) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 214
-Info (10041): Inferred latch for "memAddr[2]" at RISC.vhd(214) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 214
-Info (10041): Inferred latch for "memAddr[3]" at RISC.vhd(214) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 214
-Info (10041): Inferred latch for "memAddr[4]" at RISC.vhd(214) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 214
-Info (10041): Inferred latch for "memAddr[5]" at RISC.vhd(214) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 214
-Info (10041): Inferred latch for "memAddr[6]" at RISC.vhd(214) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 214
-Info (10041): Inferred latch for "memAddr[7]" at RISC.vhd(214) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 214
-Info (10041): Inferred latch for "memAddr[8]" at RISC.vhd(214) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 214
-Info (10041): Inferred latch for "memAddr[9]" at RISC.vhd(214) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 214
-Info (10041): Inferred latch for "memAddr[10]" at RISC.vhd(214) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 214
-Info (10041): Inferred latch for "memAddr[11]" at RISC.vhd(214) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 214
-Info (10041): Inferred latch for "memAddr[12]" at RISC.vhd(214) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 214
-Info (10041): Inferred latch for "memAddr[13]" at RISC.vhd(214) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 214
-Info (10041): Inferred latch for "memAddr[14]" at RISC.vhd(214) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 214
-Info (10041): Inferred latch for "memAddr[15]" at RISC.vhd(214) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 214
-Info (10041): Inferred latch for "tempInstr[0]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "tempInstr[1]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "tempInstr[2]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "tempInstr[3]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "tempInstr[4]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "tempInstr[5]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "tempInstr[6]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "tempInstr[7]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "tempInstr[8]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "tempInstr[9]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "tempInstr[10]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "tempInstr[11]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "tempInstr[12]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "tempInstr[13]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "tempInstr[14]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "tempInstr[15]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "irW" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "aluSel[0]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "aluSel[1]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "aluIn2Mux[0]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "aluIn2Mux[1]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "aluIn2Mux[2]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "memInMux" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "rfSel1[0]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "rfSel1[1]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "rfSel1[2]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "nextState[0]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "nextState[1]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "nextState[2]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "nextState[3]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "nextState[4]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "rfWrite" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "rfDataIn[0]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "rfDataIn[1]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "rfDataIn[2]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "rfDataIn[3]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "rfDataIn[4]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "rfDataIn[5]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "rfDataIn[6]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "rfDataIn[7]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "rfDataIn[8]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "rfDataIn[9]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "rfDataIn[10]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "rfDataIn[11]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "rfDataIn[12]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "rfDataIn[13]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "rfDataIn[14]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "rfDataIn[15]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "rfSelW[0]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "rfSelW[1]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "rfSelW[2]" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "memWrite" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "memRead" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (10041): Inferred latch for "memInit" at RISC.vhd(143) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 143
-Info (12128): Elaborating entity "memory" for hierarchy "memory:mem" File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 132
+Warning (10492): VHDL Process Statement warning at RISC.vhd(205): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 205
+Warning (10492): VHDL Process Statement warning at RISC.vhd(208): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 208
+Warning (10492): VHDL Process Statement warning at RISC.vhd(211): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 211
+Warning (10492): VHDL Process Statement warning at RISC.vhd(214): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 214
+Warning (10492): VHDL Process Statement warning at RISC.vhd(217): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 217
+Warning (10492): VHDL Process Statement warning at RISC.vhd(220): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 220
+Warning (10492): VHDL Process Statement warning at RISC.vhd(223): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 223
+Warning (10492): VHDL Process Statement warning at RISC.vhd(225): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 225
+Warning (10492): VHDL Process Statement warning at RISC.vhd(228): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 228
+Warning (10492): VHDL Process Statement warning at RISC.vhd(234): signal "aluOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 234
+Warning (10631): VHDL Process Statement warning at RISC.vhd(145): inferring latch(es) for signal or variable "memInit", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (10631): VHDL Process Statement warning at RISC.vhd(145): inferring latch(es) for signal or variable "memRead", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (10631): VHDL Process Statement warning at RISC.vhd(145): inferring latch(es) for signal or variable "memWrite", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (10631): VHDL Process Statement warning at RISC.vhd(145): inferring latch(es) for signal or variable "rfSelW", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (10631): VHDL Process Statement warning at RISC.vhd(145): inferring latch(es) for signal or variable "rfDataIn", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (10631): VHDL Process Statement warning at RISC.vhd(145): inferring latch(es) for signal or variable "rfWrite", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (10631): VHDL Process Statement warning at RISC.vhd(145): inferring latch(es) for signal or variable "nextState", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (10631): VHDL Process Statement warning at RISC.vhd(145): inferring latch(es) for signal or variable "rfSel1", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (10631): VHDL Process Statement warning at RISC.vhd(145): inferring latch(es) for signal or variable "memInMux", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (10631): VHDL Process Statement warning at RISC.vhd(145): inferring latch(es) for signal or variable "aluIn2Mux", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (10631): VHDL Process Statement warning at RISC.vhd(145): inferring latch(es) for signal or variable "aluSel", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (10631): VHDL Process Statement warning at RISC.vhd(145): inferring latch(es) for signal or variable "irW", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (10631): VHDL Process Statement warning at RISC.vhd(145): inferring latch(es) for signal or variable "tempInstr", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (10631): VHDL Process Statement warning at RISC.vhd(145): inferring latch(es) for signal or variable "rfSel2", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (10631): VHDL Process Statement warning at RISC.vhd(239): inferring latch(es) for signal or variable "memAddr", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 239
+Info (10635): VHDL Report Statement at RISC.vhd(251): "aluin1: 0" (NOTE) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 251
+Warning (10631): VHDL Process Statement warning at RISC.vhd(249): inferring latch(es) for signal or variable "aluIn2", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+Info (10041): Inferred latch for "aluIn2[0]" at RISC.vhd(249) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+Info (10041): Inferred latch for "aluIn2[1]" at RISC.vhd(249) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+Info (10041): Inferred latch for "aluIn2[2]" at RISC.vhd(249) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+Info (10041): Inferred latch for "aluIn2[3]" at RISC.vhd(249) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+Info (10041): Inferred latch for "aluIn2[4]" at RISC.vhd(249) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+Info (10041): Inferred latch for "aluIn2[5]" at RISC.vhd(249) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+Info (10041): Inferred latch for "aluIn2[6]" at RISC.vhd(249) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+Info (10041): Inferred latch for "aluIn2[7]" at RISC.vhd(249) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+Info (10041): Inferred latch for "aluIn2[8]" at RISC.vhd(249) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+Info (10041): Inferred latch for "aluIn2[9]" at RISC.vhd(249) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+Info (10041): Inferred latch for "aluIn2[10]" at RISC.vhd(249) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+Info (10041): Inferred latch for "aluIn2[11]" at RISC.vhd(249) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+Info (10041): Inferred latch for "aluIn2[12]" at RISC.vhd(249) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+Info (10041): Inferred latch for "aluIn2[13]" at RISC.vhd(249) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+Info (10041): Inferred latch for "aluIn2[14]" at RISC.vhd(249) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+Info (10041): Inferred latch for "aluIn2[15]" at RISC.vhd(249) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+Info (10041): Inferred latch for "memAddr[0]" at RISC.vhd(239) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 239
+Info (10041): Inferred latch for "memAddr[1]" at RISC.vhd(239) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 239
+Info (10041): Inferred latch for "memAddr[2]" at RISC.vhd(239) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 239
+Info (10041): Inferred latch for "memAddr[3]" at RISC.vhd(239) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 239
+Info (10041): Inferred latch for "memAddr[4]" at RISC.vhd(239) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 239
+Info (10041): Inferred latch for "memAddr[5]" at RISC.vhd(239) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 239
+Info (10041): Inferred latch for "memAddr[6]" at RISC.vhd(239) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 239
+Info (10041): Inferred latch for "memAddr[7]" at RISC.vhd(239) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 239
+Info (10041): Inferred latch for "memAddr[8]" at RISC.vhd(239) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 239
+Info (10041): Inferred latch for "memAddr[9]" at RISC.vhd(239) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 239
+Info (10041): Inferred latch for "memAddr[10]" at RISC.vhd(239) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 239
+Info (10041): Inferred latch for "memAddr[11]" at RISC.vhd(239) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 239
+Info (10041): Inferred latch for "memAddr[12]" at RISC.vhd(239) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 239
+Info (10041): Inferred latch for "memAddr[13]" at RISC.vhd(239) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 239
+Info (10041): Inferred latch for "memAddr[14]" at RISC.vhd(239) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 239
+Info (10041): Inferred latch for "memAddr[15]" at RISC.vhd(239) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 239
+Info (10041): Inferred latch for "rfSel2[0]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfSel2[1]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfSel2[2]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "tempInstr[0]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "tempInstr[1]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "tempInstr[2]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "tempInstr[3]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "tempInstr[4]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "tempInstr[5]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "tempInstr[6]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "tempInstr[7]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "tempInstr[8]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "tempInstr[9]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "tempInstr[10]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "tempInstr[11]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "tempInstr[12]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "tempInstr[13]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "tempInstr[14]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "tempInstr[15]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "irW" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "aluSel[0]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "aluSel[1]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "aluIn2Mux[0]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "aluIn2Mux[1]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "aluIn2Mux[2]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "memInMux" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfSel1[0]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfSel1[1]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfSel1[2]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "nextState[0]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "nextState[1]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "nextState[2]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "nextState[3]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "nextState[4]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfWrite" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfDataIn[0]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfDataIn[1]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfDataIn[2]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfDataIn[3]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfDataIn[4]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfDataIn[5]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfDataIn[6]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfDataIn[7]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfDataIn[8]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfDataIn[9]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfDataIn[10]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfDataIn[11]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfDataIn[12]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfDataIn[13]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfDataIn[14]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfDataIn[15]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfSelW[0]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfSelW[1]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "rfSelW[2]" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "memWrite" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "memRead" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (10041): Inferred latch for "memInit" at RISC.vhd(145) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Info (12128): Elaborating entity "memory" for hierarchy "memory:mem" File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 134
 Info (10635): VHDL Report Statement at Memory.vhd(23): "addr:0" (NOTE) File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 23
 Warning (10492): VHDL Process Statement warning at Memory.vhd(30): signal "mem_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 30
 Warning (10492): VHDL Process Statement warning at Memory.vhd(33): signal "di" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 33
@@ -779,7 +903,7 @@ Info (10041): Inferred latch for "mem_reg[0][12]" at Memory.vhd(21) File: C:/COD
 Info (10041): Inferred latch for "mem_reg[0][13]" at Memory.vhd(21) File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
 Info (10041): Inferred latch for "mem_reg[0][14]" at Memory.vhd(21) File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
 Info (10041): Inferred latch for "mem_reg[0][15]" at Memory.vhd(21) File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-Info (12128): Elaborating entity "registerfile" for hierarchy "registerfile:rf" File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 133
+Info (12128): Elaborating entity "registerfile" for hierarchy "registerfile:rf" File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 135
 Warning (10492): VHDL Process Statement warning at RegisterFile.vhd(29): signal "data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 29
 Info (10635): VHDL Report Statement at RegisterFile.vhd(29): "reg0 = 0" (NOTE) File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 29
 Info (10635): VHDL Report Statement at RegisterFile.vhd(29): "reg1 = 0" (NOTE) File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 29
@@ -971,7 +1095,7 @@ Info (10041): Inferred latch for "data[0][15]" at RegisterFile.vhd(26) File: C:/
 Warning (12125): Using design file alu.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: alu-behave File: C:/CODE/outcode/RISC-2/alu.vhd Line: 15
     Info (12023): Found entity 1: alu File: C:/CODE/outcode/RISC-2/alu.vhd Line: 5
-Info (12128): Elaborating entity "alu" for hierarchy "alu:aluInst" File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 134
+Info (12128): Elaborating entity "alu" for hierarchy "alu:aluInst" File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 136
 Info (10635): VHDL Report Statement at alu.vhd(28): "called" (NOTE) File: C:/CODE/outcode/RISC-2/alu.vhd Line: 28
 Warning (10631): VHDL Process Statement warning at alu.vhd(26): inferring latch(es) for signal or variable "tempout", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
 Info (10635): VHDL Report Statement at alu.vhd(39): "tout:0" (NOTE) File: C:/CODE/outcode/RISC-2/alu.vhd Line: 39
@@ -1006,7 +1130,7 @@ Info (12128): Elaborating entity "onebithalfadd" for hierarchy "alu:aluInst|Sixt
 Warning (12125): Using design file ir.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: ir-behave File: C:/CODE/outcode/RISC-2/ir.vhd Line: 23
     Info (12023): Found entity 1: ir File: C:/CODE/outcode/RISC-2/ir.vhd Line: 6
-Info (12128): Elaborating entity "IR" for hierarchy "IR:irInst" File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 135
+Info (12128): Elaborating entity "IR" for hierarchy "IR:irInst" File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 137
 Warning (10631): VHDL Process Statement warning at ir.vhd(27): inferring latch(es) for signal or variable "instr", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
 Info (10041): Inferred latch for "instr[0]" at ir.vhd(27) File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
 Info (10041): Inferred latch for "instr[1]" at ir.vhd(27) File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
@@ -1024,20 +1148,478 @@ Info (10041): Inferred latch for "instr[12]" at ir.vhd(27) File: C:/CODE/outcode
 Info (10041): Inferred latch for "instr[13]" at ir.vhd(27) File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
 Info (10041): Inferred latch for "instr[14]" at ir.vhd(27) File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
 Info (10041): Inferred latch for "instr[15]" at ir.vhd(27) File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Warning (14026): LATCH primitive "ir:irInst|instr[1]" is permanently enabled File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Warning (14026): LATCH primitive "ir:irInst|instr[3]" is permanently enabled File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Warning (14026): LATCH primitive "ir:irInst|instr[4]" is permanently enabled File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Warning (14026): LATCH primitive "ir:irInst|instr[5]" is permanently enabled File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Warning (14026): LATCH primitive "ir:irInst|instr[6]" is permanently enabled File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Warning (14026): LATCH primitive "ir:irInst|instr[7]" is permanently enabled File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Warning (14026): LATCH primitive "ir:irInst|instr[8]" is permanently enabled File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Warning (14026): LATCH primitive "ir:irInst|instr[9]" is permanently enabled File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Warning (14026): LATCH primitive "ir:irInst|instr[10]" is permanently enabled File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Warning (14026): LATCH primitive "ir:irInst|instr[11]" is permanently enabled File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Warning (14026): LATCH primitive "ir:irInst|instr[12]" is permanently enabled File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Warning (14026): LATCH primitive "ir:irInst|instr[13]" is permanently enabled File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Warning (14026): LATCH primitive "ir:irInst|instr[14]" is permanently enabled File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Warning (14026): LATCH primitive "ir:irInst|instr[15]" is permanently enabled File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Warning (14026): LATCH primitive "ir:irInst|instr[0]" is permanently enabled File: C:/CODE/outcode/RISC-2/ir.vhd Line: 27
+Warning (14025): LATCH primitive "memory:mem|mem_reg[15][1]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[15][3]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[15][4]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[15][5]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[15][6]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[15][7]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[15][8]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[15][9]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[15][10]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[15][11]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[15][12]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[15][13]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[15][14]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[15][15]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[14][1]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[14][3]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[14][4]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[14][5]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[14][6]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[14][7]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[14][8]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[14][9]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[14][10]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[14][11]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[14][12]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[14][13]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[14][14]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[14][15]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[13][1]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[13][3]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[13][4]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[13][5]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[13][6]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[13][7]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[13][8]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[13][9]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[13][10]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[13][11]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[13][12]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[13][13]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[13][14]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[13][15]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[12][1]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[12][3]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[12][4]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[12][5]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[12][6]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[12][7]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[12][8]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[12][9]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[12][10]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[12][11]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[12][12]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[12][13]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[12][14]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[12][15]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[11][1]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[11][3]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[11][4]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[11][5]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[11][6]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[11][7]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[11][8]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[11][9]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[11][10]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[11][11]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[11][12]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[11][13]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[11][14]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[11][15]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[10][1]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[10][3]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[10][4]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[10][5]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[10][6]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[10][7]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[10][8]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[10][9]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[10][10]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[10][11]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[10][12]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[10][13]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[10][14]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[10][15]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[9][1]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[9][3]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[9][4]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[9][5]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[9][6]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[9][7]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[9][8]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[9][9]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[9][10]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[9][11]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[9][12]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[9][13]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[9][14]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[9][15]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[8][1]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[8][3]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[8][4]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[8][5]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[8][6]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[8][7]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[8][8]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[8][9]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[8][10]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[8][11]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[8][12]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[8][13]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[8][14]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[8][15]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[7][1]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[7][3]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[7][4]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[7][5]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[7][6]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[7][7]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[7][8]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[7][9]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[7][10]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[7][11]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[7][12]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[7][13]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[7][14]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[7][15]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[6][1]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[6][3]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[6][4]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[6][5]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[6][6]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[6][7]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[6][8]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[6][9]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[6][10]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[6][11]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[6][12]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[6][13]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[6][14]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[6][15]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[5][1]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[5][3]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[5][4]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[5][5]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[5][6]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[5][7]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[5][8]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[5][9]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[5][10]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[5][11]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[5][12]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[5][13]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[5][14]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[5][15]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[4][1]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[4][3]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[4][4]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[4][5]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[4][6]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[4][7]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[4][8]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[4][9]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[4][10]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[4][11]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[4][12]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[4][13]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[4][14]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[4][15]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[15][0]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[14][0]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[13][0]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[12][0]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[11][0]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[10][0]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[9][0]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[8][0]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[7][0]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[6][0]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[5][0]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14025): LATCH primitive "memory:mem|mem_reg[4][0]" is permanently disabled File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (14026): LATCH primitive "alu:aluInst|tempout[1]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[2]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[3]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[4]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[5]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[6]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[7]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[8]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[9]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[10]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[11]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[12]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[13]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[14]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[15]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[0]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[1]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[2]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[3]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[4]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[5]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[6]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[7]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[8]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[9]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[10]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[11]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[12]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[13]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[14]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[15]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "alu:aluInst|tempout[0]" is permanently enabled File: C:/CODE/outcode/RISC-2/alu.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|douta[15]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|douta[14]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|douta[13]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|douta[12]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|douta[11]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|douta[10]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|douta[9]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|douta[8]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|douta[7]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|douta[6]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|douta[5]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|douta[4]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|douta[3]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|douta[0]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|douta[1]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|douta[2]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|doutb[15]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|doutb[14]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|doutb[13]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|doutb[12]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|doutb[11]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|doutb[10]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|doutb[9]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|doutb[8]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|doutb[7]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|doutb[6]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|doutb[5]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|doutb[4]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|doutb[3]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|doutb[2]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|doutb[0]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|doutb[1]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "nextState[4]" merged with LATCH primitive "nextState[3]" File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Info (13026): Duplicate LATCH primitive "memory:mem|do[12]" merged with LATCH primitive "memory:mem|do[0]" File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+    Info (13026): Duplicate LATCH primitive "memory:mem|do[6]" merged with LATCH primitive "memory:mem|do[0]" File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+    Info (13026): Duplicate LATCH primitive "memory:mem|do[4]" merged with LATCH primitive "memory:mem|do[0]" File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+    Info (13026): Duplicate LATCH primitive "rfSelW[2]" merged with LATCH primitive "rfSelW[0]" File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Info (13026): Duplicate LATCH primitive "tempInstr[0]" merged with LATCH primitive "tempInstr[6]" File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Info (13026): Duplicate LATCH primitive "tempInstr[12]" merged with LATCH primitive "tempInstr[6]" File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Info (13026): Duplicate LATCH primitive "tempInstr[4]" merged with LATCH primitive "tempInstr[6]" File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Info (13026): Duplicate LATCH primitive "memory:mem|do[8]" merged with LATCH primitive "memory:mem|do[10]" File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+    Info (13026): Duplicate LATCH primitive "tempInstr[8]" merged with LATCH primitive "tempInstr[10]" File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (13012): Latch nextState[0] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch nextState[1] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch nextState[3] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch aluIn2[0] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (13012): Latch rfSel1[1] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch rfSel1[2] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch rfSel1[0] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch aluIn2[1] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (13012): Latch aluIn2[2] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (13012): Latch aluIn2[3] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (13012): Latch aluIn2[4] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (13012): Latch aluIn2[5] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (13012): Latch aluIn2[6] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (13012): Latch aluIn2[7] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (13012): Latch aluIn2[8] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (13012): Latch aluIn2[9] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (13012): Latch aluIn2[10] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (13012): Latch aluIn2[11] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (13012): Latch aluIn2[12] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (13012): Latch aluIn2[13] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (13012): Latch aluIn2[14] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (13012): Latch aluIn2[15] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 249
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (13012): Latch aluIn2Mux[0] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch aluIn2Mux[1] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch rfSel2[0] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInstr[6] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+Warning (13012): Latch rfDataIn[0] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch rfSelW[0] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch rfSelW[1] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch rfWrite has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 123
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch rfDataIn[1] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch rfDataIn[2] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch rfDataIn[3] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch rfDataIn[4] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch rfDataIn[5] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch rfDataIn[6] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch rfDataIn[7] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch rfDataIn[8] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch rfDataIn[9] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch rfDataIn[10] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch rfDataIn[11] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch rfDataIn[12] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch rfDataIn[13] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch rfDataIn[14] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (13012): Latch rfDataIn[15] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 145
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 140
+Warning (14025): LATCH primitive "registerfile:rf|data[4][0]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[0][0]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[5][0]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[1][0]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[4][1]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[0][1]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[5][1]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[1][1]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[4][2]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[0][2]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[5][2]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[1][2]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[4][3]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[0][3]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[5][3]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[1][3]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[4][4]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[0][4]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[5][4]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[1][4]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[4][5]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[0][5]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[5][5]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[1][5]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[4][6]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[0][6]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[5][6]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[1][6]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[4][7]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[0][7]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[5][7]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[1][7]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[4][8]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[0][8]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[5][8]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[1][8]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[4][9]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[0][9]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[5][9]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[1][9]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[4][10]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[0][10]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[5][10]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[1][10]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[4][11]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[0][11]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[5][11]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[1][11]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[4][12]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[0][12]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[5][12]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[1][12]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[4][13]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[0][13]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[5][13]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[1][13]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[4][14]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[0][14]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[5][14]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[1][14]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[4][15]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[0][15]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[5][15]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[1][15]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[6][0]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[3][0]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[6][1]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[3][1]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[6][2]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[3][2]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[6][3]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[3][3]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[6][4]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[3][4]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[6][5]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[3][5]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[6][6]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[3][6]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[6][7]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[3][7]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[6][8]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[3][8]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[6][9]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[3][9]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[6][10]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[3][10]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[6][11]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[3][11]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[6][12]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[3][12]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[6][13]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[3][13]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[6][14]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[3][14]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[6][15]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14025): LATCH primitive "registerfile:rf|data[3][15]" is permanently disabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "outstates[2]" is stuck at GND File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 7
     Warning (13410): Pin "outstates[7]" is stuck at GND File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 7
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 23 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 276 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 12 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 76 warnings
-    Info: Peak virtual memory: 4772 megabytes
-    Info: Processing ended: Thu May 05 17:55:48 2022
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:22
+    Info (21061): Implemented 265 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 527 warnings
+    Info: Peak virtual memory: 4794 megabytes
+    Info: Processing ended: Thu May 05 18:19:52 2022
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:27
 
 
