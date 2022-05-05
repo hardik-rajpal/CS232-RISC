@@ -12,7 +12,7 @@ architecture rtl of RISC is
 	constant ST_INIT:std_logic_vector(4 downto 0)	:="00000";
 	constant ST_HK:std_logic_vector(4 downto 0)		:="00001";
 	constant ST_ID:std_logic_vector(4 downto 0)		:="00010";
-	constant ST_LWSW:std_logic_vector(4 downto 0)	:="00011";
+    constant ST_CNDB:std_logic_vector(4 downto 0)   :="00011";
 	constant ST_LWRD:std_logic_vector(4 downto 0)	:="00100";
 	constant ST_SWWR:std_logic_vector(4 downto 0)	:="00101";
 	constant ST_LWWR:std_logic_vector(4 downto 0)	:="00110";
@@ -39,6 +39,7 @@ architecture rtl of RISC is
     constant ST_ADDL:std_logic_vector(4 downto 0)   :="11011";
     constant ST_EXE:std_logic_vector(4 downto 0)    :="11100";
     constant ST_MEMA:std_logic_vector(4 downto 0)   :="11101";
+    constant ST_CPC:std_logic_vector(4 downto 0)    :="11110";
 
     constant OC_ADDR:std_logic_vector(3 downto 0)	:="0001";
 	constant OC_ADDI:std_logic_vector(3 downto 0)	:="0000";
@@ -131,7 +132,8 @@ architecture rtl of RISC is
     signal aluIn1,aluIn2,aluOut:std_logic_vector(15 downto 0);
     signal aluCin:std_logic:='0';
     signal aluSel:std_logic_vector(1 downto 0);
-    signal aluIn1Mux,aluIn2Mux:std_logic_vector(2 downto 0);
+    signal aluIn1Mux:std_logic:= '1';
+    signal aluIn2Mux:std_logic_vector(2 downto 0);
 ---
 begin
     mem:memory port map(state=>state,init=>memInit,mr=>memRead,mw=>memWrite,addr=>memAddr,di=>memDataIn,do=>memDataOut);
@@ -160,6 +162,7 @@ begin
                 nextState<=ST_HK;
             elsif (state = ST_HK) then
                 memInit<='0';
+                aluIn1Mux<='1';
                 memRead<='1';
                 memWrite<='0';
                 rfWrite<='0';
@@ -257,9 +260,13 @@ begin
                 
                 elsif (opCode = OC_BEQ) then
                     report "oc: BEQ";
-                
+                    rfSel1<="111";
+                    aluIn2Mux<="011";
+                    aluSel<="00";
+                    nextState<=ST_CNDB;
                 elsif (opCode = OC_JAL) then
                     report "oc: JAL";
+                    
                 elsif (opCode = OC_JLR) then
                     report "oc: JLR";
 
@@ -269,6 +276,19 @@ begin
                     report "op code not matched";
                     --no next state=>execution stopped.
                 end if;
+            elsif (state = ST_CNDB) then
+                aluIn1Mux<='0';
+                rfSel1<=raSel;
+                rfsel2<=rbSel;
+                nextState<=ST_CPC;
+            elsif (state = ST_CPC) then
+                report "rd1:"&integer'image(to_integer(unsigned(rfDataOut1)))&", rd2"&integer'image(to_integer(unsigned(rfDataOut2)));
+                if (rfDataOut1 = rfDataOut2) then
+                    rfSelW<="111";
+                    rfWrite<='1';
+                    rfDataIn<=aluOut;
+                end if;
+                nextState<=ST_HK;
             elsif (state = ST_MEMA) then
                 if(opcode = OC_LW) then
                     rfDataIn<=memDataOut;
@@ -297,7 +317,11 @@ begin
     process(aluIn1Mux,aluIn2Mux,rfDataOut1,rfDataOut2,imm6_16,imm8_16,imm9_16high,imm9_16low)
         begin
             report"aluin1: "&integer'image(to_integer(unsigned(rfDataOut1)));
-            aluIn1<=rfDataOut1;
+            if(aluIn1Mux = '1') then
+                aluIn1<=rfDataOut1;
+            elsif(aluIn1Mux = '0') then
+                report "inp not updated";
+            end if;
             if(aluIn2Mux = "000") then
                 aluIn2<=rfDataOut2;
             elsif (aluIn2Mux = "001") then
@@ -310,15 +334,6 @@ begin
                 report "udb";
             end if;
     end process;
-    -- process(memDataOut)
-    --     begin
-    --         if(memOutDemux = '0') then
-    --             irw<='1';
-    --             tempInstr<=memDataOut;
-    --         else
-    --             tempMemData<=memDataOut;
-    --         end if;
-    -- end process;
     process(state,nextState)
         begin
             outstates(9 downto 5) <= nextState;

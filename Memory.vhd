@@ -23,8 +23,9 @@ architecture memory_behave of memory is
 			report "addr:"&integer'image(to_integer(unsigned(addr)));
 			if (init = '1') then
 				-- mem_reg(0) <= "0001000001010000"; -- ADD R2 <- R1+R0
-				mem_reg(0) <= "0101000001000001"; -- LW R0 <- M[R1+000001]
+				-- mem_reg(0) <= "0101000001000001"; -- LW R0 <- M[R1+000001]
 				-- mem_reg(0) <= "0111000001000001"; -- SW R0 -> M[R1+000001]
+				mem_reg(0) <= "1000000001000100"; -- BEQ R0,R1 to PC+ 000100;
 				
 				mem_reg(2) <= "0000000000000100"; 
 				-- mem_reg(1) <= "0000000001100000"; -- ADDI R1 <- 100000+R0

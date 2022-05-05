@@ -31,6 +31,8 @@ begin
             tempout<=sumout;
         elsif( sel = "01") then
             tempout<=not (inp1 and inp2);
+        elsif( sel = "10") then
+            tempout<= (inp1 xor inp2);
         else
             report "udb";
         end if;
