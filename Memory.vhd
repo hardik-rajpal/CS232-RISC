@@ -23,15 +23,20 @@ architecture memory_behave of memory is
 			report "addr:"&integer'image(to_integer(unsigned(addr)));
 			if (init = '1') then
 				-- mem_reg(0) <= "0001000001010000"; -- ADD R2 <- R1+R0
+				mem_reg(0) <= "0101000001000001"; -- LW R0 <- M[R1+000001]
+				-- mem_reg(0) <= "0111000001000001"; -- SW R0 -> M[R1+000001]
+				
+				mem_reg(2) <= "0000000000000100"; 
 				-- mem_reg(1) <= "0000000001100000"; -- ADDI R1 <- 100000+R0
 				-- mem_reg(2) <= "0010000001010000"; -- NND R2 <- R1 nand R0
-				mem_reg(0) <= "0011000011010101"; -- LHI R0, 011010101
-				mem_reg(1) <= "0011001101010111"; -- LHI R1, 101010111
-				mem_reg(2) <= "0011010101110111"; -- LHI R2, 101110111
+				-- mem_reg(0) <= "0011000011010101"; -- LHI R0, 011010101
+				-- mem_reg(1) <= "0011001101010111"; -- LHI R1, 101010111
+				-- mem_reg(2) <= "0011011101110111"; -- LHI R3, 101110111
 			elsif (mr = '1') then
 				do <= mem_reg(to_integer(unsigned(addr(3 downto 0))));
 			end if;
 			if (mw = '1') then
+				report "memwr:"&integer'image(to_integer(unsigned(addr)));
 				mem_reg(to_integer(unsigned(addr(3 downto 0)))) <= di;
 			end if;
 --		end if;

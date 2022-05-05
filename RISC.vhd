@@ -238,11 +238,17 @@ begin
                     rfSelW<=raSel;
                     rfSel1<=rbSel;
                     aluIn2Mux<="011";--imm6
+                    aluSel<="00";
                     memInMux<='1';
                     nextState<=ST_MEMA;
                 elsif (opCode = OC_SW) then
                     report "oc: SW";
-                
+                    rfSel1<=rbSel;--send to alu;
+                    rfSel2<=raSel;
+                    aluIn2Mux<="011";--imm6;
+                    aluSel<="00";
+                    memInMux<='1';
+                    nextState<=ST_MEMA;
                 elsif (opCode = OC_LM) then
                     report "oc: LM";
                 
@@ -264,8 +270,13 @@ begin
                     --no next state=>execution stopped.
                 end if;
             elsif (state = ST_MEMA) then
-                rfDataIn<=memDataOut;
-                rfWrite<='1';
+                if(opcode = OC_LW) then
+                    rfDataIn<=memDataOut;
+                    rfWrite<='1';
+                elsif (opcode = OC_SW) then
+                    memWrite<='1';
+                    memDataIn<=rfDataOut2;   
+                end if;
                 nextState<=ST_HK;
             elsif (state = ST_WBTR) then
                 rfDataIn<=aluOut;
