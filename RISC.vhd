@@ -136,7 +136,7 @@ architecture rtl of RISC is
     signal aluIn1,aluIn2,aluOut:std_logic_vector(15 downto 0);
     signal aluCin:std_logic:='0';
     signal aluSel:std_logic_vector(1 downto 0);
-    signal aluIn1Mux:std_logic:= '1';
+    signal aluIn1Mux:std_logic_vector(1 downto 0):= "00";
     signal aluIn2Mux:std_logic_vector(2 downto 0);
 ---
 begin
@@ -167,7 +167,7 @@ begin
                 nextState<=ST_HK;
             elsif (state = ST_HK) then
                 memInit<='0';
-                aluIn1Mux<='1';
+                aluIn1Mux<="00";
                 memRead<='1';
                 memWrite<='0';
                 rfWrite<='0';
@@ -266,10 +266,12 @@ begin
                 
                 elsif (opCode = OC_BEQ) then
                     report "oc: BEQ";
-                    rfSel1<="111";
+                    aluIn1Mux<="10";
                     aluIn2Mux<="011";
                     aluSel<="00";
-                    nextState<=ST_CNDB;
+                    rfSel1<=raSel;
+                    rfSel2<=rbSel;
+                    nextState<=ST_CPC;
                 elsif (opCode = OC_JAL) then
                     report "oc: JAL";
                     rfSel1<="111";
@@ -296,11 +298,6 @@ begin
                 rfDataIn<=rfDataOut1;
                 rfSelW<=raSel;
                 rfWrite<='1';
-                nextState<=ST_CPC;
-            elsif (state = ST_CNDB) then
-                aluIn1Mux<='0';
-                rfSel1<=raSel;
-                rfsel2<=rbSel;
                 nextState<=ST_CPC;
             elsif (state = ST_CPC) then
                 if(opcode = OC_BEQ) then
@@ -352,10 +349,12 @@ begin
     process(aluIn1Mux,aluIn2Mux,rfDataOut1,rfDataOut2,imm6_16,imm8_16,imm9_16high,imm9_16low,prevPC)
         begin
             report"aluin1: "&integer'image(to_integer(unsigned(rfDataOut1)));
-            if(aluIn1Mux = '1') then
+            if(aluIn1Mux = "00") then
                 aluIn1<=rfDataOut1;
-            elsif(aluIn1Mux = '0') then
+            elsif(aluIn1Mux = "01") then
                 report "inp not updated";
+            elsif(aluIn1Mux = "10") then
+                aluin1<=prevPC;
             end if;
             if(aluIn2Mux = "000") then
                 aluIn2<=rfDataOut2;
@@ -367,8 +366,6 @@ begin
                 aluIn2<=imm6_16;
             elsif (aluIn2Mux = "100") then
                 aluIn2<=imm9_16low;
-            elsif (aluIn2Mux = "101") then
-                aluIn2<=prevPC;
             else
                 report "udb";
             end if;
