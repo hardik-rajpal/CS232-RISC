@@ -1,6 +1,9 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
+use IEEE.std_logic_unsigned.all;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
 entity RISC is
     port (
         clk:in std_logic;
@@ -126,11 +129,14 @@ architecture rtl of RISC is
     signal rfDataIn,rfDataOut1,rfDataOut2:std_logic_vector(15 downto 0);
     signal rfWrite:std_logic:='0';
     signal rfSel1,rfSel2,rfSelW:std_logic_vector(2 downto 0);
----
+---misc signals
     signal tempData1:std_logic_vector(15 downto 0);
     signal tempData2:std_logic_vector(15 downto 0);
     signal prevPC:std_logic_vector(15 downto 0);
-
+    signal regNum:std_logic_vector(3 downto 0):="0000";
+    signal index:std_logic_vector(15 downto 0):=(others=>'0');
+    signal loadCurrent:std_logic:='0';
+---
 ---aLU signals
     signal aluZeroFlag,aluCarryFlag:std_logic;
     signal aluIn1,aluIn2,aluOut:std_logic_vector(15 downto 0);
@@ -260,7 +266,13 @@ begin
                     nextState<=ST_MEMA;
                 elsif (opCode = OC_LM) then
                     report "oc: LM";
-                
+                    rfSel1<=raSel;
+                    aluIn2Mux<="111";
+                    aluSel<="00";
+                    regNum<="0000";
+                    index<=(others=>'0');
+                    loadCurrent<='0';
+                    nextState<=ST_LMRD;
                 elsif (opCode = OC_SM) then
                     report "oc: SM";
                 
@@ -294,6 +306,28 @@ begin
                     report "op code not matched";
                     --no next state=>execution stopped.
                 end if;
+            elsif (state = ST_LMRD) then
+                if(to_integer(unsigned(regNum)) = 8) then
+                    nextState<=ST_HK;
+                else
+                    if (imm8_16(to_integer(unsigned(regNum))) = '1') then
+                        memInMux<='1';
+                        loadCurrent<='1';
+                        nextState<=ST_LMWB;
+                    elsif (imm8_16(to_integer(unsigned(regNum))) = '0') then
+                        loadCurrent<='0';
+                        nextState<=ST_LMWB;
+                    end if;
+                end if;
+            elsif(state = ST_LMWB) then
+                if(loadCurrent = '1') then
+                    rfSelW<=regNum(2 downto 0);
+                    rfDataIn<=memDataOut;
+                    rfWrite<='1';
+                    index<=(index+"1");
+                end if;
+                regNum<=(regNum + "0001");
+                nextState<=ST_LMRD;
             elsif (state = ST_JLR2) then
                 report "rd1:"&integer'image(to_integer(unsigned(rfDataOut1)))&", rd2"&integer'image(to_integer(unsigned(rfDataOut2)));
                 rfDataIn<=rfDataOut1;
@@ -347,7 +381,7 @@ begin
                 report "udb";
             end if;
     end process;
-    process(aluIn1Mux,aluIn2Mux,rfDataOut1,rfDataOut2,imm6_16,imm8_16,imm9_16high,imm9_16low,prevPC)
+    process(aluIn1Mux,aluIn2Mux,rfDataOut1,rfDataOut2,imm6_16,imm8_16,imm9_16high,imm9_16low,prevPC,index)
         begin
             report"aluin1: "&integer'image(to_integer(unsigned(rfDataOut1)));
             if(aluIn1Mux = "00") then
@@ -367,6 +401,8 @@ begin
                 aluIn2<=imm6_16;
             elsif (aluIn2Mux = "100") then
                 aluIn2<=imm9_16low;
+            elsif (aluIn2Mux = "101") then
+                aluIn2<=index;
             else
                 report "udb";
             end if;
