@@ -67,22 +67,22 @@ architecture rtl of RISC is
                 init: in std_logic;  
               mr  : in std_logic;   
               mw  : in std_logic;
-              addr   : in std_logic_vector(15 downto 0);   
+              dataPointer   : in std_logic_vector(7 downto 0);   
               di  : in std_logic_vector(15 downto 0);   
               do  : out std_logic_vector(15 downto 0));  
       end component;
-    component IR is 
+    component InstrReg is 
         port(
-            irwrite: in std_logic;
+            irw: in std_logic;
             inp: in std_logic_vector(15 downto 0);
             opcode: out std_logic_vector(3 downto 0); -- 12-15
-            immediate6: out std_logic_vector(5 downto 0); --0-5
+            immed6: out std_logic_vector(5 downto 0); --0-5
             ra: out std_logic_vector(2 downto 0); --9-11
             rb: out std_logic_vector(2 downto 0); --6-8
             rc: out std_logic_vector(2 downto 0); --3-5
             cz: out std_logic_vector(1 downto 0); --0-1 -- 0 is z and 1 is c
-            immediate9: out std_logic_vector(8 downto 0); --0-8
-            immediate8: out std_logic_vector(7 downto 0) --0-7
+            immed9: out std_logic_vector(8 downto 0); --0-8
+            immed8: out std_logic_vector(7 downto 0) --0-7
             );
     end component;
     component sequencer is
@@ -95,7 +95,8 @@ architecture rtl of RISC is
     signal nextState:std_logic_vector(3 downto 0):=ST_HK;
 ---memory signals 
     signal memInit,memRead,memWrite:std_logic;
-    signal memAddr,memDataIn,memDataOut:std_logic_vector(15 downto 0);
+    signal memAddr:std_logic_vector(7 downto 0);
+    signal memDataIn,memDataOut:std_logic_vector(15 downto 0);
     signal memInMux:std_logic;
     signal memOutDemux:std_logic;
     signal tempMemData:std_logic_vector(15 downto 0);
@@ -140,10 +141,10 @@ architecture rtl of RISC is
     signal inRegNum,outRegNum:std_logic_vector(3 downto 0);
 ---
 begin
-    mem:memory port map(state=>state,init=>memInit,mr=>memRead,mw=>memWrite,addr=>memAddr,di=>memDataIn,do=>memDataOut);
+    mem:memory port map(state=>state,init=>memInit,mr=>memRead,mw=>memWrite,dataPointer=>memAddr,di=>memDataIn,do=>memDataOut);
     rf:registerfile port map(state=>state,dinm=>rfDataIn,regsela=>rfSel1,regselb=>rfSel2, regselm=>rfSelW,regwrite=>rfWrite,douta=>rfDataOut1,doutb=>rfDataOut2);
     aluInst:ALU port map(state=>state,inp1=>aluIn1,inp2=>aluIn2,cin=>aluCin,sel=>aluSel,outp=>aluOut,cout=>aluCarryFlag,zero=>aluZeroFlag);
-    irInst:IR port map(irwrite=>irw,inp=>tempInstr,opcode=>opCode,immediate6=>imm6,immediate8=>imm8,immediate9=>imm9,ra=>raSel,rb=>rbSel,rc=>rcSel,cz=>czVal);
+    irInst:InstrReg port map(irw=>irw,inp=>tempInstr,opcode=>opCode,immed6=>imm6,immed8=>imm8,immed9=>imm9,ra=>raSel,rb=>rbSel,rc=>rcSel,cz=>czVal);
     seq:sequencer port map(inregnum=>inRegNum,outregnum=>outRegNum);
     process(clk)
         begin
@@ -434,9 +435,9 @@ begin
     process(memInMux,rfDataOut1,aluOut)
         begin
             if(memInMux = '0') then
-                memAddr<=rfDataOut1;
+                memAddr<=rfDataOut1(7 downto 0);
             elsif (memInMux = '1') then
-                memAddr<=aluOut;
+                memAddr<=aluOut(7 downto 0);
             else
                 report "udb";
             end if;

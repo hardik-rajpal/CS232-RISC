@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Fri May 06 14:31:18 2022
+Analysis & Synthesis Status : Successful - Fri May 06 14:49:10 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : RISC
 Top-level Entity Name : RISC
 Family : Cyclone IV E
-Total logic elements : 1,433
-    Total combinational functions : 1,433
+Total logic elements : 8,102
+    Total combinational functions : 8,102
     Dedicated logic registers : 4
 Total registers : 4
 Total pins : 9
