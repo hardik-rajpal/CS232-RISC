@@ -13,6 +13,7 @@ vcom -93 -work work {C:/CODE/outcode/RISC-2/sixteenbitrca.vhd}
 vcom -93 -work work {C:/CODE/outcode/RISC-2/onebitfulladd.vhd}
 vcom -93 -work work {C:/CODE/outcode/RISC-2/onebithalfadd.vhd}
 vcom -93 -work work {C:/CODE/outcode/RISC-2/ir.vhd}
+vcom -93 -work work {C:/CODE/outcode/RISC-2/sequencer.vhd}
 
 vcom -93 -work work {C:/CODE/outcode/RISC-2/simulation/modelsim/Waveform.vwf.vht}
 

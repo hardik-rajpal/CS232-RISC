@@ -1,5 +1,5 @@
 Flow report for RISC
-Fri May 06 13:50:12 2022
+Fri May 06 14:14:18 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,13 +41,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri May 06 13:50:12 2022       ;
+; Flow Status                        ; Successful - Fri May 06 14:14:18 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; RISC                                        ;
 ; Top-level Entity Name              ; RISC                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,443                                       ;
-;     Total combinational functions  ; 1,443                                       ;
+; Total logic elements               ; 1,308                                       ;
+;     Total combinational functions  ; 1,308                                       ;
 ;     Dedicated logic registers      ; 5                                           ;
 ; Total registers                    ; 5                                           ;
 ; Total pins                         ; 11                                          ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/06/2022 13:49:54 ;
+; Start date & time ; 05/06/2022 14:14:04 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; RISC                ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id       ;
 +--------------------------------------+----------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID                ; 91770711168.165182519402076            ; --            ; --          ; --               ;
+; COMPILER_SIGNATURE_ID                ; 91770711168.165182664401064            ; --            ; --          ; --               ;
 ; EDA_DESIGN_INSTANCE_NAME             ; i1                                     ; --            ; --          ; Waveform.vwf.vht ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Waveform.vwf.vht                       ; --            ; --          ; eda_simulation   ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation   ;
@@ -96,8 +96,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 4794 MB             ; 00:00:33                           ;
-; Total                ; 00:00:18     ; --                      ; --                  ; 00:00:33                           ;
+; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4796 MB             ; 00:00:29                           ;
+; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:29                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
