@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RISC
-Fri May 06 04:33:32 2022
+Fri May 06 05:46:27 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -47,13 +47,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 06 04:33:32 2022       ;
+; Analysis & Synthesis Status        ; Successful - Fri May 06 05:46:27 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; RISC                                        ;
 ; Top-level Entity Name              ; RISC                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,340                                       ;
-;     Total combinational functions  ; 1,340                                       ;
+; Total logic elements               ; 1,296                                       ;
+;     Total combinational functions  ; 1,296                                       ;
 ;     Dedicated logic registers      ; 5                                           ;
 ; Total registers                    ; 5                                           ;
 ; Total pins                         ; 11                                          ;
@@ -162,7 +162,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
+;     Processor 2            ;   0.1%      ;
 ;     Processors 3-4         ;   0.1%      ;
 +----------------------------+-------------+
 
@@ -183,36 +183,36 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------------+------------------------------------------+---------+
 
 
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-; Estimated Total logic elements              ; 1,340    ;
-;                                             ;          ;
-; Total combinational functions               ; 1340     ;
-; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 559      ;
-;     -- 3 input functions                    ; 728      ;
-;     -- <=2 input functions                  ; 53       ;
-;                                             ;          ;
-; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 1340     ;
-;     -- arithmetic mode                      ; 0        ;
-;                                             ;          ;
-; Total registers                             ; 5        ;
-;     -- Dedicated logic registers            ; 5        ;
-;     -- I/O registers                        ; 0        ;
-;                                             ;          ;
-; I/O pins                                    ; 11       ;
-;                                             ;          ;
-; Embedded Multiplier 9-bit elements          ; 0        ;
-;                                             ;          ;
-; Maximum fan-out node                        ; memWrite ;
-; Maximum fan-out                             ; 97       ;
-; Total fan-out                               ; 4557     ;
-; Average fan-out                             ; 3.33     ;
-+---------------------------------------------+----------+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 1,296        ;
+;                                             ;              ;
+; Total combinational functions               ; 1296         ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 589          ;
+;     -- 3 input functions                    ; 654          ;
+;     -- <=2 input functions                  ; 53           ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 1296         ;
+;     -- arithmetic mode                      ; 0            ;
+;                                             ;              ;
+; Total registers                             ; 5            ;
+;     -- Dedicated logic registers            ; 5            ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 11           ;
+;                                             ;              ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; memAddr[3]~1 ;
+; Maximum fan-out                             ; 77           ;
+; Total fan-out                               ; 4455         ;
+; Average fan-out                             ; 3.37         ;
++---------------------------------------------+--------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -220,9 +220,9 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                         ; Entity Name   ; Library Name ;
 +-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------+---------------+--------------+
-; |RISC                             ; 1340 (456)          ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |RISC                                                                       ; RISC          ; work         ;
-;    |alu:aluInst|                  ; 43 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst                                                           ; alu           ; work         ;
-;       |SixteenBitRCA:adder|       ; 27 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder                                       ; SixteenBitRCA ; work         ;
+; |RISC                             ; 1296 (476)          ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |RISC                                                                       ; RISC          ; work         ;
+;    |alu:aluInst|                  ; 43 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst                                                           ; alu           ; work         ;
+;       |SixteenBitRCA:adder|       ; 26 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder                                       ; SixteenBitRCA ; work         ;
 ;          |OnebitFullAdd:a10|      ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a10                     ; OnebitFullAdd ; work         ;
 ;          |OnebitFullAdd:a11|      ; 2 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a11                     ; OnebitFullAdd ; work         ;
 ;             |OnebitHalfAdd:obha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a11|OnebitHalfAdd:obha2 ; OnebitHalfAdd ; work         ;
@@ -233,16 +233,15 @@ https://fpgasoftware.intel.com/eula.
 ;          |OnebitFullAdd:a15|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a15                     ; OnebitFullAdd ; work         ;
 ;          |OnebitFullAdd:a2|       ; 2 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a2                      ; OnebitFullAdd ; work         ;
 ;             |OnebitHalfAdd:obha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a2|OnebitHalfAdd:obha2  ; OnebitHalfAdd ; work         ;
-;          |OnebitFullAdd:a4|       ; 4 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a4                      ; OnebitFullAdd ; work         ;
-;             |OnebitHalfAdd:obha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a4|OnebitHalfAdd:obha2  ; OnebitHalfAdd ; work         ;
-;          |OnebitFullAdd:a5|       ; 1 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a5                      ; OnebitFullAdd ; work         ;
+;          |OnebitFullAdd:a4|       ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a4                      ; OnebitFullAdd ; work         ;
+;          |OnebitFullAdd:a5|       ; 2 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a5                      ; OnebitFullAdd ; work         ;
 ;             |OnebitHalfAdd:obha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a5|OnebitHalfAdd:obha2  ; OnebitHalfAdd ; work         ;
 ;          |OnebitFullAdd:a6|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a6                      ; OnebitFullAdd ; work         ;
-;          |OnebitFullAdd:a7|       ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a7                      ; OnebitFullAdd ; work         ;
+;          |OnebitFullAdd:a7|       ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a7                      ; OnebitFullAdd ; work         ;
 ;          |OnebitFullAdd:a8|       ; 2 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a8                      ; OnebitFullAdd ; work         ;
 ;             |OnebitHalfAdd:obha2| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a8|OnebitHalfAdd:obha2  ; OnebitHalfAdd ; work         ;
 ;          |OnebitFullAdd:a9|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|alu:aluInst|SixteenBitRCA:adder|OnebitFullAdd:a9                      ; OnebitFullAdd ; work         ;
-;    |memory:mem|                   ; 545 (545)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|memory:mem                                                            ; memory        ; work         ;
+;    |memory:mem|                   ; 481 (481)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|memory:mem                                                            ; memory        ; work         ;
 ;    |registerfile:rf|              ; 296 (296)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RISC|registerfile:rf                                                       ; registerfile  ; work         ;
 +-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -258,53 +257,53 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; nextState[2]                                         ; nextState[4]           ; no                     ;
 ; nextState[3]                                         ; nextState[4]           ; no                     ;
 ; nextState[4]                                         ; nextState[4]           ; no                     ;
-; tempInstr[12]                                        ; Equal2                 ; yes                    ;
-; tempInstr[14]                                        ; Equal2                 ; yes                    ;
 ; tempInstr[15]                                        ; Equal2                 ; yes                    ;
+; tempInstr[14]                                        ; Equal2                 ; yes                    ;
 ; tempInstr[13]                                        ; Equal2                 ; yes                    ;
-; tempInstr[0]                                         ; Equal2                 ; yes                    ;
-; tempInstr[1]                                         ; Equal2                 ; yes                    ;
-; aluIn2[1]                                            ; aluIn2[9]              ; yes                    ;
-; aluIn1[1]                                            ; aluIn1[0]              ; yes                    ;
-; aluIn2[0]                                            ; aluIn2[9]              ; yes                    ;
-; aluIn1[0]                                            ; aluIn1[0]              ; yes                    ;
-; aluSel[0]                                            ; aluSel[0]              ; yes                    ;
-; aluIn2[5]                                            ; aluIn2[9]              ; yes                    ;
-; aluIn1[5]                                            ; aluIn1[0]              ; yes                    ;
-; aluIn2[4]                                            ; aluIn2[9]              ; yes                    ;
-; aluIn1[4]                                            ; aluIn1[0]              ; yes                    ;
-; aluIn2[3]                                            ; aluIn2[9]              ; yes                    ;
-; aluIn1[3]                                            ; aluIn1[0]              ; yes                    ;
-; aluIn2[2]                                            ; aluIn2[9]              ; yes                    ;
-; aluIn1[2]                                            ; aluIn1[0]              ; yes                    ;
-; aluIn2[14]                                           ; aluIn2[9]              ; yes                    ;
-; aluIn1[14]                                           ; aluIn1[0]              ; yes                    ;
-; aluIn2[13]                                           ; aluIn2[9]              ; yes                    ;
-; aluIn1[13]                                           ; aluIn1[0]              ; yes                    ;
-; aluIn2[12]                                           ; aluIn2[9]              ; yes                    ;
-; aluIn1[12]                                           ; aluIn1[0]              ; yes                    ;
-; aluIn2[11]                                           ; aluIn2[9]              ; yes                    ;
-; aluIn1[11]                                           ; aluIn1[0]              ; yes                    ;
-; aluIn1[10]                                           ; aluIn1[0]              ; yes                    ;
-; aluIn2[10]                                           ; aluIn2[9]              ; yes                    ;
-; aluIn2[9]                                            ; aluIn2[9]              ; yes                    ;
-; aluIn1[9]                                            ; aluIn1[0]              ; yes                    ;
-; aluIn2[8]                                            ; aluIn2[9]              ; yes                    ;
-; aluIn1[8]                                            ; aluIn1[0]              ; yes                    ;
-; aluIn2[7]                                            ; aluIn2[9]              ; yes                    ;
-; aluIn1[7]                                            ; aluIn1[0]              ; yes                    ;
-; aluIn2[6]                                            ; aluIn2[9]              ; yes                    ;
-; aluIn1[6]                                            ; aluIn1[0]              ; yes                    ;
-; aluIn2[15]                                           ; aluIn2[9]              ; yes                    ;
-; aluIn1[15]                                           ; aluIn1[0]              ; yes                    ;
+; tempInstr[12]                                        ; Equal2                 ; yes                    ;
 ; regNum[0]                                            ; regNum[0]              ; yes                    ;
 ; regNum[1]                                            ; regNum[0]              ; yes                    ;
 ; regNum[2]                                            ; regNum[0]              ; yes                    ;
 ; regNum[3]                                            ; regNum[0]              ; yes                    ;
-; memory:mem|do[12]                                    ; memory:mem|do[15]      ; yes                    ;
-; memory:mem|do[14]                                    ; memory:mem|do[15]      ; yes                    ;
+; tempInstr[0]                                         ; Equal2                 ; yes                    ;
+; tempInstr[1]                                         ; Equal2                 ; yes                    ;
+; aluIn2[1]                                            ; aluIn2[10]             ; yes                    ;
+; aluIn1[1]                                            ; aluIn1[0]              ; yes                    ;
+; aluIn2[0]                                            ; aluIn2[10]             ; yes                    ;
+; aluIn1[0]                                            ; aluIn1[0]              ; yes                    ;
+; aluSel[0]                                            ; aluSel[0]              ; yes                    ;
+; aluIn2[2]                                            ; aluIn2[10]             ; yes                    ;
+; aluIn1[2]                                            ; aluIn1[0]              ; yes                    ;
+; aluIn2[4]                                            ; aluIn2[10]             ; yes                    ;
+; aluIn1[4]                                            ; aluIn1[0]              ; yes                    ;
+; aluIn2[3]                                            ; aluIn2[10]             ; yes                    ;
+; aluIn1[3]                                            ; aluIn1[0]              ; yes                    ;
+; aluIn2[5]                                            ; aluIn2[10]             ; yes                    ;
+; aluIn1[5]                                            ; aluIn1[0]              ; yes                    ;
+; aluIn2[6]                                            ; aluIn2[10]             ; yes                    ;
+; aluIn1[6]                                            ; aluIn1[0]              ; yes                    ;
+; aluIn2[7]                                            ; aluIn2[10]             ; yes                    ;
+; aluIn1[7]                                            ; aluIn1[0]              ; yes                    ;
+; aluIn2[8]                                            ; aluIn2[10]             ; yes                    ;
+; aluIn1[8]                                            ; aluIn1[0]              ; yes                    ;
+; aluIn2[10]                                           ; aluIn2[10]             ; yes                    ;
+; aluIn1[10]                                           ; aluIn1[0]              ; yes                    ;
+; aluIn2[9]                                            ; aluIn2[10]             ; yes                    ;
+; aluIn1[9]                                            ; aluIn1[0]              ; yes                    ;
+; aluIn1[11]                                           ; aluIn1[0]              ; yes                    ;
+; aluIn2[11]                                           ; aluIn2[10]             ; yes                    ;
+; aluIn2[12]                                           ; aluIn2[10]             ; yes                    ;
+; aluIn1[12]                                           ; aluIn1[0]              ; yes                    ;
+; aluIn2[13]                                           ; aluIn2[10]             ; yes                    ;
+; aluIn1[13]                                           ; aluIn1[0]              ; yes                    ;
+; aluIn2[14]                                           ; aluIn2[10]             ; yes                    ;
+; aluIn1[14]                                           ; aluIn1[0]              ; yes                    ;
+; aluIn2[15]                                           ; aluIn2[10]             ; yes                    ;
+; aluIn1[15]                                           ; aluIn1[0]              ; yes                    ;
 ; memory:mem|do[15]                                    ; memory:mem|do[15]      ; yes                    ;
+; memory:mem|do[14]                                    ; memory:mem|do[15]      ; yes                    ;
 ; memory:mem|do[13]                                    ; memory:mem|do[15]      ; yes                    ;
+; memory:mem|do[12]                                    ; memory:mem|do[15]      ; yes                    ;
 ; memory:mem|do[0]                                     ; memory:mem|do[15]      ; yes                    ;
 ; memory:mem|do[1]                                     ; memory:mem|do[15]      ; yes                    ;
 ; registerfile:rf|data[2][1]                           ; registerfile:rf|Equal7 ; yes                    ;
@@ -339,20 +338,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; prevPC[0]                                            ; Equal2                 ; yes                    ;
 ; lmsmAddr[0]                                          ; lmsmAddr[0]            ; yes                    ;
 ; loadCurrent                                          ; loadCurrent            ; yes                    ;
-; registerfile:rf|data[2][5]                           ; registerfile:rf|Equal7 ; yes                    ;
-; registerfile:rf|data[4][5]                           ; registerfile:rf|Equal7 ; yes                    ;
-; registerfile:rf|data[0][5]                           ; registerfile:rf|Equal7 ; yes                    ;
-; registerfile:rf|data[6][5]                           ; registerfile:rf|Equal7 ; yes                    ;
-; registerfile:rf|data[5][5]                           ; registerfile:rf|Equal7 ; yes                    ;
-; registerfile:rf|data[3][5]                           ; registerfile:rf|Equal7 ; yes                    ;
-; registerfile:rf|data[1][5]                           ; registerfile:rf|Equal7 ; yes                    ;
-; registerfile:rf|data[7][5]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[2][2]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[4][2]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[0][2]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[6][2]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[5][2]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[3][2]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[1][2]                           ; registerfile:rf|Equal7 ; yes                    ;
+; registerfile:rf|data[7][2]                           ; registerfile:rf|Equal7 ; yes                    ;
+; tempInstr[2]                                         ; Equal2                 ; yes                    ;
+; prevPC[2]                                            ; Equal2                 ; yes                    ;
+; lmsmAddr[2]                                          ; lmsmAddr[0]            ; yes                    ;
 ; registerfile:rf|data[2][4]                           ; registerfile:rf|Equal7 ; yes                    ;
 ; registerfile:rf|data[4][4]                           ; registerfile:rf|Equal7 ; yes                    ;
 ; registerfile:rf|data[0][4]                           ; registerfile:rf|Equal7 ; yes                    ;
-; registerfile:rf|data[6][4]                           ; registerfile:rf|Equal7 ; yes                    ;
-; registerfile:rf|data[5][4]                           ; registerfile:rf|Equal7 ; yes                    ;
-; registerfile:rf|data[3][4]                           ; registerfile:rf|Equal7 ; yes                    ;
 ; Number of user-specified and inferred latches = 542  ;                        ;                        ;
 +------------------------------------------------------+------------------------+------------------------+
 Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -378,23 +377,21 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |RISC|nextState[4]              ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |RISC|memory:mem|mem_reg[7][10] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |RISC|memory:mem|mem_reg[6][4]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |RISC|memory:mem|mem_reg[5][0]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |RISC|memory:mem|mem_reg[4][0]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |RISC|memory:mem|mem_reg[0][0]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |RISC|aluIn1[5]                 ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |RISC|registerfile:rf|doutb[10] ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |RISC|registerfile:rf|douta[12] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |RISC|nextState[1]              ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |RISC|regNum[2]                 ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |RISC|memory:mem|mem_reg[0][8]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |RISC|rfSel2[2]                 ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |RISC|aluIn1[1]                 ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |RISC|registerfile:rf|doutb[9]  ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |RISC|registerfile:rf|douta[15] ;
 ; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |RISC|aluIn2[8]                 ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |RISC|aluIn2[14]                ;
-; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |RISC|memory:mem|Mux2           ;
-; 17:1               ; 3 bits    ; 33 LEs        ; 6 LEs                ; 27 LEs                 ; No         ; |RISC|rfSel1[0]                 ;
-; 7:1                ; 5 bits    ; 20 LEs        ; 15 LEs               ; 5 LEs                  ; No         ; |RISC|aluIn2[2]                 ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; No         ; |RISC|rfSelW[1]                 ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 21 LEs               ; 14 LEs                 ; No         ; |RISC|rfDataIn[4]               ;
-; 8:1                ; 9 bits    ; 45 LEs        ; 27 LEs               ; 18 LEs                 ; No         ; |RISC|rfDataIn[11]              ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |RISC|aluIn2[15]                ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |RISC|memory:mem|Mux12          ;
+; 17:1               ; 3 bits    ; 33 LEs        ; 6 LEs                ; 27 LEs                 ; No         ; |RISC|rfSel1[2]                 ;
+; 7:1                ; 5 bits    ; 20 LEs        ; 15 LEs               ; 5 LEs                  ; No         ; |RISC|aluIn2[5]                 ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 9 LEs                ; 6 LEs                  ; No         ; |RISC|rfSelW[2]                 ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 21 LEs               ; 14 LEs                 ; No         ; |RISC|rfDataIn[6]               ;
+; 8:1                ; 9 bits    ; 45 LEs        ; 27 LEs               ; 18 LEs                 ; No         ; |RISC|rfDataIn[14]              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 
 
@@ -425,14 +422,14 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; boundary_port         ; 11                          ;
 ; cycloneiii_ff         ; 5                           ;
 ;     plain             ; 5                           ;
-; cycloneiii_lcell_comb ; 1340                        ;
-;     normal            ; 1340                        ;
+; cycloneiii_lcell_comb ; 1296                        ;
+;     normal            ; 1296                        ;
 ;         2 data inputs ; 53                          ;
-;         3 data inputs ; 728                         ;
-;         4 data inputs ; 559                         ;
+;         3 data inputs ; 654                         ;
+;         4 data inputs ; 589                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 12.00                       ;
-; Average LUT depth     ; 5.04                        ;
+; Max LUT depth         ; 14.00                       ;
+; Average LUT depth     ; 5.49                        ;
 +-----------------------+-----------------------------+
 
 
@@ -441,7 +438,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -451,7 +448,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri May 06 04:33:16 2022
+    Info: Processing started: Fri May 06 05:45:50 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISC -c RISC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -504,41 +501,56 @@ Warning (10492): VHDL Process Statement warning at RISC.vhd(263): signal "raSel"
 Warning (10492): VHDL Process Statement warning at RISC.vhd(268): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 268
 Warning (10492): VHDL Process Statement warning at RISC.vhd(271): signal "raSel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 271
 Warning (10492): VHDL Process Statement warning at RISC.vhd(275): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 275
-Warning (10492): VHDL Process Statement warning at RISC.vhd(278): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 278
-Warning (10492): VHDL Process Statement warning at RISC.vhd(283): signal "raSel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 283
-Warning (10492): VHDL Process Statement warning at RISC.vhd(284): signal "rbSel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 284
-Warning (10492): VHDL Process Statement warning at RISC.vhd(286): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 286
-Warning (10492): VHDL Process Statement warning at RISC.vhd(293): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 293
-Warning (10492): VHDL Process Statement warning at RISC.vhd(296): signal "rbSel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 296
-Warning (10492): VHDL Process Statement warning at RISC.vhd(298): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 298
-Warning (10492): VHDL Process Statement warning at RISC.vhd(300): signal "raSel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 300
-Warning (10492): VHDL Process Statement warning at RISC.vhd(313): signal "regNum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 313
-Warning (10492): VHDL Process Statement warning at RISC.vhd(318): signal "imm8_16" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 318
-Warning (10492): VHDL Process Statement warning at RISC.vhd(318): signal "regNum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 318
-Warning (10492): VHDL Process Statement warning at RISC.vhd(322): signal "imm8_16" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 322
-Warning (10492): VHDL Process Statement warning at RISC.vhd(322): signal "regNum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 322
-Warning (10492): VHDL Process Statement warning at RISC.vhd(328): signal "loadCurrent" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 328
-Warning (10492): VHDL Process Statement warning at RISC.vhd(331): signal "regNum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 331
-Warning (10492): VHDL Process Statement warning at RISC.vhd(332): signal "memDataOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 332
-Warning (10492): VHDL Process Statement warning at RISC.vhd(336): signal "aluOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 336
+Warning (10492): VHDL Process Statement warning at RISC.vhd(278): signal "raSel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 278
+Warning (10492): VHDL Process Statement warning at RISC.vhd(282): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 282
+Warning (10492): VHDL Process Statement warning at RISC.vhd(287): signal "raSel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 287
+Warning (10492): VHDL Process Statement warning at RISC.vhd(288): signal "rbSel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 288
+Warning (10492): VHDL Process Statement warning at RISC.vhd(290): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 290
+Warning (10492): VHDL Process Statement warning at RISC.vhd(297): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 297
+Warning (10492): VHDL Process Statement warning at RISC.vhd(300): signal "rbSel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 300
+Warning (10492): VHDL Process Statement warning at RISC.vhd(302): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 302
+Warning (10492): VHDL Process Statement warning at RISC.vhd(304): signal "raSel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 304
+Warning (10492): VHDL Process Statement warning at RISC.vhd(315): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 315
+Warning (10492): VHDL Process Statement warning at RISC.vhd(317): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 317
+Warning (10492): VHDL Process Statement warning at RISC.vhd(321): signal "regNum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 321
+Warning (10492): VHDL Process Statement warning at RISC.vhd(326): signal "imm8_16" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 326
+Warning (10492): VHDL Process Statement warning at RISC.vhd(326): signal "regNum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 326
+Warning (10492): VHDL Process Statement warning at RISC.vhd(330): signal "imm8_16" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 330
+Warning (10492): VHDL Process Statement warning at RISC.vhd(330): signal "regNum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 330
+Warning (10492): VHDL Process Statement warning at RISC.vhd(336): signal "loadCurrent" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 336
 Warning (10492): VHDL Process Statement warning at RISC.vhd(339): signal "regNum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 339
-Warning (10492): VHDL Process Statement warning at RISC.vhd(343): signal "rfDataOut1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 343
-Warning (10492): VHDL Process Statement warning at RISC.vhd(344): signal "raSel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 344
-Warning (10492): VHDL Process Statement warning at RISC.vhd(348): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 348
-Warning (10492): VHDL Process Statement warning at RISC.vhd(350): signal "rfDataOut1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 350
-Warning (10492): VHDL Process Statement warning at RISC.vhd(350): signal "rfDataOut2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 350
-Warning (10492): VHDL Process Statement warning at RISC.vhd(353): signal "aluOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 353
-Warning (10492): VHDL Process Statement warning at RISC.vhd(355): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 355
-Warning (10492): VHDL Process Statement warning at RISC.vhd(357): signal "aluOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 357
-Warning (10492): VHDL Process Statement warning at RISC.vhd(359): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 359
-Warning (10492): VHDL Process Statement warning at RISC.vhd(361): signal "rfDataOut2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 361
-Warning (10492): VHDL Process Statement warning at RISC.vhd(363): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 363
-Warning (10492): VHDL Process Statement warning at RISC.vhd(365): signal "aluOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 365
-Warning (10492): VHDL Process Statement warning at RISC.vhd(370): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 370
-Warning (10492): VHDL Process Statement warning at RISC.vhd(371): signal "memDataOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 371
-Warning (10492): VHDL Process Statement warning at RISC.vhd(373): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 373
-Warning (10492): VHDL Process Statement warning at RISC.vhd(375): signal "rfDataOut2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 375
-Warning (10492): VHDL Process Statement warning at RISC.vhd(379): signal "aluOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 379
+Warning (10492): VHDL Process Statement warning at RISC.vhd(340): signal "memDataOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 340
+Warning (10492): VHDL Process Statement warning at RISC.vhd(344): signal "aluOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 344
+Warning (10492): VHDL Process Statement warning at RISC.vhd(347): signal "regNum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 347
+Warning (10492): VHDL Process Statement warning at RISC.vhd(352): signal "regNum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 352
+Warning (10492): VHDL Process Statement warning at RISC.vhd(352): signal "loadCurrent" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 352
+Warning (10492): VHDL Process Statement warning at RISC.vhd(356): signal "aluOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 356
+Warning (10492): VHDL Process Statement warning at RISC.vhd(358): signal "regNum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 358
+Warning (10492): VHDL Process Statement warning at RISC.vhd(362): signal "imm8_16" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 362
+Warning (10492): VHDL Process Statement warning at RISC.vhd(362): signal "regNum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 362
+Warning (10492): VHDL Process Statement warning at RISC.vhd(363): signal "regNum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 363
+Warning (10492): VHDL Process Statement warning at RISC.vhd(366): signal "imm8_16" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 366
+Warning (10492): VHDL Process Statement warning at RISC.vhd(366): signal "regNum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 366
+Warning (10492): VHDL Process Statement warning at RISC.vhd(373): signal "loadCurrent" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 373
+Warning (10492): VHDL Process Statement warning at RISC.vhd(378): signal "rfDataOut2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 378
+Warning (10492): VHDL Process Statement warning at RISC.vhd(382): signal "regNum" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 382
+Warning (10492): VHDL Process Statement warning at RISC.vhd(386): signal "rfDataOut1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 386
+Warning (10492): VHDL Process Statement warning at RISC.vhd(387): signal "raSel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 387
+Warning (10492): VHDL Process Statement warning at RISC.vhd(391): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 391
+Warning (10492): VHDL Process Statement warning at RISC.vhd(393): signal "rfDataOut1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 393
+Warning (10492): VHDL Process Statement warning at RISC.vhd(393): signal "rfDataOut2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 393
+Warning (10492): VHDL Process Statement warning at RISC.vhd(396): signal "aluOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 396
+Warning (10492): VHDL Process Statement warning at RISC.vhd(398): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 398
+Warning (10492): VHDL Process Statement warning at RISC.vhd(400): signal "aluOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 400
+Warning (10492): VHDL Process Statement warning at RISC.vhd(402): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 402
+Warning (10492): VHDL Process Statement warning at RISC.vhd(404): signal "rfDataOut2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 404
+Warning (10492): VHDL Process Statement warning at RISC.vhd(406): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 406
+Warning (10492): VHDL Process Statement warning at RISC.vhd(408): signal "aluOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 408
+Warning (10492): VHDL Process Statement warning at RISC.vhd(413): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 413
+Warning (10492): VHDL Process Statement warning at RISC.vhd(414): signal "memDataOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 414
+Warning (10492): VHDL Process Statement warning at RISC.vhd(416): signal "opCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 416
+Warning (10492): VHDL Process Statement warning at RISC.vhd(418): signal "rfDataOut2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 418
+Warning (10492): VHDL Process Statement warning at RISC.vhd(422): signal "aluOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 422
 Warning (10631): VHDL Process Statement warning at RISC.vhd(162): inferring latch(es) for signal or variable "memInit", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
 Warning (10631): VHDL Process Statement warning at RISC.vhd(162): inferring latch(es) for signal or variable "memRead", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
 Warning (10631): VHDL Process Statement warning at RISC.vhd(162): inferring latch(es) for signal or variable "memWrite", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
@@ -559,59 +571,59 @@ Warning (10631): VHDL Process Statement warning at RISC.vhd(162): inferring latc
 Warning (10631): VHDL Process Statement warning at RISC.vhd(162): inferring latch(es) for signal or variable "loadCurrent", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
 Warning (10631): VHDL Process Statement warning at RISC.vhd(162): inferring latch(es) for signal or variable "lmsmAddr", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
 Warning (10631): VHDL Process Statement warning at RISC.vhd(162): inferring latch(es) for signal or variable "memDataIn", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (10631): VHDL Process Statement warning at RISC.vhd(384): inferring latch(es) for signal or variable "memAddr", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 384
-Info (10635): VHDL Report Statement at RISC.vhd(396): "aluin1: 0" (NOTE) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 396
-Warning (10492): VHDL Process Statement warning at RISC.vhd(417): signal "index" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 417
-Warning (10631): VHDL Process Statement warning at RISC.vhd(394): inferring latch(es) for signal or variable "aluIn1", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Warning (10631): VHDL Process Statement warning at RISC.vhd(394): inferring latch(es) for signal or variable "aluIn2", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn2[0]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn2[1]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn2[2]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn2[3]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn2[4]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn2[5]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn2[6]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn2[7]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn2[8]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn2[9]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn2[10]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn2[11]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn2[12]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn2[13]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn2[14]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn2[15]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn1[0]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn1[1]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn1[2]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn1[3]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn1[4]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn1[5]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn1[6]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn1[7]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn1[8]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn1[9]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn1[10]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn1[11]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn1[12]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn1[13]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn1[14]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "aluIn1[15]" at RISC.vhd(394) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-Info (10041): Inferred latch for "memAddr[0]" at RISC.vhd(384) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 384
-Info (10041): Inferred latch for "memAddr[1]" at RISC.vhd(384) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 384
-Info (10041): Inferred latch for "memAddr[2]" at RISC.vhd(384) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 384
-Info (10041): Inferred latch for "memAddr[3]" at RISC.vhd(384) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 384
-Info (10041): Inferred latch for "memAddr[4]" at RISC.vhd(384) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 384
-Info (10041): Inferred latch for "memAddr[5]" at RISC.vhd(384) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 384
-Info (10041): Inferred latch for "memAddr[6]" at RISC.vhd(384) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 384
-Info (10041): Inferred latch for "memAddr[7]" at RISC.vhd(384) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 384
-Info (10041): Inferred latch for "memAddr[8]" at RISC.vhd(384) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 384
-Info (10041): Inferred latch for "memAddr[9]" at RISC.vhd(384) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 384
-Info (10041): Inferred latch for "memAddr[10]" at RISC.vhd(384) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 384
-Info (10041): Inferred latch for "memAddr[11]" at RISC.vhd(384) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 384
-Info (10041): Inferred latch for "memAddr[12]" at RISC.vhd(384) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 384
-Info (10041): Inferred latch for "memAddr[13]" at RISC.vhd(384) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 384
-Info (10041): Inferred latch for "memAddr[14]" at RISC.vhd(384) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 384
-Info (10041): Inferred latch for "memAddr[15]" at RISC.vhd(384) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 384
+Warning (10631): VHDL Process Statement warning at RISC.vhd(427): inferring latch(es) for signal or variable "memAddr", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 427
+Info (10635): VHDL Report Statement at RISC.vhd(439): "aluin1: 0" (NOTE) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 439
+Warning (10492): VHDL Process Statement warning at RISC.vhd(460): signal "index" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 460
+Warning (10631): VHDL Process Statement warning at RISC.vhd(437): inferring latch(es) for signal or variable "aluIn1", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Warning (10631): VHDL Process Statement warning at RISC.vhd(437): inferring latch(es) for signal or variable "aluIn2", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn2[0]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn2[1]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn2[2]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn2[3]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn2[4]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn2[5]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn2[6]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn2[7]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn2[8]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn2[9]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn2[10]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn2[11]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn2[12]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn2[13]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn2[14]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn2[15]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn1[0]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn1[1]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn1[2]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn1[3]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn1[4]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn1[5]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn1[6]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn1[7]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn1[8]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn1[9]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn1[10]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn1[11]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn1[12]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn1[13]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn1[14]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "aluIn1[15]" at RISC.vhd(437) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+Info (10041): Inferred latch for "memAddr[0]" at RISC.vhd(427) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 427
+Info (10041): Inferred latch for "memAddr[1]" at RISC.vhd(427) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 427
+Info (10041): Inferred latch for "memAddr[2]" at RISC.vhd(427) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 427
+Info (10041): Inferred latch for "memAddr[3]" at RISC.vhd(427) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 427
+Info (10041): Inferred latch for "memAddr[4]" at RISC.vhd(427) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 427
+Info (10041): Inferred latch for "memAddr[5]" at RISC.vhd(427) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 427
+Info (10041): Inferred latch for "memAddr[6]" at RISC.vhd(427) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 427
+Info (10041): Inferred latch for "memAddr[7]" at RISC.vhd(427) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 427
+Info (10041): Inferred latch for "memAddr[8]" at RISC.vhd(427) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 427
+Info (10041): Inferred latch for "memAddr[9]" at RISC.vhd(427) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 427
+Info (10041): Inferred latch for "memAddr[10]" at RISC.vhd(427) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 427
+Info (10041): Inferred latch for "memAddr[11]" at RISC.vhd(427) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 427
+Info (10041): Inferred latch for "memAddr[12]" at RISC.vhd(427) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 427
+Info (10041): Inferred latch for "memAddr[13]" at RISC.vhd(427) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 427
+Info (10041): Inferred latch for "memAddr[14]" at RISC.vhd(427) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 427
+Info (10041): Inferred latch for "memAddr[15]" at RISC.vhd(427) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 427
 Info (10041): Inferred latch for "memDataIn[0]" at RISC.vhd(162) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
 Info (10041): Inferred latch for "memDataIn[1]" at RISC.vhd(162) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
 Info (10041): Inferred latch for "memDataIn[2]" at RISC.vhd(162) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
@@ -726,7 +738,7 @@ Info (10041): Inferred latch for "memRead" at RISC.vhd(162) File: C:/CODE/outcod
 Info (10041): Inferred latch for "memInit" at RISC.vhd(162) File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
 Info (12128): Elaborating entity "memory" for hierarchy "memory:mem" File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 150
 Info (10635): VHDL Report Statement at Memory.vhd(23): "addr:0" (NOTE) File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 23
-Warning (10492): VHDL Process Statement warning at Memory.vhd(50): signal "di" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 50
+Warning (10492): VHDL Process Statement warning at Memory.vhd(51): signal "di" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 51
 Warning (10631): VHDL Process Statement warning at Memory.vhd(21): inferring latch(es) for signal or variable "mem_reg", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
 Warning (10631): VHDL Process Statement warning at Memory.vhd(21): inferring latch(es) for signal or variable "do", which holds its previous value in one or more paths through the process File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
 Info (10041): Inferred latch for "do[0]" at Memory.vhd(21) File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
@@ -1303,10 +1315,10 @@ Warning (14026): LATCH primitive "registerfile:rf|doutb[12]" is permanently enab
 Warning (14026): LATCH primitive "registerfile:rf|douta[13]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
 Warning (14026): LATCH primitive "registerfile:rf|doutb[11]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
 Warning (14026): LATCH primitive "registerfile:rf|douta[12]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
-Warning (14026): LATCH primitive "registerfile:rf|doutb[10]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
 Warning (14026): LATCH primitive "registerfile:rf|douta[11]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
-Warning (14026): LATCH primitive "registerfile:rf|douta[10]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|doutb[10]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
 Warning (14026): LATCH primitive "registerfile:rf|doutb[9]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
+Warning (14026): LATCH primitive "registerfile:rf|douta[10]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
 Warning (14026): LATCH primitive "registerfile:rf|doutb[8]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
 Warning (14026): LATCH primitive "registerfile:rf|douta[9]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
 Warning (14026): LATCH primitive "registerfile:rf|doutb[7]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
@@ -1327,7 +1339,7 @@ Warning (14026): LATCH primitive "registerfile:rf|doutb[1]" is permanently enabl
 Warning (14026): LATCH primitive "registerfile:rf|douta[1]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
 Warning (14026): LATCH primitive "registerfile:rf|douta[2]" is permanently enabled File: C:/CODE/outcode/RISC-2/RegisterFile.vhd Line: 26
 Warning (13012): Latch nextState[0] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[2] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
     Warning (13013): Ports ENA and PRE on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
 Warning (13012): Latch nextState[1] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
     Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
@@ -1336,91 +1348,91 @@ Warning (13012): Latch nextState[2] has unsafe behavior File: C:/CODE/outcode/RI
     Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
     Warning (13013): Ports ENA and PRE on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
 Warning (13012): Latch nextState[3] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[2] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
     Warning (13013): Ports ENA and PRE on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
 Warning (13012): Latch nextState[4] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
     Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInstr[14] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
     Warning (13013): Ports ENA and PRE on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
-Warning (13012): Latch aluIn2[1] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn1[1] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn2[0] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn1[0] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluSel[0] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
-Warning (13012): Latch aluIn2[5] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn1[5] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn2[4] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn1[4] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn2[3] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn1[3] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn2[2] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn1[2] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn2[14] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn1[14] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn2[13] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn1[13] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn2[12] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn1[12] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn2[11] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn1[11] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn1[10] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn2[10] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn2[9] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn1[9] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn2[8] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn1[8] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn2[7] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn1[7] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn2[6] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn1[6] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn2[15] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-Warning (13012): Latch aluIn1[15] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 394
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
 Warning (13012): Latch regNum[0] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regNum[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
 Warning (13012): Latch regNum[1] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
     Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
 Warning (13012): Latch regNum[2] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
     Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
 Warning (13012): Latch regNum[3] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
     Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
+Warning (13012): Latch aluIn2[1] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn1[1] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn2[0] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn1[0] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluSel[0] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
+Warning (13012): Latch aluIn2[2] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn1[2] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn2[4] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn1[4] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn2[3] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn1[3] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn2[5] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn1[5] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn2[6] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn1[6] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn2[7] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn1[7] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn2[8] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn1[8] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn2[10] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn1[10] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn2[9] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn1[9] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn1[11] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn2[11] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn2[12] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn1[12] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn2[13] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn1[13] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn2[14] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn1[14] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn2[15] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn2Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch aluIn1[15] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 437
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal aluIn1Mux[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
 Warning (13012): Latch rfSel2[1] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInstr[15] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regNum[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
 Warning (13012): Latch rfSel2[2] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInstr[15] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regNum[2] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
 Warning (13012): Latch rfSel2[0] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal tempInstr[15] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal regNum[0] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
 Warning (13012): Latch aluIn2Mux[1] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
     Warning (13013): Ports D and ENA on the latch are fed by the same signal state[4] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
 Warning (13012): Latch aluIn2Mux[0] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
@@ -1441,65 +1453,17 @@ Warning (13012): Latch loadCurrent has unsafe behavior File: C:/CODE/outcode/RIS
     Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
 Warning (13012): Latch memInMux has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 111
     Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
-Warning (13012): Latch memory:mem|mem_reg[5][12] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[6][12] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[4][12] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[7][12] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[0][12] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[6][14] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[5][14] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[4][14] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (13012): Latch memory:mem|mem_reg[0][15] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
 Warning (13012): Latch memory:mem|mem_reg[0][14] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[7][14] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[6][15] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[5][15] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[4][15] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[7][15] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[0][15] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[5][13] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[6][13] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[4][13] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
 Warning (13012): Latch memory:mem|mem_reg[0][13] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[7][13] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[5][0] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[6][0] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[4][0] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[7][0] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (13012): Latch memory:mem|mem_reg[0][12] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
 Warning (13012): Latch memory:mem|mem_reg[0][0] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[6][1] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[5][1] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[4][1] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
 Warning (13012): Latch memory:mem|mem_reg[0][1] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[7][1] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
 Warning (13012): Latch rfDataIn[1] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
     Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
@@ -1519,7 +1483,7 @@ Warning (13012): Latch rfWrite has unsafe behavior File: C:/CODE/outcode/RISC-2/
 Warning (13012): Latch rfDataIn[0] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
     Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
-Warning (13012): Latch rfDataIn[5] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch rfDataIn[2] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
     Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
 Warning (13012): Latch rfDataIn[4] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
@@ -1528,7 +1492,28 @@ Warning (13012): Latch rfDataIn[4] has unsafe behavior File: C:/CODE/outcode/RIS
 Warning (13012): Latch rfDataIn[3] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
     Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
-Warning (13012): Latch rfDataIn[2] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+Warning (13012): Latch rfDataIn[5] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
+Warning (13012): Latch rfDataIn[6] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
+Warning (13012): Latch rfDataIn[7] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
+Warning (13012): Latch rfDataIn[8] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
+Warning (13012): Latch rfDataIn[9] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
+Warning (13012): Latch rfDataIn[10] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
+Warning (13012): Latch rfDataIn[11] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
+Warning (13012): Latch rfDataIn[12] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
     Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
 Warning (13012): Latch rfDataIn[13] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
@@ -1537,143 +1522,43 @@ Warning (13012): Latch rfDataIn[13] has unsafe behavior File: C:/CODE/outcode/RI
 Warning (13012): Latch rfDataIn[14] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
     Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
-Warning (13012): Latch rfDataIn[12] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
-Warning (13012): Latch rfDataIn[11] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
-Warning (13012): Latch rfDataIn[10] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
-Warning (13012): Latch rfDataIn[9] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
-Warning (13012): Latch rfDataIn[8] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
-Warning (13012): Latch rfDataIn[7] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
-Warning (13012): Latch rfDataIn[6] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
 Warning (13012): Latch rfDataIn[15] has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 162
     Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
 Warning (13012): Latch memWrite has unsafe behavior File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal state[1] File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 157
-Warning (13012): Latch memory:mem|mem_reg[6][5] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[5][5] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[4][5] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[7][5] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[0][5] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[5][4] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[6][4] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[4][4] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (13012): Latch memory:mem|mem_reg[0][2] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
 Warning (13012): Latch memory:mem|mem_reg[0][4] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[7][4] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[5][3] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[6][3] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[4][3] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[7][3] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
 Warning (13012): Latch memory:mem|mem_reg[0][3] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[6][2] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[5][2] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[4][2] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[0][2] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[7][2] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[6][8] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[5][8] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[4][8] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[7][8] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[0][8] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[5][7] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[6][7] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[4][7] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[0][7] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[7][7] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[5][6] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[6][6] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[4][6] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[7][6] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (13012): Latch memory:mem|mem_reg[0][5] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
 Warning (13012): Latch memory:mem|mem_reg[0][6] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[6][10] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (13012): Latch memory:mem|mem_reg[0][7] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[5][10] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[4][10] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[7][10] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
+Warning (13012): Latch memory:mem|mem_reg[0][8] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
 Warning (13012): Latch memory:mem|mem_reg[0][10] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[6][11] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[5][11] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[4][11] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
 Warning (13012): Latch memory:mem|mem_reg[0][11] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[7][11] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[5][9] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[6][9] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[4][9] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
 Warning (13012): Latch memory:mem|mem_reg[0][9] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
-Warning (13012): Latch memory:mem|mem_reg[7][9] has unsafe behavior File: C:/CODE/outcode/RISC-2/Memory.vhd Line: 21
     Warning (13013): Ports D and ENA on the latch are fed by the same signal memWrite File: C:/CODE/outcode/RISC-2/RISC.vhd Line: 109
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1356 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1312 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 1345 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 546 warnings
-    Info: Peak virtual memory: 4796 megabytes
-    Info: Processing ended: Fri May 06 04:33:32 2022
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:35
+    Info (21061): Implemented 1301 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 434 warnings
+    Info: Peak virtual memory: 4807 megabytes
+    Info: Processing ended: Fri May 06 05:46:27 2022
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:01:18
 
 
