@@ -26,9 +26,9 @@ V:W_9EQL2Kb?k2=07;U_M?1
 !s100 8JZ3lO6Zzc7la5X]lb^JQ0
 Z9 OV;C;2020.1;71
 31
-Z10 !s110 1651796197
+Z10 !s110 1651825227
 !i10b 1
-Z11 !s108 1651796197.000000
+Z11 !s108 1651825227.000000
 Z12 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/alu.vhd|
 Z13 !s107 C:/CODE/outcode/RISC-2/alu.vhd|
 !i113 1
@@ -71,11 +71,11 @@ V1RHlS>XSmHBQaGQ76Mf^K2
 !s100 zOb_lig9P^IGfzdWWHB5:1
 R9
 31
-Z19 !s110 1651796198
+R10
 !i10b 1
-Z20 !s108 1651796198.000000
-Z21 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/ir.vhd|
-Z22 !s107 C:/CODE/outcode/RISC-2/ir.vhd|
+R11
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/ir.vhd|
+Z20 !s107 C:/CODE/outcode/RISC-2/ir.vhd|
 !i113 1
 R14
 R15
@@ -91,23 +91,23 @@ VdQWRNo?>m]olY:4GJJiWm0
 !s100 ZW>@7kAc?YeNYW3feC[VA2
 R9
 31
-R19
+R10
 !i10b 1
+R11
+R19
 R20
-R21
-R22
 !i113 1
 R14
 R15
 Ememory
-Z23 w1651793994
+Z21 w1651825190
 R2
 R4
 R5
 !i122 1
 R0
-Z24 8C:/CODE/outcode/RISC-2/Memory.vhd
-Z25 FC:/CODE/outcode/RISC-2/Memory.vhd
+Z22 8C:/CODE/outcode/RISC-2/Memory.vhd
+Z23 FC:/CODE/outcode/RISC-2/Memory.vhd
 l0
 L7 1
 VHCXbYbiU31:AW2HZdz5Hb2
@@ -117,8 +117,8 @@ R9
 R10
 !i10b 1
 R11
-Z26 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/Memory.vhd|
-Z27 !s107 C:/CODE/outcode/RISC-2/Memory.vhd|
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/Memory.vhd|
+Z25 !s107 C:/CODE/outcode/RISC-2/Memory.vhd|
 !i113 1
 R14
 R15
@@ -129,27 +129,27 @@ R5
 DEx4 work 6 memory 0 22 HCXbYbiU31:AW2HZdz5Hb2
 !i122 1
 l20
-L17 39
-VddCQ9f;_JY>WR;Vz[5jH<3
-!s100 BUhFVMR8J6eP7MDE:GH`d3
+L17 42
+VU:1ZK^Km[D<g7UC1]EQ5_3
+!s100 U@e14LYn`=<eCK5YCEBD^0
 R9
 31
 R10
 !i10b 1
 R11
-R26
-R27
+R24
+R25
 !i113 1
 R14
 R15
 Eonebitfulladd
-Z28 w1651741339
+Z26 w1651741339
 R4
 R5
 !i122 5
 R0
-Z29 8C:/CODE/outcode/RISC-2/onebitfulladd.vhd
-Z30 FC:/CODE/outcode/RISC-2/onebitfulladd.vhd
+Z27 8C:/CODE/outcode/RISC-2/onebitfulladd.vhd
+Z28 FC:/CODE/outcode/RISC-2/onebitfulladd.vhd
 l0
 L3 1
 V6BoCinYNZ?1V54o2:z@293
@@ -159,8 +159,8 @@ R9
 R10
 !i10b 1
 R11
-Z31 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/onebitfulladd.vhd|
-Z32 !s107 C:/CODE/outcode/RISC-2/onebitfulladd.vhd|
+Z29 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/onebitfulladd.vhd|
+Z30 !s107 C:/CODE/outcode/RISC-2/onebitfulladd.vhd|
 !i113 1
 R14
 R15
@@ -178,30 +178,30 @@ R9
 R10
 !i10b 1
 R11
-R31
-R32
+R29
+R30
 !i113 1
 R14
 R15
 Eonebithalfadd
-R28
+R26
 R4
 R5
 !i122 6
 R0
-Z33 8C:/CODE/outcode/RISC-2/onebithalfadd.vhd
-Z34 FC:/CODE/outcode/RISC-2/onebithalfadd.vhd
+Z31 8C:/CODE/outcode/RISC-2/onebithalfadd.vhd
+Z32 FC:/CODE/outcode/RISC-2/onebithalfadd.vhd
 l0
 L4 1
 VK=ZJBlFY;z3M5Id=nhLh33
 !s100 OeYHL?_6a]cJcZIo@lKCe3
 R9
 31
-R19
+R10
 !i10b 1
-R20
-Z35 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/onebithalfadd.vhd|
-Z36 !s107 C:/CODE/outcode/RISC-2/onebithalfadd.vhd|
+R11
+Z33 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/onebithalfadd.vhd|
+Z34 !s107 C:/CODE/outcode/RISC-2/onebithalfadd.vhd|
 !i113 1
 R14
 R15
@@ -216,23 +216,23 @@ VE8[4nhXHW6[lIY;nafFE73
 !s100 A@206SSAe?Wc3kYXZ0b_g0
 R9
 31
-R19
+R10
 !i10b 1
-R20
-R35
-R36
+R11
+R33
+R34
 !i113 1
 R14
 R15
 Eregisterfile
-Z37 w1651793879
+Z35 w1651793879
 R2
 R4
 R5
 !i122 2
 R0
-Z38 8C:/CODE/outcode/RISC-2/RegisterFile.vhd
-Z39 FC:/CODE/outcode/RISC-2/RegisterFile.vhd
+Z36 8C:/CODE/outcode/RISC-2/RegisterFile.vhd
+Z37 FC:/CODE/outcode/RISC-2/RegisterFile.vhd
 l0
 L7 1
 VhDm3hb<l`SWoTS99gm3A51
@@ -242,8 +242,8 @@ R9
 R10
 !i10b 1
 R11
-Z40 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/RegisterFile.vhd|
-Z41 !s107 C:/CODE/outcode/RISC-2/RegisterFile.vhd|
+Z38 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/RegisterFile.vhd|
+Z39 !s107 C:/CODE/outcode/RISC-2/RegisterFile.vhd|
 !i113 1
 R14
 R15
@@ -262,13 +262,13 @@ R9
 R10
 !i10b 1
 R11
-R40
-R41
+R38
+R39
 !i113 1
 R14
 R15
 Erisc
-Z42 w1651796146
+Z40 w1651825157
 R3
 R6
 R2
@@ -276,17 +276,17 @@ R4
 R5
 !i122 0
 R0
-Z43 8C:/CODE/outcode/RISC-2/RISC.vhd
-Z44 FC:/CODE/outcode/RISC-2/RISC.vhd
+Z41 8C:/CODE/outcode/RISC-2/RISC.vhd
+Z42 FC:/CODE/outcode/RISC-2/RISC.vhd
 l0
 L7 1
 V@7[bi2a@zD]QUAe5[:?RT2
 !s100 9LM8A_Z3gJJNS`:EiUZOU0
 R9
 31
-R10
+Z43 !s110 1651825225
 !i10b 1
-R11
+Z44 !s108 1651825225.000000
 Z45 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/RISC.vhd|
 Z46 !s107 C:/CODE/outcode/RISC-2/RISC.vhd|
 !i113 1
@@ -302,13 +302,13 @@ DEx4 work 4 risc 0 22 @7[bi2a@zD]QUAe5[:?RT2
 !i122 0
 l149
 L13 478
-VG=HeANNBKD_YeMZ>L_[iM3
-!s100 LJVEH2KG<SzGO<03:GE:31
+VRm9h][UFZSXLZiXL@N0L=0
+!s100 NVnA8>FgDRO>5O;2z`hh43
 R9
 31
-R10
+R43
 !i10b 1
-R11
+R44
 R45
 R46
 !i113 1
@@ -328,10 +328,10 @@ VfRnWYiOU=]BQDg1NF5e9Z2
 !s100 >Z[6d7KQY7dk7`ZR1I?4G2
 R9
 31
-R19
+Z50 !s110 1651825228
 !i10b 1
-R20
-Z50 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/simulation/modelsim/Waveform.vwf.vht|
+R11
+Z51 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/simulation/modelsim/Waveform.vwf.vht|
 !s107 C:/CODE/outcode/RISC-2/simulation/modelsim/Waveform.vwf.vht|
 !i113 1
 R14
@@ -347,22 +347,22 @@ VR4fF8QlhP[mIRX1;CJoQC0
 !s100 K==m=96_9X8Ja6F;=M=Q<1
 R9
 31
-R19
-!i10b 1
-R20
 R50
-Z51 !s107 C:/CODE/outcode/RISC-2/simulation/modelsim/Waveform.vwf.vht|
+!i10b 1
+R11
+R51
+Z52 !s107 C:/CODE/outcode/RISC-2/simulation/modelsim/Waveform.vwf.vht|
 !i113 1
 R14
 R15
 Esixteenbitrca
-R28
+R26
 R4
 R5
 !i122 4
 R0
-Z52 8C:/CODE/outcode/RISC-2/sixteenbitrca.vhd
-Z53 FC:/CODE/outcode/RISC-2/sixteenbitrca.vhd
+Z53 8C:/CODE/outcode/RISC-2/sixteenbitrca.vhd
+Z54 FC:/CODE/outcode/RISC-2/sixteenbitrca.vhd
 l0
 L4 1
 VLHO57Kj1h1>VC;T<7naKX2
@@ -372,8 +372,8 @@ R9
 R10
 !i10b 1
 R11
-Z54 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/sixteenbitrca.vhd|
-Z55 !s107 C:/CODE/outcode/RISC-2/sixteenbitrca.vhd|
+Z55 !s90 -reportprogress|300|-93|-work|work|C:/CODE/outcode/RISC-2/sixteenbitrca.vhd|
+Z56 !s107 C:/CODE/outcode/RISC-2/sixteenbitrca.vhd|
 !i113 1
 R14
 R15
@@ -391,8 +391,8 @@ R9
 R10
 !i10b 1
 R11
-R54
 R55
+R56
 !i113 1
 R14
 R15

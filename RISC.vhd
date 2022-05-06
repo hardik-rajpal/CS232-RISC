@@ -56,7 +56,7 @@ architecture rtl of RISC is
 	constant OC_JLR:std_logic_vector(3 downto 0)	:="1010";
     constant OC_JRI:std_logic_vector(3 downto 0)    :="1011";
 	constant OC_BEQ:std_logic_vector(3 downto 0)	:="1000";
-	
+	constant OC_TER:std_logic_vector(3 downto 0)    :="0100";
     
     ----
 ---components
