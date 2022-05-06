@@ -9,11 +9,11 @@ entity InstrReg is
         inp: in std_logic_vector(15 downto 0);
         immed6: out std_logic_vector(5 downto 0);
         immed9: out std_logic_vector(8 downto 0);
-        immed8: out std_logic_vector(7 downto 0) 
+        immed8: out std_logic_vector(7 downto 0); 
         ra: out std_logic_vector(2 downto 0);
         rb: out std_logic_vector(2 downto 0);
         rc: out std_logic_vector(2 downto 0);
-        cz: out std_logic_vector(1 downto 0);
+        cz: out std_logic_vector(1 downto 0)
 		  );
 
 end entity;

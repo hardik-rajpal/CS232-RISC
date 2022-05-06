@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RISC
-Fri May 06 14:49:11 2022
+Fri May 06 14:52:59 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -47,7 +47,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 06 14:49:10 2022       ;
+; Analysis & Synthesis Status        ; Successful - Fri May 06 14:52:59 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; RISC                                        ;
 ; Top-level Entity Name              ; RISC                                        ;
@@ -164,7 +164,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.7%      ;
 ;     Processor 3            ;   0.6%      ;
-;     Processor 4            ;   0.5%      ;
+;     Processor 4            ;   0.6%      ;
 +----------------------------+-------------+
 
 
@@ -450,7 +450,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:13     ;
+; Top            ; 00:00:16     ;
 +----------------+--------------+
 
 
@@ -460,7 +460,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri May 06 14:48:42 2022
+    Info: Processing started: Fri May 06 14:52:28 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISC -c RISC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -5705,9 +5705,9 @@ Info (21057): Implemented 8115 device resources after synthesis - the final reso
     Info (21059): Implemented 8 output pins
     Info (21061): Implemented 8106 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 733 warnings
-    Info: Peak virtual memory: 4810 megabytes
-    Info: Processing ended: Fri May 06 14:49:11 2022
-    Info: Elapsed time: 00:00:29
-    Info: Total CPU time (on all processors): 00:00:50
+    Info: Peak virtual memory: 4808 megabytes
+    Info: Processing ended: Fri May 06 14:52:59 2022
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:00:54
 
 
