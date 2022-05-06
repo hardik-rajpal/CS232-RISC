@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "05/05/2022 15:14:50"
+-- Generated on "05/06/2022 14:33:07"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          RISC
 -- 
@@ -35,11 +35,11 @@ ARCHITECTURE RISC_arch OF RISC_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL clk : STD_LOGIC;
-SIGNAL outstates : STD_LOGIC_VECTOR(9 DOWNTO 0);
+SIGNAL outstates : STD_LOGIC_VECTOR(7 DOWNTO 0);
 COMPONENT RISC
 	PORT (
 	clk : IN STD_LOGIC;
-	outstates : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
+	outstates : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN

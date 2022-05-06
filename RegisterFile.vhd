@@ -6,7 +6,7 @@ use ieee.numeric_std.all;
 
 entity registerfile is    
   port(
-		state : in std_logic_vector(4 downto 0);
+		state : in std_logic_vector(3 downto 0);
 		dinm : in std_logic_vector(15 downto 0);  
 	  	regsela : in std_logic_vector(2 downto 0);
 		regselb	: in std_logic_vector(2 downto 0);

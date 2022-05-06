@@ -4,7 +4,7 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 entity alu is
     --TODO add input signal to prevent zeroflag,carryflag if pc update from modification.
-	port(state:in std_logic_vector(4 downto 0);
+	port(state:in std_logic_vector(3 downto 0);
         inp1,inp2: in std_logic_vector(15 downto 0);
 		  cin: in std_logic;
 		  sel: in std_logic_vector(1 downto 0);

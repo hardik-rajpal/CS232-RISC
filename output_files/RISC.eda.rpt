@@ -1,5 +1,5 @@
 EDA Netlist Writer report for RISC
-Thu May 05 15:14:50 2022
+Fri May 06 14:33:07 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -35,7 +35,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu May 05 15:14:50 2022 ;
+; EDA Netlist Writer Status ; Successful - Fri May 06 14:33:07 2022 ;
 ; Revision Name             ; RISC                                  ;
 ; Top-level Entity Name     ; RISC                                  ;
 ; Family                    ; Cyclone IV E                          ;
@@ -62,15 +62,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu May 05 15:14:48 2022
+    Info: Processing started: Fri May 06 14:33:06 2022
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off RISC -c RISC --vector_source=C:/CODE/outcode/RISC-2/Waveform.vwf --testbench_file=C:/CODE/outcode/RISC-2/simulation/modelsim/Waveform.vwf.vht
 Info (119004): Automatically selected device EP4CE6E22C6 for design RISC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (201002): Generated VHDL Test Bench File C:/CODE/outcode/RISC-2/simulation/modelsim/Waveform.vwf.vht for simulation
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4636 megabytes
-    Info: Processing ended: Thu May 05 15:14:50 2022
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4638 megabytes
+    Info: Processing ended: Fri May 06 14:33:07 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

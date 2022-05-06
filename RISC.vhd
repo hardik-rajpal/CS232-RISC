@@ -7,42 +7,25 @@ use IEEE.numeric_std.all;
 entity RISC is
     port (
         clk:in std_logic;
-        outstates:out std_logic_vector(9 downto 0)
+        outstates:out std_logic_vector(7 downto 0)
     );
 end entity RISC;
 architecture rtl of RISC is
 ---constants
-	constant ST_INIT:std_logic_vector(4 downto 0)	:="00000";
-	constant ST_HK:std_logic_vector(4 downto 0)		:="00001";
-	constant ST_ID:std_logic_vector(4 downto 0)		:="00010";
-    constant ST_CNDB:std_logic_vector(4 downto 0)   :="00011";
-	constant ST_LWRD:std_logic_vector(4 downto 0)	:="00100";
-	constant ST_PJAL2:std_logic_vector(4 downto 0)	:="00101";
-	constant ST_LWWR:std_logic_vector(4 downto 0)	:="00110";
-	constant ST_ADDI:std_logic_vector(4 downto 0)	:="00111";
-	constant ST_ADDIWB:std_logic_vector(4 downto 0)	:="01000";
-	constant ST_NND:std_logic_vector(4 downto 0)	:="01001";
-	constant ST_ADDRG:std_logic_vector(4 downto 0)	:="01010";
-	constant ST_RGWB:std_logic_vector(4 downto 0)	:="01011";
-	constant ST_S12:std_logic_vector(4 downto 0)	:="01100";
-	constant ST_LHI:std_logic_vector(4 downto 0)	:="01101";
-	constant ST_JLR2:std_logic_vector(4 downto 0)	:="01110";
-	constant ST_PSTJCMD:std_logic_vector(4 downto 0):="01111";
-	constant ST_PSTJAL:std_logic_vector(4 downto 0)	:="10000";
-	constant ST_PSTJLR:std_logic_vector(4 downto 0)	:="10001";
-	constant ST_LMSM:std_logic_vector(4 downto 0)	:="10010";
-	constant ST_LMRD:std_logic_vector(4 downto 0)	:="10011";
-	constant ST_SM1:std_logic_vector(4 downto 0)	:="10100";
-	constant ST_LMWB:std_logic_vector(4 downto 0)	:="10101";
-	constant ST_SMW:std_logic_vector(4 downto 0)	:="10110";
-	constant ST_LMSMTR:std_logic_vector(4 downto 0)	:="10111";
-	constant ST_SMLP:std_logic_vector(4 downto 0)	:="11000";
-	constant ST_IF:std_logic_vector(4 downto 0)		:="11001";
-    constant ST_WBTR:std_logic_vector(4 downto 0)   :="11010";
-    constant ST_ADDL:std_logic_vector(4 downto 0)   :="11011";
-    constant ST_EXE:std_logic_vector(4 downto 0)    :="11100";
-    constant ST_MEMA:std_logic_vector(4 downto 0)   :="11101";
-    constant ST_CPC:std_logic_vector(4 downto 0)    :="11110";
+	constant ST_INIT:std_logic_vector(3 downto 0)	:="0000";
+	constant ST_HK:std_logic_vector(3 downto 0)		:="0001";
+	constant ST_ID:std_logic_vector(3 downto 0)		:="0010";
+	constant ST_JLR2:std_logic_vector(3 downto 0)	:="0011";
+	constant ST_LMSM:std_logic_vector(3 downto 0)	:="0100";
+	constant ST_LMRD:std_logic_vector(3 downto 0)	:="0101";
+	constant ST_SM1:std_logic_vector(3 downto 0)	:="0110";
+	constant ST_LMWB:std_logic_vector(3 downto 0)	:="0111";
+	constant ST_SMW:std_logic_vector(3 downto 0)	:="1000";
+	constant ST_IF:std_logic_vector(3 downto 0)		:="1001";
+    constant ST_WBTR:std_logic_vector(3 downto 0)   :="1010";
+    constant ST_EXE:std_logic_vector(3 downto 0)    :="1011";
+    constant ST_MEMA:std_logic_vector(3 downto 0)   :="1100";
+    constant ST_CPC:std_logic_vector(3 downto 0)    :="1101";
 
     constant OC_ADDR:std_logic_vector(3 downto 0)	:="0001";
 	constant OC_ADDI:std_logic_vector(3 downto 0)	:="0000";
@@ -61,7 +44,7 @@ architecture rtl of RISC is
     ----
 ---components
     component registerfile is port(
-		state : in std_logic_vector(4 downto 0);
+		state : in std_logic_vector(3 downto 0);
 		dinm : in std_logic_vector(15 downto 0);  
 	  	regsela : in std_logic_vector(2 downto 0);
 		regselb	: in std_logic_vector(2 downto 0);
@@ -71,7 +54,7 @@ architecture rtl of RISC is
 		doutb : out std_logic_vector(15 downto 0) );
     end component;
     component alu is
-        port(state:in std_logic_vector(4 downto 0);
+        port(state:in std_logic_vector(3 downto 0);
 		  inp1,inp2: in std_logic_vector(15 downto 0);
               cin: in std_logic;
               sel: in std_logic_vector(1 downto 0);
@@ -80,7 +63,7 @@ architecture rtl of RISC is
               zero: out std_logic);
     end component;
     component memory is 
-        port (state : in std_logic_vector(4 downto 0);
+        port (state : in std_logic_vector(3 downto 0);
                 init: in std_logic;  
               mr  : in std_logic;   
               mw  : in std_logic;
@@ -108,8 +91,8 @@ architecture rtl of RISC is
       );
     end component;
 ---
-      signal state:std_logic_vector(4 downto 0):=ST_INIT;
-    signal nextState:std_logic_vector(4 downto 0):=ST_HK;
+      signal state:std_logic_vector(3 downto 0):=ST_INIT;
+    signal nextState:std_logic_vector(3 downto 0):=ST_HK;
 ---memory signals 
     signal memInit,memRead,memWrite:std_logic;
     signal memAddr,memDataIn,memDataOut:std_logic_vector(15 downto 0);
@@ -144,6 +127,9 @@ architecture rtl of RISC is
 ---
 ---aLU signals
     signal aluZeroFlag,aluCarryFlag:std_logic;
+    signal zeroFlagMux:std_logic:='0';
+    signal zeroFlag:std_logic;
+    signal lwZeroFlag:std_logic;
     signal aluIn1,aluIn2,aluOut:std_logic_vector(15 downto 0);
     signal aluCin:std_logic:='0';
     signal aluSel:std_logic_vector(1 downto 0);
@@ -419,6 +405,12 @@ begin
             elsif (state = ST_MEMA) then
                 if(opcode = OC_LW) then
                     rfDataIn<=memDataOut;
+                    zeroFlagMux<='1';
+                    if(memDataOut = "0000000000000000") then
+                        lwZeroFlag<='1';
+                    else
+                        lwZeroFlag<='0';
+                    end if;
                     rfWrite<='1';
                 elsif (opcode = OC_SW) then
                     memWrite<='1';
@@ -429,6 +421,14 @@ begin
                 rfDataIn<=aluOut;
                 rfWrite<='1';
                 nextState<=ST_HK;
+            end if;
+    end process;
+    process(zeroFlagMux,aluZeroFlag,lwZeroFlag)
+        begin
+            if(zeroFlagMux = '0') then
+                zeroFlag<=aluZeroFlag;
+            elsif (zeroFlagMux = '1') then
+                zeroFlag<=lwZeroFlag;
             end if;
     end process;
     process(memInMux,rfDataOut1,aluOut)
@@ -473,8 +473,8 @@ begin
     end process;
     process(state,nextState)
         begin
-            outstates(9 downto 5) <= nextState;
-            outstates(4 downto 0) <= state;
+            outstates(7 downto 4) <= nextState;
+            outstates(3 downto 0) <= state;
     end process;
     process(imm9)
         begin
