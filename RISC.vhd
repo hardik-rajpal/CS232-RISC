@@ -168,6 +168,8 @@ begin
             elsif (state = ST_HK) then
                 memInit<='0';
                 aluIn1Mux<="00";--set rfdataOut1 to aluIn1
+                aluIn2Mux<="001";--set rf
+                aluSel<="00";
                 memRead<='1';--read from memory
                 memWrite<='0';
                 rfWrite<='0';
@@ -176,13 +178,8 @@ begin
                 nextState<=ST_IF;
             elsif (state = ST_IF) then
                 prevPC<=rfDataOut1;
-                aluIn2Mux<="001";
-                aluSel<="00";
                 irw<='1';
                 tempInstr<=memDataOut;
-                nextState<=ST_UPD;
-            elsif (state = ST_UPD) then
-                report "oc nc:"&integer'image(to_integer(unsigned(opcode)));
                 rfSelW<="111";
                 rfDataIn<=aluOut;
                 rfWrite<='1';
