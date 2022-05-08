@@ -12,7 +12,7 @@
 # 
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/RISC.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:14:17 on May 08,2022
+# Start time: 16:36:48 on May 08,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/RISC.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -22,11 +22,11 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity RISC
 # -- Compiling architecture rtl of RISC
-# End time: 16:14:17 on May 08,2022, Elapsed time: 0:00:00
+# End time: 16:36:48 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/Memory.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:14:18 on May 08,2022
+# Start time: 16:36:49 on May 08,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/Memory.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -34,11 +34,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Memory
 # -- Compiling architecture membehave of memory
-# End time: 16:14:18 on May 08,2022, Elapsed time: 0:00:00
+# End time: 16:36:49 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/RegisterFile.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:14:18 on May 08,2022
+# Start time: 16:36:49 on May 08,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/RegisterFile.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -46,11 +46,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity registerfile
 # -- Compiling architecture behave of registerfile
-# End time: 16:14:18 on May 08,2022, Elapsed time: 0:00:00
+# End time: 16:36:50 on May 08,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/alu.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:14:18 on May 08,2022
+# Start time: 16:36:50 on May 08,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/alu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -60,44 +60,44 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity alu
 # -- Compiling architecture behave of alu
-# End time: 16:14:18 on May 08,2022, Elapsed time: 0:00:00
+# End time: 16:36:50 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/sixteenbitrca.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:14:18 on May 08,2022
+# Start time: 16:36:50 on May 08,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/sixteenbitrca.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity SixteenBitRCA
 # -- Compiling architecture arith of SixteenBitRCA
-# End time: 16:14:18 on May 08,2022, Elapsed time: 0:00:00
+# End time: 16:36:50 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/onebitfulladd.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:14:18 on May 08,2022
+# Start time: 16:36:50 on May 08,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/onebitfulladd.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity OnebitFullAdd
 # -- Compiling architecture archobfa of onebitfulladd
-# End time: 16:14:18 on May 08,2022, Elapsed time: 0:00:00
+# End time: 16:36:50 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/onebithalfadd.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:14:18 on May 08,2022
+# Start time: 16:36:50 on May 08,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/onebithalfadd.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity OnebitHalfAdd
 # -- Compiling architecture arch_obha of onebithalfadd
-# End time: 16:14:18 on May 08,2022, Elapsed time: 0:00:00
+# End time: 16:36:50 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/instrreg.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:14:18 on May 08,2022
+# Start time: 16:36:50 on May 08,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/instrreg.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -105,11 +105,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity InstrReg
 # -- Compiling architecture behave of InstrReg
-# End time: 16:14:18 on May 08,2022, Elapsed time: 0:00:00
+# End time: 16:36:50 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/sequencer.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:14:18 on May 08,2022
+# Start time: 16:36:50 on May 08,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/sequencer.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -117,24 +117,24 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity sequencer
 # -- Compiling architecture behave of sequencer
-# End time: 16:14:18 on May 08,2022, Elapsed time: 0:00:00
+# End time: 16:36:50 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/simulation/modelsim/Waveform.vwf.vht}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:14:18 on May 08,2022
+# Start time: 16:36:50 on May 08,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/simulation/modelsim/Waveform.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity RISC_vhd_vec_tst
 # -- Compiling architecture RISC_arch of RISC_vhd_vec_tst
-# End time: 16:14:19 on May 08,2022, Elapsed time: 0:00:01
+# End time: 16:36:50 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  RISC_vhd_vec_tst
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=""+acc"" RISC_vhd_vec_tst 
-# Start time: 16:14:19 on May 08,2022
+# Start time: 16:36:50 on May 08,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -1910,6 +1910,8 @@
 #    Time: 37500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: regwrite:11
 #    Time: 37500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: mema
+#    Time: 37500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
 # ** Note: rd1:11, rd2768
 #    Time: 37500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
 # ** Note: reg0 = 512
@@ -2482,5 +2484,5 @@
 #    Time: 98500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
 # ** Note: oc:4
 #    Time: 99500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# End time: 16:14:50 on May 08,2022, Elapsed time: 0:00:31
+# End time: 16:37:14 on May 08,2022, Elapsed time: 0:00:24
 # Errors: 0, Warnings: 54
