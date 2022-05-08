@@ -15,7 +15,7 @@ architecture rtl of RISC is
 	constant ST_INIT:std_logic_vector(3 downto 0)	:="0000";
 	constant ST_HK:std_logic_vector(3 downto 0)		:="0001";
 	constant ST_UPD:std_logic_vector(3 downto 0)		:="0010";
-	constant ST_JLR2:std_logic_vector(3 downto 0)	:="0011";
+	constant ST_MEMA:std_logic_vector(3 downto 0)	:="0011";
 	constant ST_LMSM:std_logic_vector(3 downto 0)	:="0100";
 	constant ST_LMRD:std_logic_vector(3 downto 0)	:="0101";
 	constant ST_SM1:std_logic_vector(3 downto 0)	:="0110";
@@ -154,7 +154,7 @@ begin
     end process;
     process(state)
         begin
-            if(state = ST_INIT) then
+            if (state = ST_INIT) then
                 report "rfd1"&integer'image(to_integer(unsigned(rfDataOut1)));
                 --initialize memory contents
                 memInit<='1';
@@ -181,13 +181,13 @@ begin
                 irw<='1';
                 tempInstr<=memDataOut;
                 nextState<=ST_UPD;
-            elsif (state=ST_UPD) then
+            elsif (state = ST_UPD) then
                 report "oc nc:"&integer'image(to_integer(unsigned(opcode)));
                 rfSelW<="111";
                 rfDataIn<=aluOut;
                 rfWrite<='1';
                 nextState<=ST_EXE;
-            elsif(state = ST_EXE) then
+            elsif (state = ST_EXE) then
                 if(opCode = OC_ADDR) then
                     report "oc: addR";
                     rfWrite<='0';
@@ -290,12 +290,12 @@ begin
                     aluIn2Mux<="100";--alu gets prevpc and 9imm_16low
                     aluSel<="00";
                     rfSel1<="111";
-                    nextState<=ST_JLR2;
+                    nextState<=ST_MEMA;
                 elsif (opCode = OC_JLR) then
                     report "oc: JLR";
                     rfSel1<="111";
                     rfSel2<=rbSel;
-                    nextState<=ST_JLR2;
+                    nextState<=ST_MEMA;
                 elsif (opCode = OC_JRI) then
                     report "oc: JRI";
                     rfSel1<=raSel;
@@ -316,10 +316,10 @@ begin
                         if (imm8_16(7-to_integer(unsigned(outRegNum))) = '1') then
                             memInMux<='1';--aluout
                             loadCurrent<='1';
-                            nextState<=ST_LMWB;
+                            nextState<=ST_MEMA;
                         elsif (imm8_16(7-to_integer(unsigned(outRegNum))) = '0') then
                             loadCurrent<='0';
-                            nextState<=ST_LMWB;
+                            nextState<=ST_MEMA;
                         end if;
                     end if;
                 elsif(opcode = OC_SM) then
@@ -337,47 +337,46 @@ begin
                         if (imm8_16(7-to_integer(unsigned(outRegNum))) = '1') then
                             rfSel2<=outRegNum(2 downto 0);
                             loadCurrent<='1';
-                            nextState<=ST_SMW;
+                            nextState<=ST_MEMA;
                         elsif (imm8_16(7-to_integer(unsigned(outRegNum))) = '0') then
                             loadCurrent<='0';
-                            nextState<=ST_SMW;
+                            nextState<=ST_MEMA;
                         end if;
                     end if;
-                end if;                
-            elsif(state = ST_LMWB) then
-                if(loadCurrent = '1') then
-                    report "mdo:"&integer'image(to_integer(unsigned(memDataOut)));
-                    report "rgnml:"&integer'image(to_integer(unsigned(outRegNum)));
-                    rfSelW<=outRegNum(2 downto 0);
-                    rfDataIn<=memDataOut;
+                end if;
+            elsif (state = ST_MEMA) then
+                if( opcode = OC_JAL or opcode = OC_JLR) then
+                    report "rd1:"&integer'image(to_integer(unsigned(rfDataOut1)))&", rd2"&integer'image(to_integer(unsigned(rfDataOut2)));
+                    rfDataIn<=rfDataOut1;
+                    rfSelW<=raSel;
                     rfWrite<='1';
-                    aluIn1Mux<="11";---pass lmsmaddr to ALu
-                    aluIn2Mux<="001";---pass +1 to ALU
-                    lmsmAddr<=aluOut;
-                    aluSel<="00";
+                    nextState<=ST_WBTR;
+                elsif (opcode = OC_LM or opcode = OC_SM) then
+                    if(opcode = OC_LM) then
+                        if(loadCurrent = '1') then
+                            report "mdo:"&integer'image(to_integer(unsigned(memDataOut)));
+                            report "rgnml:"&integer'image(to_integer(unsigned(outRegNum)));
+                            rfSelW<=outRegNum(2 downto 0);
+                            rfDataIn<=memDataOut;
+                            rfWrite<='1';
+                            aluIn1Mux<="11";---pass lmsmaddr to ALu
+                            aluIn2Mux<="001";---pass +1 to ALU
+                            lmsmAddr<=aluOut;
+                            aluSel<="00";
+                        end if;
+                    elsif (opcode = OC_SM) then
+                        if(loadCurrent = '1') then
+                            report "mdi:"&integer'image(to_integer(unsigned(rfDataOut2)));
+                            report "rgnml:"&integer'image(to_integer(unsigned(outRegNum)));
+                            report "maddrin:"&integer'image(to_integer(unsigned(aluOut)));
+                            memDataIn<=rfDataOut2;
+                            memInMux<='1';--aluout
+                            memWrite<='1';
+                        end if;
+                    end if;
+                    inRegNum<=outRegNum;
+                    nextState<=ST_LMSM;
                 end if;
-                inRegNum<=outRegNum;
-                nextState<=ST_LMSM;
-            elsif (state = ST_SM1) then
-                report "sm1";
-            elsif (state = ST_SMW) then
-                report "smw";
-                if(loadCurrent = '1') then
-                    report "mdi:"&integer'image(to_integer(unsigned(rfDataOut2)));
-                    report "rgnml:"&integer'image(to_integer(unsigned(outRegNum)));
-                    report "maddrin:"&integer'image(to_integer(unsigned(aluOut)));
-                    memDataIn<=rfDataOut2;
-                    memInMux<='1';--aluout
-                    memWrite<='1';
-                end if;
-                inRegNum<=outRegNum;
-                nextState<=ST_LMSM;
-            elsif (state = ST_JLR2) then
-                report "rd1:"&integer'image(to_integer(unsigned(rfDataOut1)))&", rd2"&integer'image(to_integer(unsigned(rfDataOut2)));
-                rfDataIn<=rfDataOut1;
-                rfSelW<=raSel;
-                rfWrite<='1';
-                nextState<=ST_WBTR;
             elsif (state = ST_WBTR) then
                 if(opcode = OC_BEQ) then
                     report "rd1:"&integer'image(to_integer(unsigned(rfDataOut1)))&", rd2"&integer'image(to_integer(unsigned(rfDataOut2)));
@@ -410,6 +409,7 @@ begin
                 elsif (opcode = OC_SW) then
                     memWrite<='1';
                     memDataIn<=rfDataOut2;   
+--                els
                 else
                     rfDataIn<=aluOut;
                     rfWrite<='1';

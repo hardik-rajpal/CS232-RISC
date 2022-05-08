@@ -12,7 +12,7 @@
 # 
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/RISC.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:57:07 on May 08,2022
+# Start time: 16:14:17 on May 08,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/RISC.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -22,11 +22,11 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity RISC
 # -- Compiling architecture rtl of RISC
-# End time: 15:57:07 on May 08,2022, Elapsed time: 0:00:00
+# End time: 16:14:17 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/Memory.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:57:07 on May 08,2022
+# Start time: 16:14:18 on May 08,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/Memory.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -34,11 +34,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Memory
 # -- Compiling architecture membehave of memory
-# End time: 15:57:07 on May 08,2022, Elapsed time: 0:00:00
+# End time: 16:14:18 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/RegisterFile.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:57:07 on May 08,2022
+# Start time: 16:14:18 on May 08,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/RegisterFile.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -46,11 +46,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity registerfile
 # -- Compiling architecture behave of registerfile
-# End time: 15:57:07 on May 08,2022, Elapsed time: 0:00:00
+# End time: 16:14:18 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/alu.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:57:07 on May 08,2022
+# Start time: 16:14:18 on May 08,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/alu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -60,44 +60,44 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity alu
 # -- Compiling architecture behave of alu
-# End time: 15:57:07 on May 08,2022, Elapsed time: 0:00:00
+# End time: 16:14:18 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/sixteenbitrca.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:57:07 on May 08,2022
+# Start time: 16:14:18 on May 08,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/sixteenbitrca.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity SixteenBitRCA
 # -- Compiling architecture arith of SixteenBitRCA
-# End time: 15:57:08 on May 08,2022, Elapsed time: 0:00:01
+# End time: 16:14:18 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/onebitfulladd.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:57:08 on May 08,2022
+# Start time: 16:14:18 on May 08,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/onebitfulladd.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity OnebitFullAdd
 # -- Compiling architecture archobfa of onebitfulladd
-# End time: 15:57:08 on May 08,2022, Elapsed time: 0:00:00
+# End time: 16:14:18 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/onebithalfadd.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:57:08 on May 08,2022
+# Start time: 16:14:18 on May 08,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/onebithalfadd.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity OnebitHalfAdd
 # -- Compiling architecture arch_obha of onebithalfadd
-# End time: 15:57:08 on May 08,2022, Elapsed time: 0:00:00
+# End time: 16:14:18 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/instrreg.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:57:08 on May 08,2022
+# Start time: 16:14:18 on May 08,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/instrreg.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -105,11 +105,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity InstrReg
 # -- Compiling architecture behave of InstrReg
-# End time: 15:57:08 on May 08,2022, Elapsed time: 0:00:00
+# End time: 16:14:18 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/sequencer.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:57:08 on May 08,2022
+# Start time: 16:14:18 on May 08,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/sequencer.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -117,24 +117,24 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity sequencer
 # -- Compiling architecture behave of sequencer
-# End time: 15:57:08 on May 08,2022, Elapsed time: 0:00:00
+# End time: 16:14:18 on May 08,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {C:/CODE/outcode/RISC-2/simulation/modelsim/Waveform.vwf.vht}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:57:08 on May 08,2022
+# Start time: 16:14:18 on May 08,2022
 # vcom -reportprogress 300 -93 -work work C:/CODE/outcode/RISC-2/simulation/modelsim/Waveform.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity RISC_vhd_vec_tst
 # -- Compiling architecture RISC_arch of RISC_vhd_vec_tst
-# End time: 15:57:08 on May 08,2022, Elapsed time: 0:00:00
+# End time: 16:14:19 on May 08,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  RISC_vhd_vec_tst
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=""+acc"" RISC_vhd_vec_tst 
-# Start time: 15:57:08 on May 08,2022
+# Start time: 16:14:19 on May 08,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -392,7 +392,7 @@
 #    Time: 1500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/aluInst
 # ** Note: inputs: 0,0
 #    Time: 1500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: instr:49827
+# ** Note: instr:12292
 #    Time: 1500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/irInst
 # ** Note: inputs: 0,1
 #    Time: 1500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
@@ -402,7 +402,7 @@
 #    Time: 1500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1
 # ** Note: tout:1
 #    Time: 1500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: oc:12
+# ** Note: oc:3
 #    Time: 2500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
 # ** Note: reg0 = 16
 #    Time: 2500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
@@ -420,7 +420,7 @@
 #    Time: 2500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg7 = 0
 #    Time: 2500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: oc nc:12
+# ** Note: oc nc:3
 #    Time: 2500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
 # ** Note: reg0 = 16
 #    Time: 2500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
@@ -440,7 +440,7 @@
 #    Time: 2500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: regwrite:1
 #    Time: 2500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: oc:12
+# ** Note: oc:3
 #    Time: 3500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
 # ** Note: reg0 = 16
 #    Time: 3500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
@@ -460,45 +460,43 @@
 #    Time: 3500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: regwrite:1
 #    Time: 3500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: oc: SM
+# ** Note: oc: LHI
 #    Time: 3500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
-#    Time: 3500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg1 = 4
-#    Time: 3500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg2 = 2
-#    Time: 3500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg3 = 0
-#    Time: 3500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg4 = 0
-#    Time: 3500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg5 = 0
-#    Time: 3500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg6 = 6
-#    Time: 3500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg7 = 1
-#    Time: 3500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:1
-#    Time: 3500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: aluin1: 1
 #    Time: 3500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 16
+#    Time: 3500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 4
+#    Time: 3500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 2
+#    Time: 3500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 0
+#    Time: 3500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 3500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 3500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 3500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 1
+#    Time: 3500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:512
+#    Time: 3500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: dataPointer:1
 #    Time: 3500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: aluin1: 4
-#    Time: 3500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1
-# ** Note: inputs: 1,0
+# ** Note: inputs: 1,1
 #    Time: 3500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: dataPointer:4
-#    Time: 3500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: inputs: 4,0
-#    Time: 3500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: inputs: 4,0
+# ** Note: inputs: 1,1
+#    Time: 3500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 1,1
 #    Time: 3500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: tout:4
+# ** Note: tout:0
+#    Time: 3500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:2
 #    Time: 3500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: oc:12
+# ** Note: oc:3
 #    Time: 4500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
+# ** Note: reg0 = 512
 #    Time: 4500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg1 = 4
 #    Time: 4500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
@@ -514,9 +512,9 @@
 #    Time: 4500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg7 = 1
 #    Time: 4500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:1
+# ** Note: regwrite:512
 #    Time: 4500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg0 = 16
+# ** Note: reg0 = 512
 #    Time: 4500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg1 = 4
 #    Time: 4500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
@@ -532,13 +530,9 @@
 #    Time: 4500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg7 = 1
 #    Time: 4500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:1
-#    Time: 4500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: aluin1: 4
-#    Time: 4500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:12
+# ** Note: oc:3
 #    Time: 5500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
+# ** Note: reg0 = 512
 #    Time: 5500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg1 = 4
 #    Time: 5500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
@@ -554,27 +548,15 @@
 #    Time: 5500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg7 = 1
 #    Time: 5500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:1
-#    Time: 5500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: smw
-#    Time: 5500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: mdi:16
-#    Time: 5500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: rgnml:0
-#    Time: 5500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: maddrin:4
-#    Time: 5500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: dataPointer:4
-#    Time: 5500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: memwr:4
-#    Time: 5500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: dataPointer:4
-#    Time: 5500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: memwr:4
-#    Time: 5500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: oc:12
+# ** Note: aluin1: 1
+#    Time: 5500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
+# ** Note: instr:12802
+#    Time: 5500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/irInst
+# ** Note: aluin1: 1
+#    Time: 5500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1
+# ** Note: oc:3
 #    Time: 6500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
+# ** Note: reg0 = 512
 #    Time: 6500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg1 = 4
 #    Time: 6500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
@@ -590,23 +572,29 @@
 #    Time: 6500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg7 = 1
 #    Time: 6500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:1
-#    Time: 6500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: dataPointer:4
-#    Time: 6500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: aluin1: 4
-#    Time: 6500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
-# ** Note: inputs: 4,1
-#    Time: 6500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: inputs: 4,1
-#    Time: 6500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: tout:5
-#    Time: 6500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: dataPointer:5
-#    Time: 6500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: oc:12
+# ** Note: oc nc:3
+#    Time: 6500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
+#    Time: 6500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 4
+#    Time: 6500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 2
+#    Time: 6500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 0
+#    Time: 6500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 6500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 6500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 6500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 1
+#    Time: 6500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:2
+#    Time: 6500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc:3
 #    Time: 7500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
+# ** Note: reg0 = 512
 #    Time: 7500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg1 = 4
 #    Time: 7500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
@@ -620,17 +608,57 @@
 #    Time: 7500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg6 = 6
 #    Time: 7500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg7 = 1
+# ** Note: reg7 = 2
 #    Time: 7500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:1
+# ** Note: regwrite:2
 #    Time: 7500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: smw
+# ** Note: oc: LHI
 #    Time: 7500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:12
+# ** Note: aluin1: 2
+#    Time: 7500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
+#    Time: 7500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 4
+#    Time: 7500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 2
+#    Time: 7500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 0
+#    Time: 7500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 7500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 7500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 7500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 2
+#    Time: 7500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:256
+#    Time: 7500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: dataPointer:2
+#    Time: 7500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: inputs: 2,1
+#    Time: 7500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 2,1
+#    Time: 7500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 2,1
+#    Time: 7500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:1
+#    Time: 7500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 2,1
+#    Time: 7500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:3
+#    Time: 7500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:7
+#    Time: 7500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 2,1
+#    Time: 7500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:3
+#    Time: 7500 ps  Iteration: 10  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: oc:3
 #    Time: 8500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
+# ** Note: reg0 = 512
 #    Time: 8500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg1 = 4
+# ** Note: reg1 = 256
 #    Time: 8500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg2 = 2
 #    Time: 8500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
@@ -642,13 +670,13 @@
 #    Time: 8500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg6 = 6
 #    Time: 8500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg7 = 1
+# ** Note: reg7 = 2
 #    Time: 8500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:1
+# ** Note: regwrite:256
 #    Time: 8500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg0 = 16
+# ** Note: reg0 = 512
 #    Time: 8500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg1 = 4
+# ** Note: reg1 = 256
 #    Time: 8500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg2 = 2
 #    Time: 8500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
@@ -660,17 +688,13 @@
 #    Time: 8500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg6 = 6
 #    Time: 8500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg7 = 1
+# ** Note: reg7 = 2
 #    Time: 8500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:1
-#    Time: 8500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: aluin1: 4
-#    Time: 8500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:12
+# ** Note: oc:3
 #    Time: 9500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
+# ** Note: reg0 = 512
 #    Time: 9500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg1 = 4
+# ** Note: reg1 = 256
 #    Time: 9500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg2 = 2
 #    Time: 9500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
@@ -682,31 +706,19 @@
 #    Time: 9500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg6 = 6
 #    Time: 9500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg7 = 1
+# ** Note: reg7 = 2
 #    Time: 9500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:1
-#    Time: 9500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: smw
-#    Time: 9500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: mdi:2
-#    Time: 9500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: rgnml:2
-#    Time: 9500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: maddrin:5
-#    Time: 9500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: dataPointer:5
-#    Time: 9500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: memwr:5
-#    Time: 9500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: dataPointer:5
-#    Time: 9500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: memwr:5
-#    Time: 9500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: oc:12
+# ** Note: aluin1: 2
+#    Time: 9500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
+# ** Note: instr:4176
+#    Time: 9500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/irInst
+# ** Note: aluin1: 2
+#    Time: 9500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1
+# ** Note: oc:1
 #    Time: 10500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
+# ** Note: reg0 = 512
 #    Time: 10500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg1 = 4
+# ** Note: reg1 = 256
 #    Time: 10500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg2 = 2
 #    Time: 10500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
@@ -718,33 +730,33 @@
 #    Time: 10500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg6 = 6
 #    Time: 10500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg7 = 1
+# ** Note: reg7 = 2
 #    Time: 10500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:1
-#    Time: 10500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: dataPointer:5
-#    Time: 10500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: aluin1: 4
-#    Time: 10500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
-# ** Note: inputs: 5,1
-#    Time: 10500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: inputs: 5,1
-#    Time: 10500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: inputs: 5,1
-#    Time: 10500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: tout:4
-#    Time: 10500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: tout:6
-#    Time: 10500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: dataPointer:4
-#    Time: 10500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: dataPointer:6
-#    Time: 10500 ps  Iteration: 10  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: oc:12
+# ** Note: oc nc:1
+#    Time: 10500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
+#    Time: 10500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 256
+#    Time: 10500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 2
+#    Time: 10500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 0
+#    Time: 10500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 10500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 10500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 10500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 2
+#    Time: 10500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:3
+#    Time: 10500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc:1
 #    Time: 11500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
+# ** Note: reg0 = 512
 #    Time: 11500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg1 = 4
+# ** Note: reg1 = 256
 #    Time: 11500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg2 = 2
 #    Time: 11500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
@@ -756,17 +768,67 @@
 #    Time: 11500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg6 = 6
 #    Time: 11500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg7 = 1
+# ** Note: reg7 = 3
 #    Time: 11500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:1
+# ** Note: regwrite:3
 #    Time: 11500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: smw
+# ** Note: oc: addR
 #    Time: 11500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:12
+# ** Note: reg0 = 512
+#    Time: 11500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 256
+#    Time: 11500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 2
+#    Time: 11500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 0
+#    Time: 11500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 11500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 11500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 11500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 3
+#    Time: 11500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: aluin1: 3
+#    Time: 11500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
+# ** Note: dataPointer:3
+#    Time: 11500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: aluin1: 512
+#    Time: 11500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 3,0
+#    Time: 11500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: dataPointer:0
+#    Time: 11500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: inputs: 512,256
+#    Time: 11500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 512,256
+#    Time: 11500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 512,256
+#    Time: 11500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:0
+#    Time: 11500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 11500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 512,256
+#    Time: 11500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:0
+#    Time: 11500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 11500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:768
+#    Time: 11500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: oc:1
 #    Time: 12500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
+# ** Note: reg0 = 512
 #    Time: 12500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg1 = 4
+# ** Note: reg1 = 256
 #    Time: 12500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg2 = 2
 #    Time: 12500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
@@ -778,17 +840,33 @@
 #    Time: 12500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg6 = 6
 #    Time: 12500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg7 = 1
+# ** Note: reg7 = 3
 #    Time: 12500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:1
-#    Time: 12500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: oc:12
+# ** Note: reg0 = 512
+#    Time: 12500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 256
+#    Time: 12500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 2
+#    Time: 12500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 0
+#    Time: 12500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 12500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 12500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 12500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 3
+#    Time: 12500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:768
+#    Time: 12500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc:1
 #    Time: 13500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
+# ** Note: reg0 = 512
 #    Time: 13500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg1 = 4
+# ** Note: reg1 = 256
 #    Time: 13500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg2 = 2
+# ** Note: reg2 = 768
 #    Time: 13500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg3 = 0
 #    Time: 13500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
@@ -798,19 +876,43 @@
 #    Time: 13500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg6 = 6
 #    Time: 13500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg7 = 1
+# ** Note: reg7 = 3
 #    Time: 13500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:1
+# ** Note: regwrite:768
 #    Time: 13500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: smw
-#    Time: 13500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:12
+# ** Note: reg0 = 512
+#    Time: 13500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 256
+#    Time: 13500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 13500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 0
+#    Time: 13500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 13500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 13500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 13500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 3
+#    Time: 13500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: aluin1: 3
+#    Time: 13500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1
+# ** Note: dataPointer:3
+#    Time: 13500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: inputs: 3,256
+#    Time: 13500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 3,256
+#    Time: 13500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:259
+#    Time: 13500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: oc:1
 #    Time: 14500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
+# ** Note: reg0 = 512
 #    Time: 14500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg1 = 4
+# ** Note: reg1 = 256
 #    Time: 14500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg2 = 2
+# ** Note: reg2 = 768
 #    Time: 14500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg3 = 0
 #    Time: 14500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
@@ -820,17 +922,35 @@
 #    Time: 14500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg6 = 6
 #    Time: 14500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg7 = 1
+# ** Note: reg7 = 3
 #    Time: 14500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:1
-#    Time: 14500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: oc:12
+# ** Note: aluin1: 3
+#    Time: 14500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
+# ** Note: instr:65
+#    Time: 14500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/irInst
+# ** Note: inputs: 3,1
+#    Time: 14500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 3,1
+#    Time: 14500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: aluin1: 3
+#    Time: 14500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1
+# ** Note: inputs: 3,1
+#    Time: 14500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:2
+#    Time: 14500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:0
+#    Time: 14500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 3,1
+#    Time: 14500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:4
+#    Time: 14500 ps  Iteration: 10  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: oc:0
 #    Time: 15500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
+# ** Note: reg0 = 512
 #    Time: 15500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg1 = 4
+# ** Note: reg1 = 256
 #    Time: 15500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg2 = 2
+# ** Note: reg2 = 768
 #    Time: 15500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg3 = 0
 #    Time: 15500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
@@ -840,19 +960,35 @@
 #    Time: 15500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg6 = 6
 #    Time: 15500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg7 = 1
+# ** Note: reg7 = 3
 #    Time: 15500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:1
-#    Time: 15500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: smw
+# ** Note: oc nc:0
 #    Time: 15500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:12
+# ** Note: reg0 = 512
+#    Time: 15500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 256
+#    Time: 15500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 15500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 0
+#    Time: 15500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 15500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 15500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 15500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 3
+#    Time: 15500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:4
+#    Time: 15500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc:0
 #    Time: 16500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
+# ** Note: reg0 = 512
 #    Time: 16500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg1 = 4
+# ** Note: reg1 = 256
 #    Time: 16500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg2 = 2
+# ** Note: reg2 = 768
 #    Time: 16500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg3 = 0
 #    Time: 16500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
@@ -862,15 +998,17 @@
 #    Time: 16500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg6 = 6
 #    Time: 16500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg7 = 1
+# ** Note: reg7 = 4
 #    Time: 16500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:1
+# ** Note: regwrite:4
 #    Time: 16500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg0 = 16
+# ** Note: oc: addI
+#    Time: 16500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
 #    Time: 16500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg1 = 4
+# ** Note: reg1 = 256
 #    Time: 16500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg2 = 2
+# ** Note: reg2 = 768
 #    Time: 16500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg3 = 0
 #    Time: 16500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
@@ -880,19 +1018,43 @@
 #    Time: 16500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg6 = 6
 #    Time: 16500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg7 = 1
-#    Time: 16500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:1
+# ** Note: reg7 = 4
 #    Time: 16500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: aluin1: 4
+#    Time: 16500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
+# ** Note: dataPointer:4
+#    Time: 16500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: aluin1: 512
 #    Time: 16500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:12
+# ** Note: inputs: 4,1
+#    Time: 16500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: dataPointer:0
+#    Time: 16500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: inputs: 512,1
+#    Time: 16500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 512,1
+#    Time: 16500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 512,1
+#    Time: 16500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:3
+#    Time: 16500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 512,1
+#    Time: 16500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:517
+#    Time: 16500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 512,1
+#    Time: 16500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:521
+#    Time: 16500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:513
+#    Time: 16500 ps  Iteration: 10  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: oc:0
 #    Time: 17500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
+# ** Note: reg0 = 512
 #    Time: 17500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg1 = 4
+# ** Note: reg1 = 256
 #    Time: 17500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg2 = 2
+# ** Note: reg2 = 768
 #    Time: 17500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg3 = 0
 #    Time: 17500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
@@ -902,33 +1064,33 @@
 #    Time: 17500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg6 = 6
 #    Time: 17500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg7 = 1
+# ** Note: reg7 = 4
 #    Time: 17500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:1
-#    Time: 17500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: smw
-#    Time: 17500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: mdi:6
-#    Time: 17500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: rgnml:6
-#    Time: 17500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: maddrin:6
-#    Time: 17500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: dataPointer:6
-#    Time: 17500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: memwr:6
-#    Time: 17500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: dataPointer:6
-#    Time: 17500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: memwr:6
-#    Time: 17500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: oc:12
+# ** Note: reg0 = 512
+#    Time: 17500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 256
+#    Time: 17500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 17500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 0
+#    Time: 17500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 17500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 17500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 17500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 4
+#    Time: 17500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:513
+#    Time: 17500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc:0
 #    Time: 18500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
+# ** Note: reg0 = 512
 #    Time: 18500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg1 = 4
+# ** Note: reg1 = 513
 #    Time: 18500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg2 = 2
+# ** Note: reg2 = 768
 #    Time: 18500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg3 = 0
 #    Time: 18500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
@@ -938,19 +1100,17 @@
 #    Time: 18500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg6 = 6
 #    Time: 18500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg7 = 1
+# ** Note: reg7 = 4
 #    Time: 18500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:1
+# ** Note: regwrite:513
 #    Time: 18500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: dataPointer:6
-#    Time: 18500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: aluin1: 4
+# ** Note: aluin1: 512
 #    Time: 18500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
+# ** Note: reg0 = 512
 #    Time: 18500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg1 = 4
+# ** Note: reg1 = 513
 #    Time: 18500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg2 = 2
+# ** Note: reg2 = 768
 #    Time: 18500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg3 = 0
 #    Time: 18500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
@@ -960,57 +1120,25 @@
 #    Time: 18500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg6 = 6
 #    Time: 18500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg7 = 1
+# ** Note: reg7 = 4
 #    Time: 18500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:1
-#    Time: 18500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: inputs: 6,1
-#    Time: 18500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
 # ** Note: aluin1: 4
 #    Time: 18500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1
-# ** Note: inputs: 6,1
-#    Time: 18500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: inputs: 6,1
+# ** Note: dataPointer:4
+#    Time: 18500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: inputs: 4,1
+#    Time: 18500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 4,1
 #    Time: 18500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
 # ** Note: tout:5
-#    Time: 18500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: inputs: 6,1
 #    Time: 18500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: tout:7
-#    Time: 18500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: tout:3
-#    Time: 18500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: inputs: 6,1
-#    Time: 18500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: dataPointer:5
-#    Time: 18500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: inputs: 6,1
-#    Time: 18500 ps  Iteration: 10  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: tout:7
-#    Time: 18500 ps  Iteration: 10  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: dataPointer:7
-#    Time: 18500 ps  Iteration: 10  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: tout:15
-#    Time: 18500 ps  Iteration: 11  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: dataPointer:3
-#    Time: 18500 ps  Iteration: 11  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: inputs: 6,1
-#    Time: 18500 ps  Iteration: 11  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: tout:7
-#    Time: 18500 ps  Iteration: 12  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: dataPointer:7
-#    Time: 18500 ps  Iteration: 12  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: dataPointer:15
-#    Time: 18500 ps  Iteration: 13  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: dataPointer:7
-#    Time: 18500 ps  Iteration: 14  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: oc:12
+# ** Note: oc:0
 #    Time: 19500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
+# ** Note: reg0 = 512
 #    Time: 19500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg1 = 4
+# ** Note: reg1 = 513
 #    Time: 19500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg2 = 2
+# ** Note: reg2 = 768
 #    Time: 19500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg3 = 0
 #    Time: 19500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
@@ -1020,33 +1148,19 @@
 #    Time: 19500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg6 = 6
 #    Time: 19500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg7 = 1
+# ** Note: reg7 = 4
 #    Time: 19500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:1
-#    Time: 19500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: smw
-#    Time: 19500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: mdi:1
-#    Time: 19500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: rgnml:7
-#    Time: 19500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: maddrin:7
-#    Time: 19500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: dataPointer:7
-#    Time: 19500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: memwr:7
-#    Time: 19500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: dataPointer:7
-#    Time: 19500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: memwr:7
-#    Time: 19500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: oc:12
+# ** Note: aluin1: 4
+#    Time: 19500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
+# ** Note: instr:29761
+#    Time: 19500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/irInst
+# ** Note: oc:7
 #    Time: 20500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
+# ** Note: reg0 = 512
 #    Time: 20500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg1 = 4
+# ** Note: reg1 = 513
 #    Time: 20500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg2 = 2
+# ** Note: reg2 = 768
 #    Time: 20500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg3 = 0
 #    Time: 20500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
@@ -1056,47 +1170,35 @@
 #    Time: 20500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg6 = 6
 #    Time: 20500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg7 = 1
+# ** Note: reg7 = 4
 #    Time: 20500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:1
-#    Time: 20500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: dataPointer:7
-#    Time: 20500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: aluin1: 4
-#    Time: 20500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
-# ** Note: inputs: 7,1
-#    Time: 20500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: inputs: 7,1
-#    Time: 20500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: inputs: 7,1
-#    Time: 20500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: tout:6
-#    Time: 20500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: tout:4
-#    Time: 20500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: inputs: 7,1
-#    Time: 20500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: dataPointer:6
-#    Time: 20500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: tout:0
-#    Time: 20500 ps  Iteration: 10  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: dataPointer:4
-#    Time: 20500 ps  Iteration: 10  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: inputs: 7,1
-#    Time: 20500 ps  Iteration: 11  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: tout:8
-#    Time: 20500 ps  Iteration: 12  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: dataPointer:0
-#    Time: 20500 ps  Iteration: 12  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: dataPointer:8
-#    Time: 20500 ps  Iteration: 14  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: oc:12
+# ** Note: oc nc:7
+#    Time: 20500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
+#    Time: 20500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 20500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 20500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 0
+#    Time: 20500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 20500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 20500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 20500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 4
+#    Time: 20500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:5
+#    Time: 20500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc:7
 #    Time: 21500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
+# ** Note: reg0 = 512
 #    Time: 21500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg1 = 4
+# ** Note: reg1 = 513
 #    Time: 21500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg2 = 2
+# ** Note: reg2 = 768
 #    Time: 21500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg3 = 0
 #    Time: 21500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
@@ -1106,491 +1208,1279 @@
 #    Time: 21500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
 # ** Note: reg6 = 6
 #    Time: 21500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg7 = 1
+# ** Note: reg7 = 5
 #    Time: 21500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:1
+# ** Note: regwrite:5
 #    Time: 21500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: aluin1: 4
+# ** Note: oc: SW
+#    Time: 21500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
+#    Time: 21500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 21500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 21500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 0
+#    Time: 21500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 21500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 21500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 21500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 5
+#    Time: 21500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:5
+#    Time: 21500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: aluin1: 5
 #    Time: 21500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
-#    Time: 21500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg1 = 4
-#    Time: 21500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg2 = 2
-#    Time: 21500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg3 = 0
-#    Time: 21500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg4 = 0
-#    Time: 21500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg5 = 0
-#    Time: 21500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg6 = 6
-#    Time: 21500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg7 = 1
-#    Time: 21500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: inputs: 4,1
-#    Time: 21500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: aluin1: 1
+# ** Note: aluin1: 513
 #    Time: 21500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1
-# ** Note: dataPointer:4
+# ** Note: inputs: 5,1
+#    Time: 21500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: dataPointer:5
 #    Time: 21500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: dataPointer:1
-#    Time: 21500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: inputs: 1,1
+# ** Note: inputs: 513,1
 #    Time: 21500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: inputs: 1,1
+# ** Note: inputs: 513,1
 #    Time: 21500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: tout:11
+# ** Note: inputs: 513,1
 #    Time: 21500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: inputs: 1,1
+# ** Note: tout:4
 #    Time: 21500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: inputs: 1,1
+# ** Note: tout:514
 #    Time: 21500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: tout:12
-#    Time: 21500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: inputs: 1,1
-#    Time: 21500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: tout:10
-#    Time: 21500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: tout:2
-#    Time: 21500 ps  Iteration: 10  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: oc:12
-#    Time: 22500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
-#    Time: 22500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg1 = 4
-#    Time: 22500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg2 = 2
-#    Time: 22500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg3 = 0
-#    Time: 22500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg4 = 0
-#    Time: 22500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg5 = 0
-#    Time: 22500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg6 = 6
-#    Time: 22500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg7 = 1
-#    Time: 22500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: aluin1: 1
-#    Time: 22500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 22500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/irInst
-# ** Note: instr:0
-#    Time: 22500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/irInst
-# ** Note: aluin1: 1
-#    Time: 22500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 23500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 23500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
-#    Time: 23500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg1 = 4
-#    Time: 23500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg2 = 2
-#    Time: 23500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg3 = 0
-#    Time: 23500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg4 = 0
-#    Time: 23500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg5 = 0
-#    Time: 23500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg6 = 6
-#    Time: 23500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg7 = 1
-#    Time: 23500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 23500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc nc:0
-#    Time: 23500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
-#    Time: 23500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg1 = 4
-#    Time: 23500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg2 = 2
-#    Time: 23500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg3 = 0
-#    Time: 23500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg4 = 0
-#    Time: 23500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg5 = 0
-#    Time: 23500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg6 = 6
-#    Time: 23500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg7 = 1
-#    Time: 23500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:2
-#    Time: 23500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 24500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 24500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: reg0 = 16
-#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg1 = 4
-#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg2 = 2
-#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg3 = 0
-#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg4 = 0
-#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg5 = 0
-#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg6 = 6
-#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: reg7 = 2
-#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Note: regwrite:2
-#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: op code not matched
-#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
-# ** Note: aluin1: 2
-#    Time: 24500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
+# ** Note: dataPointer:4
+#    Time: 21500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/mem
 # ** Note: dataPointer:2
-#    Time: 24500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
-# ** Note: inputs: 2,1
-#    Time: 24500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: inputs: 2,1
-#    Time: 24500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: inputs: 2,1
-#    Time: 24500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: tout:1
-#    Time: 24500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: inputs: 2,1
-#    Time: 24500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: tout:3
-#    Time: 24500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+#    Time: 21500 ps  Iteration: 10  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: oc:7
+#    Time: 22500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
+#    Time: 22500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 22500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 22500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 0
+#    Time: 22500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 22500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 22500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 22500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 5
+#    Time: 22500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:5
+#    Time: 22500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: dataPointer:2
+#    Time: 22500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: memwr:2
+#    Time: 22500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: dataPointer:2
+#    Time: 22500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: memwr:2
+#    Time: 22500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: oc:7
+#    Time: 23500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
+#    Time: 23500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 23500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 23500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 0
+#    Time: 23500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 23500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 23500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 23500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 5
+#    Time: 23500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:5
+#    Time: 23500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: dataPointer:2
+#    Time: 23500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: reg0 = 512
+#    Time: 23500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 23500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 23500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 0
+#    Time: 23500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 23500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 23500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 23500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 5
+#    Time: 23500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: aluin1: 5
+#    Time: 23500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1
+# ** Note: dataPointer:1
+#    Time: 23500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: dataPointer:5
+#    Time: 23500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: inputs: 5,1
+#    Time: 23500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 5,1
+#    Time: 23500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:6
+#    Time: 23500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: oc:7
+#    Time: 24500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
+#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 0
+#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 5
+#    Time: 24500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: aluin1: 5
+#    Time: 24500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
+# ** Note: instr:22081
+#    Time: 24500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/irInst
+# ** Note: oc:5
+#    Time: 25500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
+#    Time: 25500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 25500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 25500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 0
+#    Time: 25500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 25500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 25500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 25500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 5
+#    Time: 25500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc nc:5
+#    Time: 25500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
+#    Time: 25500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 25500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 25500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 0
+#    Time: 25500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 25500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 25500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 25500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 5
+#    Time: 25500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:6
+#    Time: 25500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc:5
+#    Time: 26500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
+#    Time: 26500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 26500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 26500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 0
+#    Time: 26500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 26500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 26500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 26500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 6
+#    Time: 26500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:6
+#    Time: 26500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc: LW
+#    Time: 26500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
+#    Time: 26500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 26500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 26500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 0
+#    Time: 26500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 26500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 26500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 26500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 6
+#    Time: 26500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:6
+#    Time: 26500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: aluin1: 6
+#    Time: 26500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
+# ** Note: aluin1: 513
+#    Time: 26500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1
+# ** Note: inputs: 6,1
+#    Time: 26500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: dataPointer:6
+#    Time: 26500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: inputs: 513,1
+#    Time: 26500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 513,1
+#    Time: 26500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 513,1
+#    Time: 26500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:5
+#    Time: 26500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:512
+#    Time: 26500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 513,1
+#    Time: 26500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:518
+#    Time: 26500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 513,1
+#    Time: 26500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: dataPointer:5
+#    Time: 26500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: dataPointer:0
+#    Time: 26500 ps  Iteration: 10  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: tout:514
+#    Time: 26500 ps  Iteration: 10  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: dataPointer:6
+#    Time: 26500 ps  Iteration: 11  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: dataPointer:2
+#    Time: 26500 ps  Iteration: 12  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: oc:5
+#    Time: 27500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
+#    Time: 27500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 27500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 27500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 6
+#    Time: 27500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 27500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 27500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 27500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 6
+#    Time: 27500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:6
+#    Time: 27500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg0 = 512
+#    Time: 27500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 27500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 27500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 6
+#    Time: 27500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 27500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 27500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 27500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 6
+#    Time: 27500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:768
+#    Time: 27500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc:5
+#    Time: 28500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
+#    Time: 28500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 28500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 28500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 28500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 28500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 28500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 28500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 6
+#    Time: 28500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:768
+#    Time: 28500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg0 = 512
+#    Time: 28500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 28500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 28500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 28500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 28500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 28500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 28500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 6
+#    Time: 28500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: aluin1: 6
+#    Time: 28500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1
+# ** Note: dataPointer:1
+#    Time: 28500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: dataPointer:6
+#    Time: 28500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: inputs: 6,1
+#    Time: 28500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 6,1
+#    Time: 28500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 6,1
+#    Time: 28500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:5
+#    Time: 28500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 6,1
+#    Time: 28500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/aluInst
 # ** Note: tout:7
-#    Time: 24500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Note: inputs: 2,1
-#    Time: 24500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/aluInst
+#    Time: 28500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/aluInst
 # ** Note: tout:3
-#    Time: 24500 ps  Iteration: 10  Instance: /risc_vhd_vec_tst/i1/aluInst
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 25500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 25500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 26500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 26500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 27500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 27500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 28500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 28500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 28500 ps  Iteration: 10  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 6,1
+#    Time: 28500 ps  Iteration: 10  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 6,1
+#    Time: 28500 ps  Iteration: 11  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:7
+#    Time: 28500 ps  Iteration: 11  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:15
+#    Time: 28500 ps  Iteration: 12  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 6,1
+#    Time: 28500 ps  Iteration: 12  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:7
+#    Time: 28500 ps  Iteration: 13  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: oc:5
 #    Time: 29500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 29500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: reg0 = 512
+#    Time: 29500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 29500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 29500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 29500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 29500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 29500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 29500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 6
+#    Time: 29500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: aluin1: 6
+#    Time: 29500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
+# ** Note: instr:33988
+#    Time: 29500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/irInst
+# ** Note: aluin1: 6
+#    Time: 29500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1
+# ** Note: oc:8
 #    Time: 30500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 30500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: reg0 = 512
+#    Time: 30500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 30500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 30500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 30500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 30500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 30500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 30500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 6
+#    Time: 30500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc nc:8
+#    Time: 30500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
+#    Time: 30500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 30500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 30500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 30500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 30500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 30500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 30500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 6
+#    Time: 30500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:7
+#    Time: 30500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc:8
 #    Time: 31500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 31500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: reg0 = 512
+#    Time: 31500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 31500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 31500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 31500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 31500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 31500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 31500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 7
+#    Time: 31500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:7
+#    Time: 31500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc: BEQ
+#    Time: 31500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
+# ** Note: aluin1: 7
+#    Time: 31500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
+#    Time: 31500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 31500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 31500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 31500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 31500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 31500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 31500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 7
+#    Time: 31500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:7
+#    Time: 31500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: dataPointer:7
+#    Time: 31500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: inputs: 6,4
+#    Time: 31500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: aluin1: 768
+#    Time: 31500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1
+# ** Note: dataPointer:0
+#    Time: 31500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: inputs: 6,4
+#    Time: 31500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 6,4
+#    Time: 31500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:2
+#    Time: 31500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:10
+#    Time: 31500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: oc:8
 #    Time: 32500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 32500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: reg0 = 512
+#    Time: 32500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 32500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 32500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 32500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 32500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 32500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 32500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 7
+#    Time: 32500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:7
+#    Time: 32500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: rd1:768, rd2768
+#    Time: 32500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
+#    Time: 32500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 32500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 32500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 32500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 32500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 32500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 32500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 7
+#    Time: 32500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:10
+#    Time: 32500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc:8
 #    Time: 33500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 33500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: reg0 = 512
+#    Time: 33500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 33500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 33500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 33500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 33500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 33500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 33500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 10
+#    Time: 33500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:10
+#    Time: 33500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: aluin1: 768
+#    Time: 33500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
+#    Time: 33500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 33500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 33500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 33500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 33500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 33500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 33500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 10
+#    Time: 33500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: inputs: 768,4
+#    Time: 33500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: aluin1: 10
+#    Time: 33500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1
+# ** Note: dataPointer:10
+#    Time: 33500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: inputs: 10,4
+#    Time: 33500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 10,4
+#    Time: 33500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:780
+#    Time: 33500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 10,4
+#    Time: 33500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:14
+#    Time: 33500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: oc:8
 #    Time: 34500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 34500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: reg0 = 512
+#    Time: 34500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 34500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 34500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 34500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 34500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 34500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 34500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 10
+#    Time: 34500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: aluin1: 10
+#    Time: 34500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
+# ** Note: instr:38914
+#    Time: 34500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/irInst
+# ** Note: inputs: 10,1
+#    Time: 34500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 10,1
+#    Time: 34500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: aluin1: 10
+#    Time: 34500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1
+# ** Note: tout:11
+#    Time: 34500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: oc:9
 #    Time: 35500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 35500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: reg0 = 512
+#    Time: 35500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 35500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 35500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 35500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 35500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 35500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 35500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 10
+#    Time: 35500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc nc:9
+#    Time: 35500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
+#    Time: 35500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 35500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 35500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 35500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 35500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 35500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 35500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 10
+#    Time: 35500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:11
+#    Time: 35500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc:9
 #    Time: 36500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 36500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: reg0 = 512
+#    Time: 36500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 36500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 36500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 36500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 36500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 36500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 36500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 11
+#    Time: 36500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:11
+#    Time: 36500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc: JAL
+#    Time: 36500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
+# ** Note: aluin1: 11
+#    Time: 36500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
+# ** Note: dataPointer:11
+#    Time: 36500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: inputs: 10,2
+#    Time: 36500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 10,2
+#    Time: 36500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 10,2
+#    Time: 36500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:8
+#    Time: 36500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:12
+#    Time: 36500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: oc:9
 #    Time: 37500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 37500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: reg0 = 512
+#    Time: 37500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 37500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 37500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 37500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 37500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 37500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 37500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 11
+#    Time: 37500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:11
+#    Time: 37500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: rd1:11, rd2768
+#    Time: 37500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
+#    Time: 37500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 37500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 37500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 37500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 0
+#    Time: 37500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 37500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 37500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 11
+#    Time: 37500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:11
+#    Time: 37500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc:9
 #    Time: 38500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 38500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: reg0 = 512
+#    Time: 38500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 38500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 38500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 38500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 11
+#    Time: 38500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 38500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 38500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 11
+#    Time: 38500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:11
+#    Time: 38500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg0 = 512
+#    Time: 38500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 38500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 38500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 38500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 11
+#    Time: 38500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 38500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 38500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 11
+#    Time: 38500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:12
+#    Time: 38500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc:9
 #    Time: 39500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 39500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: reg0 = 512
+#    Time: 39500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 39500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 39500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 39500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 11
+#    Time: 39500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 39500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 39500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 12
+#    Time: 39500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:12
+#    Time: 39500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: aluin1: 12
+#    Time: 39500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
+#    Time: 39500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 39500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 39500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 39500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 11
+#    Time: 39500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 39500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 39500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 12
+#    Time: 39500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: dataPointer:12
+#    Time: 39500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: inputs: 12,2
+#    Time: 39500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 12,2
+#    Time: 39500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 12,2
+#    Time: 39500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:10
+#    Time: 39500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 12,2
+#    Time: 39500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:14
+#    Time: 39500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:6
+#    Time: 39500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 12,2
+#    Time: 39500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 12,2
+#    Time: 39500 ps  Iteration: 10  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:14
+#    Time: 39500 ps  Iteration: 10  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:30
+#    Time: 39500 ps  Iteration: 11  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 12,2
+#    Time: 39500 ps  Iteration: 11  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:14
+#    Time: 39500 ps  Iteration: 12  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: oc:9
 #    Time: 40500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 40500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: reg0 = 512
+#    Time: 40500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 40500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 40500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 40500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 11
+#    Time: 40500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 40500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 40500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 12
+#    Time: 40500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: aluin1: 12
+#    Time: 40500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
+# ** Note: instr:8272
+#    Time: 40500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/irInst
+# ** Note: inputs: 12,1
+#    Time: 40500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 12,1
+#    Time: 40500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: aluin1: 12
+#    Time: 40500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1
+# ** Note: tout:13
+#    Time: 40500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: oc:2
 #    Time: 41500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 41500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: reg0 = 512
+#    Time: 41500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 41500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 41500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 41500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 11
+#    Time: 41500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 41500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 41500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 12
+#    Time: 41500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc nc:2
+#    Time: 41500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
+#    Time: 41500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 41500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 41500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 41500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 11
+#    Time: 41500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 41500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 41500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 12
+#    Time: 41500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:13
+#    Time: 41500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc:2
 #    Time: 42500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 42500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: reg0 = 512
+#    Time: 42500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 42500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 42500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 42500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 11
+#    Time: 42500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 42500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 42500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 13
+#    Time: 42500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:13
+#    Time: 42500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc: NND
+#    Time: 42500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
+#    Time: 42500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 42500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 42500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 42500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 11
+#    Time: 42500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 42500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 42500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 13
+#    Time: 42500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: inputs: 12,1
+#    Time: 42500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: aluin1: 13
+#    Time: 42500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
+# ** Note: dataPointer:13
+#    Time: 42500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: aluin1: 512
+#    Time: 42500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1
+# ** Note: tout:65535
+#    Time: 42500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 13,768
+#    Time: 42500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: dataPointer:0
+#    Time: 42500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: inputs: 512,513
+#    Time: 42500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:65023
+#    Time: 42500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 512,513
+#    Time: 42500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 512,513
+#    Time: 42500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 512,513
+#    Time: 42500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: oc:2
 #    Time: 43500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 43500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: reg0 = 512
+#    Time: 43500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 43500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 43500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 43500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 11
+#    Time: 43500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 43500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 43500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 13
+#    Time: 43500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg0 = 512
+#    Time: 43500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 43500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 768
+#    Time: 43500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 43500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 11
+#    Time: 43500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 43500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 43500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 13
+#    Time: 43500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:65023
+#    Time: 43500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc:2
 #    Time: 44500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 44500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: reg0 = 512
+#    Time: 44500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 44500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 65023
+#    Time: 44500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 44500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 11
+#    Time: 44500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 44500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 44500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 13
+#    Time: 44500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:65023
+#    Time: 44500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg0 = 512
+#    Time: 44500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 44500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 65023
+#    Time: 44500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 44500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 11
+#    Time: 44500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 44500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 44500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 13
+#    Time: 44500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: aluin1: 13
+#    Time: 44500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1
+# ** Note: dataPointer:13
+#    Time: 44500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: inputs: 13,513
+#    Time: 44500 ps  Iteration: 5  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:65534
+#    Time: 44500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 13,513
+#    Time: 44500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 13,513
+#    Time: 44500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: oc:2
 #    Time: 45500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 45500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: reg0 = 512
+#    Time: 45500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 45500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 65023
+#    Time: 45500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 45500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 11
+#    Time: 45500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 45500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 45500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 13
+#    Time: 45500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: aluin1: 13
+#    Time: 45500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
+# ** Note: inputs: 13,513
+#    Time: 45500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: instr:16464
+#    Time: 45500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/irInst
+# ** Note: inputs: 13,1
+#    Time: 45500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:526
+#    Time: 45500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 13,1
+#    Time: 45500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:14
+#    Time: 45500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: oc:4
 #    Time: 46500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 46500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: reg0 = 512
+#    Time: 46500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 46500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 65023
+#    Time: 46500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 46500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 11
+#    Time: 46500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 46500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 46500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 13
+#    Time: 46500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc nc:4
+#    Time: 46500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
+# ** Note: reg0 = 512
+#    Time: 46500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 46500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 65023
+#    Time: 46500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 46500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 11
+#    Time: 46500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 46500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 46500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 13
+#    Time: 46500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:14
+#    Time: 46500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: oc:4
 #    Time: 47500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 47500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: reg0 = 512
+#    Time: 47500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg1 = 513
+#    Time: 47500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg2 = 65023
+#    Time: 47500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg3 = 768
+#    Time: 47500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg4 = 11
+#    Time: 47500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg5 = 0
+#    Time: 47500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg6 = 6
+#    Time: 47500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: reg7 = 14
+#    Time: 47500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: regwrite:14
+#    Time: 47500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1/rf
+# ** Note: op code not matched
+#    Time: 47500 ps  Iteration: 2  Instance: /risc_vhd_vec_tst/i1
+# ** Note: aluin1: 14
+#    Time: 47500 ps  Iteration: 3  Instance: /risc_vhd_vec_tst/i1
+# ** Note: dataPointer:14
+#    Time: 47500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/mem
+# ** Note: inputs: 14,1
+#    Time: 47500 ps  Iteration: 4  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 14,1
+#    Time: 47500 ps  Iteration: 6  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 14,1
+#    Time: 47500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:13
+#    Time: 47500 ps  Iteration: 7  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 14,1
+#    Time: 47500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:15
+#    Time: 47500 ps  Iteration: 8  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:11
+#    Time: 47500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 14,1
+#    Time: 47500 ps  Iteration: 9  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 14,1
+#    Time: 47500 ps  Iteration: 10  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:15
+#    Time: 47500 ps  Iteration: 10  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:7
+#    Time: 47500 ps  Iteration: 11  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 14,1
+#    Time: 47500 ps  Iteration: 11  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 14,1
+#    Time: 47500 ps  Iteration: 12  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:15
+#    Time: 47500 ps  Iteration: 12  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:31
+#    Time: 47500 ps  Iteration: 13  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: inputs: 14,1
+#    Time: 47500 ps  Iteration: 13  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: tout:15
+#    Time: 47500 ps  Iteration: 14  Instance: /risc_vhd_vec_tst/i1/aluInst
+# ** Note: oc:4
 #    Time: 48500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 48500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 49500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 49500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 50500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 50500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 51500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 51500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 52500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 52500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 53500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 53500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 54500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 54500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 55500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 55500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 56500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 56500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 57500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 57500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 58500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 58500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 59500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 59500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 60500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 60500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 61500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 61500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 62500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 62500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 63500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 63500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 64500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 64500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 65500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 65500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 66500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 66500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 67500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 67500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 68500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 68500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 69500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 69500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 70500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 70500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 71500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 71500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 72500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 72500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 73500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 73500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 74500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 74500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 75500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 75500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 76500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 76500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 77500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 77500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 78500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 78500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 79500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 79500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 80500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 80500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 81500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 81500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 82500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 82500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 83500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 83500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 84500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 84500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 85500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 85500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 86500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 86500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 87500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 87500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 88500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 88500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 89500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 89500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 90500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 90500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 91500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 91500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 92500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 92500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 93500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 93500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 94500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 94500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 95500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 95500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 96500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 96500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 97500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 97500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 98500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 98500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# ** Note: oc:4
 #    Time: 99500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# ** Note: oc:0
-#    Time: 99500 ps  Iteration: 1  Instance: /risc_vhd_vec_tst/i1
-# End time: 15:57:33 on May 08,2022, Elapsed time: 0:00:25
-# Errors: 0, Warnings: 140
+# End time: 16:14:50 on May 08,2022, Elapsed time: 0:00:31
+# Errors: 0, Warnings: 54
